@@ -1,3 +1,0 @@
-# Gnolang
-
-TODO: dedicated README

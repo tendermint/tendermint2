@@ -16,7 +16,6 @@ import (
 	"github.com/gnolang/gno/pkgs/crypto/hd"
 	"github.com/gnolang/gno/pkgs/crypto/merkle"
 	"github.com/gnolang/gno/pkgs/crypto/multisig"
-	gno "github.com/gnolang/gno/pkgs/gnolang"
 	"github.com/gnolang/gno/pkgs/sdk"
 	"github.com/gnolang/gno/pkgs/sdk/bank"
 	"github.com/gnolang/gno/pkgs/sdk/vm"
@@ -40,7 +39,6 @@ func main() {
 		sdk.Package,
 		bank.Package,
 		vm.Package,
-		gno.Package,
 	}
 	for _, pkg := range pkgs {
 		genproto.WriteProto3Schema(pkg)
