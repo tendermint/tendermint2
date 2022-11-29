@@ -3,12 +3,12 @@ package cstypes
 import (
 	"testing"
 
-	amino "github.com/gnolang/gno/pkgs/amino"
-	"github.com/gnolang/gno/pkgs/bft/types"
-	tmtime "github.com/gnolang/gno/pkgs/bft/types/time"
-	"github.com/gnolang/gno/pkgs/crypto"
-	"github.com/gnolang/gno/pkgs/crypto/ed25519"
-	"github.com/gnolang/gno/pkgs/random"
+	amino "github.com/tendermint/tendermint2/pkgs/amino"
+	"github.com/tendermint/tendermint2/pkgs/bft/types"
+	tmtime "github.com/tendermint/tendermint2/pkgs/bft/types/time"
+	"github.com/tendermint/tendermint2/pkgs/crypto"
+	"github.com/tendermint/tendermint2/pkgs/crypto/ed25519"
+	"github.com/tendermint/tendermint2/pkgs/random"
 )
 
 func BenchmarkRoundStateDeepCopy(b *testing.B) {

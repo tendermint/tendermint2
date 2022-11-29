@@ -5,13 +5,13 @@ import (
 	"os"
 	"path/filepath"
 
-	abci "github.com/gnolang/gno/pkgs/bft/abci/types"
-	cns "github.com/gnolang/gno/pkgs/bft/consensus/config"
-	mem "github.com/gnolang/gno/pkgs/bft/mempool/config"
-	rpc "github.com/gnolang/gno/pkgs/bft/rpc/config"
-	"github.com/gnolang/gno/pkgs/errors"
-	osm "github.com/gnolang/gno/pkgs/os"
-	p2p "github.com/gnolang/gno/pkgs/p2p/config"
+	abci "github.com/tendermint/tendermint2/pkgs/bft/abci/types"
+	cns "github.com/tendermint/tendermint2/pkgs/bft/consensus/config"
+	mem "github.com/tendermint/tendermint2/pkgs/bft/mempool/config"
+	rpc "github.com/tendermint/tendermint2/pkgs/bft/rpc/config"
+	"github.com/tendermint/tendermint2/pkgs/errors"
+	osm "github.com/tendermint/tendermint2/pkgs/os"
+	p2p "github.com/tendermint/tendermint2/pkgs/p2p/config"
 )
 
 // Config defines the top level configuration for a Tendermint node

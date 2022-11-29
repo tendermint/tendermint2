@@ -3,8 +3,8 @@ package merkle
 import (
 	"testing"
 
-	amino "github.com/gnolang/gno/pkgs/amino"
-	"github.com/gnolang/gno/pkgs/errors"
+	amino "github.com/tendermint/tendermint2/pkgs/amino"
+	"github.com/tendermint/tendermint2/pkgs/errors"
 	"github.com/stretchr/testify/assert"
 )
 

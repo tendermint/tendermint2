@@ -8,11 +8,11 @@ import (
 	"sync/atomic"
 	"time"
 
-	"github.com/gnolang/gno/pkgs/bft/types"
-	"github.com/gnolang/gno/pkgs/flow"
-	"github.com/gnolang/gno/pkgs/log"
-	"github.com/gnolang/gno/pkgs/p2p"
-	"github.com/gnolang/gno/pkgs/service"
+	"github.com/tendermint/tendermint2/pkgs/bft/types"
+	"github.com/tendermint/tendermint2/pkgs/flow"
+	"github.com/tendermint/tendermint2/pkgs/log"
+	"github.com/tendermint/tendermint2/pkgs/p2p"
+	"github.com/tendermint/tendermint2/pkgs/service"
 )
 
 /*

@@ -5,10 +5,10 @@ import (
 	"sort"
 	"testing"
 
-	dbm "github.com/gnolang/gno/pkgs/db"
+	dbm "github.com/tendermint/tendermint2/pkgs/db"
 
-	"github.com/gnolang/gno/pkgs/store/cache"
-	"github.com/gnolang/gno/pkgs/store/dbadapter"
+	"github.com/tendermint/tendermint2/pkgs/store/cache"
+	"github.com/tendermint/tendermint2/pkgs/store/dbadapter"
 )
 
 func benchmarkCacheStoreIterator(numKVs int, b *testing.B) {

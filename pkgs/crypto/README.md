@@ -5,7 +5,7 @@ crypto is the cryptographic package originally adapted for Tendermint's uses.
 ## Importing it
 
 To get the interfaces,
-`import "github.com/gnolang/gno/libs/crypto"`
+`import "github.com/tendermint/tendermint2/libs/crypto"`
 
 For any specific algorithm, use its specific module e.g.
-`import "github.com/gnolang/gno/libs/crypto/ed25519"`
+`import "github.com/tendermint/tendermint2/libs/crypto/ed25519"`

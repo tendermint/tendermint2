@@ -12,10 +12,10 @@ import (
 	"strings"
 	"sync"
 
-	"github.com/gnolang/gno/pkgs/amino"
-	types "github.com/gnolang/gno/pkgs/bft/rpc/lib/types"
-	"github.com/gnolang/gno/pkgs/errors"
-	"github.com/gnolang/gno/pkgs/random"
+	"github.com/tendermint/tendermint2/pkgs/amino"
+	types "github.com/tendermint/tendermint2/pkgs/bft/rpc/lib/types"
+	"github.com/tendermint/tendermint2/pkgs/errors"
+	"github.com/tendermint/tendermint2/pkgs/random"
 )
 
 const (

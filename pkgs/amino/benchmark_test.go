@@ -6,8 +6,8 @@ import (
 	"runtime/debug"
 	"testing"
 
-	"github.com/gnolang/gno/pkgs/amino"
-	"github.com/gnolang/gno/pkgs/amino/tests"
+	"github.com/tendermint/tendermint2/pkgs/amino"
+	"github.com/tendermint/tendermint2/pkgs/amino/tests"
 	fuzz "github.com/google/gofuzz"
 	"github.com/stretchr/testify/require"
 	"google.golang.org/protobuf/proto"

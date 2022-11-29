@@ -1,6 +1,6 @@
 package config
 
-import "github.com/gnolang/gno/pkgs/errors"
+import "github.com/tendermint/tendermint2/pkgs/errors"
 
 //-----------------------------------------------------------------------------
 // MempoolConfig

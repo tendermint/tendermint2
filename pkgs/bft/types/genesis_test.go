@@ -8,9 +8,9 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	"github.com/gnolang/gno/pkgs/amino"
-	tmtime "github.com/gnolang/gno/pkgs/bft/types/time"
-	"github.com/gnolang/gno/pkgs/crypto/ed25519"
+	"github.com/tendermint/tendermint2/pkgs/amino"
+	tmtime "github.com/tendermint/tendermint2/pkgs/bft/types/time"
+	"github.com/tendermint/tendermint2/pkgs/crypto/ed25519"
 )
 
 func TestGenesisBad(t *testing.T) {

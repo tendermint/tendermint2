@@ -1,8 +1,8 @@
 package types
 
 import (
-	abci "github.com/gnolang/gno/pkgs/bft/abci/types"
-	"github.com/gnolang/gno/pkgs/events"
+	abci "github.com/tendermint/tendermint2/pkgs/bft/abci/types"
+	"github.com/tendermint/tendermint2/pkgs/events"
 )
 
 // TMEvent implements events.Event.

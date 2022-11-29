@@ -3,9 +3,9 @@ package types
 import (
 	"fmt"
 
-	abci "github.com/gnolang/gno/pkgs/bft/abci/types"
-	"github.com/gnolang/gno/pkgs/crypto"
-	"github.com/gnolang/gno/pkgs/random"
+	abci "github.com/tendermint/tendermint2/pkgs/bft/abci/types"
+	"github.com/tendermint/tendermint2/pkgs/crypto"
+	"github.com/tendermint/tendermint2/pkgs/random"
 )
 
 // Volatile state for each Validator

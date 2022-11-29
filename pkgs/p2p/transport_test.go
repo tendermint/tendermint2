@@ -8,10 +8,10 @@ import (
 	"testing"
 	"time"
 
-	"github.com/gnolang/gno/pkgs/amino"
-	"github.com/gnolang/gno/pkgs/crypto/ed25519"
-	"github.com/gnolang/gno/pkgs/p2p/conn"
-	"github.com/gnolang/gno/pkgs/testutils"
+	"github.com/tendermint/tendermint2/pkgs/amino"
+	"github.com/tendermint/tendermint2/pkgs/crypto/ed25519"
+	"github.com/tendermint/tendermint2/pkgs/p2p/conn"
+	"github.com/tendermint/tendermint2/pkgs/testutils"
 )
 
 var defaultNodeName = "host_peer"

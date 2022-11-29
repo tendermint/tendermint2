@@ -9,16 +9,16 @@ import (
 	"sync/atomic"
 	"time"
 
-	auto "github.com/gnolang/gno/pkgs/autofile"
-	abci "github.com/gnolang/gno/pkgs/bft/abci/types"
-	cfg "github.com/gnolang/gno/pkgs/bft/mempool/config"
-	"github.com/gnolang/gno/pkgs/bft/proxy"
-	"github.com/gnolang/gno/pkgs/bft/types"
-	"github.com/gnolang/gno/pkgs/clist"
-	"github.com/gnolang/gno/pkgs/errors"
-	"github.com/gnolang/gno/pkgs/log"
-	"github.com/gnolang/gno/pkgs/maths"
-	osm "github.com/gnolang/gno/pkgs/os"
+	auto "github.com/tendermint/tendermint2/pkgs/autofile"
+	abci "github.com/tendermint/tendermint2/pkgs/bft/abci/types"
+	cfg "github.com/tendermint/tendermint2/pkgs/bft/mempool/config"
+	"github.com/tendermint/tendermint2/pkgs/bft/proxy"
+	"github.com/tendermint/tendermint2/pkgs/bft/types"
+	"github.com/tendermint/tendermint2/pkgs/clist"
+	"github.com/tendermint/tendermint2/pkgs/errors"
+	"github.com/tendermint/tendermint2/pkgs/log"
+	"github.com/tendermint/tendermint2/pkgs/maths"
+	osm "github.com/tendermint/tendermint2/pkgs/os"
 )
 
 //--------------------------------------------------------------------------------

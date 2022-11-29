@@ -3,9 +3,9 @@ package std
 import (
 	"fmt"
 
-	"github.com/gnolang/gno/pkgs/amino"
-	"github.com/gnolang/gno/pkgs/crypto"
-	"github.com/gnolang/gno/pkgs/crypto/multisig"
+	"github.com/tendermint/tendermint2/pkgs/amino"
+	"github.com/tendermint/tendermint2/pkgs/crypto"
+	"github.com/tendermint/tendermint2/pkgs/crypto/multisig"
 )
 
 var maxGasWanted = int64((1 << 60) - 1) // something smaller than math.MaxInt64

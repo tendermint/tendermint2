@@ -7,8 +7,8 @@ import (
 
 	"github.com/stretchr/testify/assert"
 
-	"github.com/gnolang/gno/pkgs/crypto/ed25519"
-	"github.com/gnolang/gno/pkgs/service"
+	"github.com/tendermint/tendermint2/pkgs/crypto/ed25519"
+	"github.com/tendermint/tendermint2/pkgs/service"
 )
 
 // mockPeer for testing the PeerSet

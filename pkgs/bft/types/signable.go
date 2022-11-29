@@ -1,8 +1,8 @@
 package types
 
 import (
-	"github.com/gnolang/gno/pkgs/crypto/ed25519"
-	"github.com/gnolang/gno/pkgs/maths"
+	"github.com/tendermint/tendermint2/pkgs/crypto/ed25519"
+	"github.com/tendermint/tendermint2/pkgs/maths"
 )
 
 // MaxSignatureSize is a maximum allowed signature size for the Proposal

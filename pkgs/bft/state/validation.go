@@ -5,9 +5,9 @@ import (
 	"errors"
 	"fmt"
 
-	"github.com/gnolang/gno/pkgs/bft/types"
-	"github.com/gnolang/gno/pkgs/crypto"
-	dbm "github.com/gnolang/gno/pkgs/db"
+	"github.com/tendermint/tendermint2/pkgs/bft/types"
+	"github.com/tendermint/tendermint2/pkgs/crypto"
+	dbm "github.com/tendermint/tendermint2/pkgs/db"
 )
 
 //-----------------------------------------------------

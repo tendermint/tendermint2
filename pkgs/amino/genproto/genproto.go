@@ -15,8 +15,8 @@ import (
 	"strings"
 	"time"
 
-	"github.com/gnolang/gno/pkgs/amino"
-	"github.com/gnolang/gno/pkgs/amino/pkg"
+	"github.com/tendermint/tendermint2/pkgs/amino"
+	"github.com/tendermint/tendermint2/pkgs/amino/pkg"
 )
 
 // TODO sort

@@ -1,11 +1,11 @@
 package mock
 
 import (
-	"github.com/gnolang/gno/pkgs/amino"
+	"github.com/tendermint/tendermint2/pkgs/amino"
 )
 
 var Package = amino.RegisterPackage(amino.NewPackage(
-	"github.com/gnolang/gno/pkgs/crypto/mock",
+	"github.com/tendermint/tendermint2/pkgs/crypto/mock",
 	"tm",
 	amino.GetCallersDirname(),
 ).WithDependencies().WithTypes(

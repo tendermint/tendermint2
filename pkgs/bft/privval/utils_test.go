@@ -5,7 +5,7 @@ import (
 
 	"github.com/stretchr/testify/assert"
 
-	"github.com/gnolang/gno/pkgs/errors"
+	"github.com/tendermint/tendermint2/pkgs/errors"
 )
 
 func TestIsConnTimeoutForNonTimeoutErrors(t *testing.T) {

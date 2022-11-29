@@ -4,8 +4,8 @@ import (
 	"bytes"
 	"fmt"
 
-	"github.com/gnolang/gno/pkgs/bech32"
-	"github.com/gnolang/gno/pkgs/crypto/tmhash"
+	"github.com/tendermint/tendermint2/pkgs/bech32"
+	"github.com/tendermint/tendermint2/pkgs/crypto/tmhash"
 )
 
 //----------------------------------------

@@ -1,11 +1,11 @@
 package ed25519
 
 import (
-	"github.com/gnolang/gno/pkgs/amino"
+	"github.com/tendermint/tendermint2/pkgs/amino"
 )
 
 var Package = amino.RegisterPackage(amino.NewPackage(
-	"github.com/gnolang/gno/pkgs/crypto/ed25519",
+	"github.com/tendermint/tendermint2/pkgs/crypto/ed25519",
 	"tm",
 	amino.GetCallersDirname(),
 ).WithDependencies().WithTypes(

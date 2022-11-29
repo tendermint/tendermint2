@@ -14,14 +14,14 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	"github.com/gnolang/gno/pkgs/bft/abci/example/counter"
-	"github.com/gnolang/gno/pkgs/bft/abci/example/kvstore"
-	abci "github.com/gnolang/gno/pkgs/bft/abci/types"
-	cfg "github.com/gnolang/gno/pkgs/bft/mempool/config"
-	"github.com/gnolang/gno/pkgs/bft/proxy"
-	"github.com/gnolang/gno/pkgs/bft/types"
-	"github.com/gnolang/gno/pkgs/log"
-	"github.com/gnolang/gno/pkgs/random"
+	"github.com/tendermint/tendermint2/pkgs/bft/abci/example/counter"
+	"github.com/tendermint/tendermint2/pkgs/bft/abci/example/kvstore"
+	abci "github.com/tendermint/tendermint2/pkgs/bft/abci/types"
+	cfg "github.com/tendermint/tendermint2/pkgs/bft/mempool/config"
+	"github.com/tendermint/tendermint2/pkgs/bft/proxy"
+	"github.com/tendermint/tendermint2/pkgs/bft/types"
+	"github.com/tendermint/tendermint2/pkgs/log"
+	"github.com/tendermint/tendermint2/pkgs/random"
 )
 
 // A cleanupFunc cleans up any config / test files created for a particular

@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"regexp"
 
-	abci "github.com/gnolang/gno/pkgs/bft/abci/types"
+	abci "github.com/tendermint/tendermint2/pkgs/bft/abci/types"
 )
 
 var isAlphaNumeric = regexp.MustCompile(`^[a-zA-Z0-9]+$`).MatchString

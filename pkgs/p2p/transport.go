@@ -6,10 +6,10 @@ import (
 	"net"
 	"time"
 
-	"github.com/gnolang/gno/pkgs/amino"
-	"github.com/gnolang/gno/pkgs/crypto"
-	"github.com/gnolang/gno/pkgs/errors"
-	"github.com/gnolang/gno/pkgs/p2p/conn"
+	"github.com/tendermint/tendermint2/pkgs/amino"
+	"github.com/tendermint/tendermint2/pkgs/crypto"
+	"github.com/tendermint/tendermint2/pkgs/errors"
+	"github.com/tendermint/tendermint2/pkgs/p2p/conn"
 )
 
 const (

@@ -6,9 +6,9 @@ import (
 	"sync"
 	"time"
 
-	"github.com/gnolang/gno/pkgs/amino"
-	"github.com/gnolang/gno/pkgs/errors"
-	"github.com/gnolang/gno/pkgs/service"
+	"github.com/tendermint/tendermint2/pkgs/amino"
+	"github.com/tendermint/tendermint2/pkgs/errors"
+	"github.com/tendermint/tendermint2/pkgs/service"
 )
 
 const (

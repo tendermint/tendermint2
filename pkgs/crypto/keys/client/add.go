@@ -4,12 +4,12 @@ import (
 	"fmt"
 	"sort"
 
-	"github.com/gnolang/gno/pkgs/command"
-	"github.com/gnolang/gno/pkgs/crypto"
-	"github.com/gnolang/gno/pkgs/crypto/bip39"
-	"github.com/gnolang/gno/pkgs/crypto/keys"
-	"github.com/gnolang/gno/pkgs/crypto/multisig"
-	"github.com/gnolang/gno/pkgs/errors"
+	"github.com/tendermint/tendermint2/pkgs/command"
+	"github.com/tendermint/tendermint2/pkgs/crypto"
+	"github.com/tendermint/tendermint2/pkgs/crypto/bip39"
+	"github.com/tendermint/tendermint2/pkgs/crypto/keys"
+	"github.com/tendermint/tendermint2/pkgs/crypto/multisig"
+	"github.com/tendermint/tendermint2/pkgs/errors"
 )
 
 type AddOptions struct {

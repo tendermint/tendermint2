@@ -9,12 +9,12 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	cstypes "github.com/gnolang/gno/pkgs/bft/consensus/types"
-	"github.com/gnolang/gno/pkgs/bft/types"
-	"github.com/gnolang/gno/pkgs/events"
-	p2pmock "github.com/gnolang/gno/pkgs/p2p/mock"
-	"github.com/gnolang/gno/pkgs/random"
-	"github.com/gnolang/gno/pkgs/testutils"
+	cstypes "github.com/tendermint/tendermint2/pkgs/bft/consensus/types"
+	"github.com/tendermint/tendermint2/pkgs/bft/types"
+	"github.com/tendermint/tendermint2/pkgs/events"
+	p2pmock "github.com/tendermint/tendermint2/pkgs/p2p/mock"
+	"github.com/tendermint/tendermint2/pkgs/random"
+	"github.com/tendermint/tendermint2/pkgs/testutils"
 )
 
 /*

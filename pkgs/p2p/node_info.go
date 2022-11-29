@@ -3,8 +3,8 @@ package p2p
 import (
 	"fmt"
 
-	"github.com/gnolang/gno/pkgs/strings"
-	"github.com/gnolang/gno/pkgs/versionset"
+	"github.com/tendermint/tendermint2/pkgs/strings"
+	"github.com/tendermint/tendermint2/pkgs/versionset"
 )
 
 const (

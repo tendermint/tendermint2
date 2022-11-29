@@ -3,18 +3,18 @@ package state
 import (
 	"fmt"
 
-	"github.com/gnolang/gno/pkgs/amino"
-	abci "github.com/gnolang/gno/pkgs/bft/abci/types"
-	"github.com/gnolang/gno/pkgs/bft/fail"
-	mempl "github.com/gnolang/gno/pkgs/bft/mempool"
-	"github.com/gnolang/gno/pkgs/bft/proxy"
-	"github.com/gnolang/gno/pkgs/bft/types"
-	typesver "github.com/gnolang/gno/pkgs/bft/types/version"
-	tmver "github.com/gnolang/gno/pkgs/bft/version"
-	"github.com/gnolang/gno/pkgs/crypto"
-	dbm "github.com/gnolang/gno/pkgs/db"
-	"github.com/gnolang/gno/pkgs/events"
-	"github.com/gnolang/gno/pkgs/log"
+	"github.com/tendermint/tendermint2/pkgs/amino"
+	abci "github.com/tendermint/tendermint2/pkgs/bft/abci/types"
+	"github.com/tendermint/tendermint2/pkgs/bft/fail"
+	mempl "github.com/tendermint/tendermint2/pkgs/bft/mempool"
+	"github.com/tendermint/tendermint2/pkgs/bft/proxy"
+	"github.com/tendermint/tendermint2/pkgs/bft/types"
+	typesver "github.com/tendermint/tendermint2/pkgs/bft/types/version"
+	tmver "github.com/tendermint/tendermint2/pkgs/bft/version"
+	"github.com/tendermint/tendermint2/pkgs/crypto"
+	dbm "github.com/tendermint/tendermint2/pkgs/db"
+	"github.com/tendermint/tendermint2/pkgs/events"
+	"github.com/tendermint/tendermint2/pkgs/log"
 )
 
 //-----------------------------------------------------------------------------

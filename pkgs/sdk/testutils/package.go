@@ -1,11 +1,11 @@
 package testutils
 
 import (
-	"github.com/gnolang/gno/pkgs/amino"
+	"github.com/tendermint/tendermint2/pkgs/amino"
 )
 
 var Package = amino.RegisterPackage(amino.NewPackage(
-	"github.com/gnolang/gno/pkgs/sdk/testutils",
+	"github.com/tendermint/tendermint2/pkgs/sdk/testutils",
 	"sdk.testutils",
 	amino.GetCallersDirname(),
 ).WithDependencies().WithTypes(

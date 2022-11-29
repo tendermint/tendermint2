@@ -1,11 +1,11 @@
 package keys
 
 import (
-	"github.com/gnolang/gno/pkgs/amino"
+	"github.com/tendermint/tendermint2/pkgs/amino"
 )
 
 var Package = amino.RegisterPackage(amino.NewPackage(
-	"github.com/gnolang/gno/pkgs/crypto/keys",
+	"github.com/tendermint/tendermint2/pkgs/crypto/keys",
 	"tm.keys",
 	amino.GetCallersDirname(),
 ).WithDependencies().WithTypes(

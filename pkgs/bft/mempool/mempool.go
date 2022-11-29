@@ -1,8 +1,8 @@
 package mempool
 
 import (
-	abci "github.com/gnolang/gno/pkgs/bft/abci/types"
-	"github.com/gnolang/gno/pkgs/bft/types"
+	abci "github.com/tendermint/tendermint2/pkgs/bft/abci/types"
+	"github.com/tendermint/tendermint2/pkgs/bft/types"
 )
 
 // Mempool defines the mempool interface.

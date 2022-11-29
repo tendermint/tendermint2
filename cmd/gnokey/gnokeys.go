@@ -5,16 +5,16 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/gnolang/gno/pkgs/amino"
-	"github.com/gnolang/gno/pkgs/command"
-	"github.com/gnolang/gno/pkgs/crypto"
-	"github.com/gnolang/gno/pkgs/crypto/keys"
-	"github.com/gnolang/gno/pkgs/crypto/keys/client"
-	"github.com/gnolang/gno/pkgs/errors"
-	gno "github.com/gnolang/gno/pkgs/gnolang"
-	"github.com/gnolang/gno/pkgs/sdk/bank"
-	"github.com/gnolang/gno/pkgs/sdk/vm"
-	"github.com/gnolang/gno/pkgs/std"
+	"github.com/tendermint/tendermint2/pkgs/amino"
+	"github.com/tendermint/tendermint2/pkgs/command"
+	"github.com/tendermint/tendermint2/pkgs/crypto"
+	"github.com/tendermint/tendermint2/pkgs/crypto/keys"
+	"github.com/tendermint/tendermint2/pkgs/crypto/keys/client"
+	"github.com/tendermint/tendermint2/pkgs/errors"
+	gno "github.com/tendermint/tendermint2/pkgs/gnolang"
+	"github.com/tendermint/tendermint2/pkgs/sdk/bank"
+	"github.com/tendermint/tendermint2/pkgs/sdk/vm"
+	"github.com/tendermint/tendermint2/pkgs/std"
 )
 
 func main() {

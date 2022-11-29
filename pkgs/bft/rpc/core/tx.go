@@ -5,13 +5,13 @@ package core
 import (
 	"fmt"
 
-	cmn "github.com/gnolang/gno/pkgs/common"
+	cmn "github.com/tendermint/tendermint2/pkgs/common"
 
-	tmquery "github.com/gnolang/gno/pkgs/pubsub/query"
-	ctypes "github.com/gnolang/gno/pkgs/bft/rpc/core/types"
-	rpctypes "github.com/gnolang/gno/pkgs/bft/rpc/lib/types"
-	"github.com/gnolang/gno/pkgs/bft/state/txindex/null"
-	"github.com/gnolang/gno/pkgs/bft/types"
+	tmquery "github.com/tendermint/tendermint2/pkgs/pubsub/query"
+	ctypes "github.com/tendermint/tendermint2/pkgs/bft/rpc/core/types"
+	rpctypes "github.com/tendermint/tendermint2/pkgs/bft/rpc/lib/types"
+	"github.com/tendermint/tendermint2/pkgs/bft/state/txindex/null"
+	"github.com/tendermint/tendermint2/pkgs/bft/types"
 )
 
 // Tx allows you to query the transaction results. `nil` could mean the

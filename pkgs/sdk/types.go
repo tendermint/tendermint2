@@ -1,8 +1,8 @@
 package sdk
 
 import (
-	abci "github.com/gnolang/gno/pkgs/bft/abci/types"
-	"github.com/gnolang/gno/pkgs/std"
+	abci "github.com/tendermint/tendermint2/pkgs/bft/abci/types"
+	"github.com/tendermint/tendermint2/pkgs/std"
 )
 
 // Router provides handlers for each transaction type.

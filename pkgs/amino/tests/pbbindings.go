@@ -3,8 +3,8 @@ package tests
 import (
 	time "time"
 
-	amino "github.com/gnolang/gno/pkgs/amino"
-	testspb "github.com/gnolang/gno/pkgs/amino/tests/pb"
+	amino "github.com/tendermint/tendermint2/pkgs/amino"
+	testspb "github.com/tendermint/tendermint2/pkgs/amino/tests/pb"
 	proto "google.golang.org/protobuf/proto"
 	anypb "google.golang.org/protobuf/types/known/anypb"
 	durationpb "google.golang.org/protobuf/types/known/durationpb"

@@ -10,12 +10,12 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	"github.com/gnolang/gno/pkgs/crypto"
-	"github.com/gnolang/gno/pkgs/crypto/ed25519"
-	"github.com/gnolang/gno/pkgs/errors"
-	"github.com/gnolang/gno/pkgs/log"
-	"github.com/gnolang/gno/pkgs/p2p/config"
-	"github.com/gnolang/gno/pkgs/p2p/conn"
+	"github.com/tendermint/tendermint2/pkgs/crypto"
+	"github.com/tendermint/tendermint2/pkgs/crypto/ed25519"
+	"github.com/tendermint/tendermint2/pkgs/errors"
+	"github.com/tendermint/tendermint2/pkgs/log"
+	"github.com/tendermint/tendermint2/pkgs/p2p/config"
+	"github.com/tendermint/tendermint2/pkgs/p2p/conn"
 )
 
 func TestPeerBasic(t *testing.T) {

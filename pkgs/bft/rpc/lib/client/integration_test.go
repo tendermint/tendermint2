@@ -16,7 +16,7 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	"github.com/gnolang/gno/pkgs/log"
+	"github.com/tendermint/tendermint2/pkgs/log"
 )
 
 func TestWSClientReconnectWithJitter(t *testing.T) {

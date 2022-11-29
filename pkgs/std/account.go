@@ -3,8 +3,8 @@ package std
 import (
 	"fmt"
 
-	"github.com/gnolang/gno/pkgs/crypto"
-	"github.com/gnolang/gno/pkgs/errors"
+	"github.com/tendermint/tendermint2/pkgs/crypto"
+	"github.com/tendermint/tendermint2/pkgs/errors"
 )
 
 // Account is an interface used to store coins at a given address within state.

@@ -1,8 +1,8 @@
 package main
 
 import (
-	"github.com/gnolang/gno/pkgs/amino/genproto"
-	"github.com/gnolang/gno/pkgs/amino/tests"
+	"github.com/tendermint/tendermint2/pkgs/amino/genproto"
+	"github.com/tendermint/tendermint2/pkgs/amino/tests"
 )
 
 func main() {

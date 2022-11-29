@@ -1,7 +1,7 @@
 package types
 
 import (
-	"github.com/gnolang/gno/pkgs/amino"
+	"github.com/tendermint/tendermint2/pkgs/amino"
 )
 
 // bytesOrNil returns nil if the input is nil, otherwise returns

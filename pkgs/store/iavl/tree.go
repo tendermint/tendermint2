@@ -3,7 +3,7 @@ package iavl
 import (
 	"fmt"
 
-	"github.com/gnolang/gno/pkgs/iavl"
+	"github.com/tendermint/tendermint2/pkgs/iavl"
 )
 
 var (

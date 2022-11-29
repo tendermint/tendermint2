@@ -7,7 +7,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/gnolang/gno/pkgs/crypto/ed25519"
+	"github.com/tendermint/tendermint2/pkgs/crypto/ed25519"
 )
 
 //-------------------------------------------

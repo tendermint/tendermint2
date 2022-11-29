@@ -9,7 +9,7 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	osm "github.com/gnolang/gno/pkgs/os"
+	osm "github.com/tendermint/tendermint2/pkgs/os"
 )
 
 func TestSIGHUP(t *testing.T) {

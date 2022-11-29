@@ -4,8 +4,8 @@ import (
 	"os"
 	"runtime/pprof"
 
-	ctypes "github.com/gnolang/gno/pkgs/bft/rpc/core/types"
-	rpctypes "github.com/gnolang/gno/pkgs/bft/rpc/lib/types"
+	ctypes "github.com/tendermint/tendermint2/pkgs/bft/rpc/core/types"
+	rpctypes "github.com/tendermint/tendermint2/pkgs/bft/rpc/lib/types"
 )
 
 // UnsafeFlushMempool removes all transactions from the mempool.

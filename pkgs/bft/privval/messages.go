@@ -1,8 +1,8 @@
 package privval
 
 import (
-	"github.com/gnolang/gno/pkgs/bft/types"
-	"github.com/gnolang/gno/pkgs/crypto"
+	"github.com/tendermint/tendermint2/pkgs/bft/types"
+	"github.com/tendermint/tendermint2/pkgs/crypto"
 )
 
 // SignerMessage is sent between Signer Clients and Servers.

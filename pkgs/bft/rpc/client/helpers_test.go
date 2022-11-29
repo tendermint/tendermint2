@@ -8,10 +8,10 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	"github.com/gnolang/gno/pkgs/bft/rpc/client"
-	"github.com/gnolang/gno/pkgs/bft/rpc/client/mock"
-	ctypes "github.com/gnolang/gno/pkgs/bft/rpc/core/types"
-	"github.com/gnolang/gno/pkgs/random"
+	"github.com/tendermint/tendermint2/pkgs/bft/rpc/client"
+	"github.com/tendermint/tendermint2/pkgs/bft/rpc/client/mock"
+	ctypes "github.com/tendermint/tendermint2/pkgs/bft/rpc/core/types"
+	"github.com/tendermint/tendermint2/pkgs/random"
 )
 
 func TestWaitForHeight(t *testing.T) {

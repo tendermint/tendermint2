@@ -1,9 +1,9 @@
 package client
 
 import (
-	"github.com/gnolang/gno/pkgs/command"
-	"github.com/gnolang/gno/pkgs/crypto/keys"
-	"github.com/gnolang/gno/pkgs/errors"
+	"github.com/tendermint/tendermint2/pkgs/command"
+	"github.com/tendermint/tendermint2/pkgs/crypto/keys"
+	"github.com/tendermint/tendermint2/pkgs/errors"
 )
 
 type DeleteOptions struct {

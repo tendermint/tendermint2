@@ -15,13 +15,13 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	"github.com/gnolang/gno/pkgs/colors"
-	"github.com/gnolang/gno/pkgs/log"
-	"github.com/gnolang/gno/pkgs/random"
+	"github.com/tendermint/tendermint2/pkgs/colors"
+	"github.com/tendermint/tendermint2/pkgs/log"
+	"github.com/tendermint/tendermint2/pkgs/random"
 
-	client "github.com/gnolang/gno/pkgs/bft/rpc/lib/client"
-	server "github.com/gnolang/gno/pkgs/bft/rpc/lib/server"
-	types "github.com/gnolang/gno/pkgs/bft/rpc/lib/types"
+	client "github.com/tendermint/tendermint2/pkgs/bft/rpc/lib/client"
+	server "github.com/tendermint/tendermint2/pkgs/bft/rpc/lib/server"
+	types "github.com/tendermint/tendermint2/pkgs/bft/rpc/lib/types"
 )
 
 // Client and Server should work over tcp or unix sockets

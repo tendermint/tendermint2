@@ -6,12 +6,12 @@ import (
 	"reflect"
 	"time"
 
-	"github.com/gnolang/gno/pkgs/amino"
-	sm "github.com/gnolang/gno/pkgs/bft/state"
-	"github.com/gnolang/gno/pkgs/bft/store"
-	"github.com/gnolang/gno/pkgs/bft/types"
-	"github.com/gnolang/gno/pkgs/log"
-	"github.com/gnolang/gno/pkgs/p2p"
+	"github.com/tendermint/tendermint2/pkgs/amino"
+	sm "github.com/tendermint/tendermint2/pkgs/bft/state"
+	"github.com/tendermint/tendermint2/pkgs/bft/store"
+	"github.com/tendermint/tendermint2/pkgs/bft/types"
+	"github.com/tendermint/tendermint2/pkgs/log"
+	"github.com/tendermint/tendermint2/pkgs/p2p"
 )
 
 const (

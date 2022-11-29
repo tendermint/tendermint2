@@ -1,8 +1,8 @@
 package p2p
 
 import (
-	"github.com/gnolang/gno/pkgs/p2p/conn"
-	"github.com/gnolang/gno/pkgs/service"
+	"github.com/tendermint/tendermint2/pkgs/p2p/conn"
+	"github.com/tendermint/tendermint2/pkgs/service"
 )
 
 // Reactor is responsible for handling incoming messages on one or more

@@ -5,9 +5,9 @@ import (
 	"os"
 	"testing"
 
-	"github.com/gnolang/gno/pkgs/bft/abci/example/kvstore"
-	nm "github.com/gnolang/gno/pkgs/bft/node"
-	rpctest "github.com/gnolang/gno/pkgs/bft/rpc/test"
+	"github.com/tendermint/tendermint2/pkgs/bft/abci/example/kvstore"
+	nm "github.com/tendermint/tendermint2/pkgs/bft/node"
+	rpctest "github.com/tendermint/tendermint2/pkgs/bft/rpc/test"
 )
 
 var node *nm.Node

@@ -4,7 +4,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/gnolang/gno/pkgs/command"
+	"github.com/tendermint/tendermint2/pkgs/command"
 	"github.com/jaekwon/testify/assert"
 	"github.com/jaekwon/testify/require"
 )

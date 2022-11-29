@@ -11,7 +11,7 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	"github.com/gnolang/gno/pkgs/random"
+	"github.com/tendermint/tendermint2/pkgs/random"
 )
 
 func TestWriteFileAtomic(t *testing.T) {

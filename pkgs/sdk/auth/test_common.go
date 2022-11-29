@@ -1,16 +1,16 @@
 package auth
 
 import (
-	abci "github.com/gnolang/gno/pkgs/bft/abci/types"
-	bft "github.com/gnolang/gno/pkgs/bft/types"
-	"github.com/gnolang/gno/pkgs/crypto"
-	dbm "github.com/gnolang/gno/pkgs/db"
-	"github.com/gnolang/gno/pkgs/log"
+	abci "github.com/tendermint/tendermint2/pkgs/bft/abci/types"
+	bft "github.com/tendermint/tendermint2/pkgs/bft/types"
+	"github.com/tendermint/tendermint2/pkgs/crypto"
+	dbm "github.com/tendermint/tendermint2/pkgs/db"
+	"github.com/tendermint/tendermint2/pkgs/log"
 
-	"github.com/gnolang/gno/pkgs/sdk"
-	"github.com/gnolang/gno/pkgs/std"
-	"github.com/gnolang/gno/pkgs/store"
-	"github.com/gnolang/gno/pkgs/store/iavl"
+	"github.com/tendermint/tendermint2/pkgs/sdk"
+	"github.com/tendermint/tendermint2/pkgs/std"
+	"github.com/tendermint/tendermint2/pkgs/store"
+	"github.com/tendermint/tendermint2/pkgs/store/iavl"
 )
 
 type testEnv struct {

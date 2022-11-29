@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"io"
 
-	"github.com/gnolang/gno/pkgs/colors"
+	"github.com/tendermint/tendermint2/pkgs/colors"
 )
 
 const (

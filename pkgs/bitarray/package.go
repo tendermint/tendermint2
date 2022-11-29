@@ -1,9 +1,9 @@
 package bitarray
 
-import "github.com/gnolang/gno/pkgs/amino"
+import "github.com/tendermint/tendermint2/pkgs/amino"
 
 var Package = amino.RegisterPackage(amino.NewPackage(
-	"github.com/gnolang/gno/pkgs/bitarray",
+	"github.com/tendermint/tendermint2/pkgs/bitarray",
 	"tm",
 	amino.GetCallersDirname(),
 ).WithDependencies().WithTypes(

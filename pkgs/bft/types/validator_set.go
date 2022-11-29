@@ -7,10 +7,10 @@ import (
 	"sort"
 	"strings"
 
-	abci "github.com/gnolang/gno/pkgs/bft/abci/types"
-	"github.com/gnolang/gno/pkgs/crypto"
-	"github.com/gnolang/gno/pkgs/crypto/merkle"
-	"github.com/gnolang/gno/pkgs/errors"
+	abci "github.com/tendermint/tendermint2/pkgs/bft/abci/types"
+	"github.com/tendermint/tendermint2/pkgs/crypto"
+	"github.com/tendermint/tendermint2/pkgs/crypto/merkle"
+	"github.com/tendermint/tendermint2/pkgs/errors"
 )
 
 // MaxTotalVotingPower - the maximum allowed total voting power.

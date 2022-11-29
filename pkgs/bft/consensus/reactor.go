@@ -6,16 +6,16 @@ import (
 	"sync"
 	"time"
 
-	"github.com/gnolang/gno/pkgs/amino"
-	cstypes "github.com/gnolang/gno/pkgs/bft/consensus/types"
-	sm "github.com/gnolang/gno/pkgs/bft/state"
-	"github.com/gnolang/gno/pkgs/bft/types"
-	tmtime "github.com/gnolang/gno/pkgs/bft/types/time"
-	"github.com/gnolang/gno/pkgs/bitarray"
-	"github.com/gnolang/gno/pkgs/errors"
-	"github.com/gnolang/gno/pkgs/events"
-	"github.com/gnolang/gno/pkgs/log"
-	"github.com/gnolang/gno/pkgs/p2p"
+	"github.com/tendermint/tendermint2/pkgs/amino"
+	cstypes "github.com/tendermint/tendermint2/pkgs/bft/consensus/types"
+	sm "github.com/tendermint/tendermint2/pkgs/bft/state"
+	"github.com/tendermint/tendermint2/pkgs/bft/types"
+	tmtime "github.com/tendermint/tendermint2/pkgs/bft/types/time"
+	"github.com/tendermint/tendermint2/pkgs/bitarray"
+	"github.com/tendermint/tendermint2/pkgs/errors"
+	"github.com/tendermint/tendermint2/pkgs/events"
+	"github.com/tendermint/tendermint2/pkgs/log"
+	"github.com/tendermint/tendermint2/pkgs/p2p"
 )
 
 const (

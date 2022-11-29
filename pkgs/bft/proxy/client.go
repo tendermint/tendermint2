@@ -3,10 +3,10 @@ package proxy
 import (
 	"sync"
 
-	abcicli "github.com/gnolang/gno/pkgs/bft/abci/client"
-	"github.com/gnolang/gno/pkgs/bft/abci/example/counter"
-	"github.com/gnolang/gno/pkgs/bft/abci/example/kvstore"
-	abci "github.com/gnolang/gno/pkgs/bft/abci/types"
+	abcicli "github.com/tendermint/tendermint2/pkgs/bft/abci/client"
+	"github.com/tendermint/tendermint2/pkgs/bft/abci/example/counter"
+	"github.com/tendermint/tendermint2/pkgs/bft/abci/example/kvstore"
+	abci "github.com/tendermint/tendermint2/pkgs/bft/abci/types"
 )
 
 // NewABCIClient returns newly connected client

@@ -1,6 +1,6 @@
 package sdk
 
-import abci "github.com/gnolang/gno/pkgs/bft/abci/types"
+import abci "github.com/tendermint/tendermint2/pkgs/bft/abci/types"
 
 // InitChainer initializes application state at genesis
 type InitChainer func(ctx Context, req abci.RequestInitChain) abci.ResponseInitChain

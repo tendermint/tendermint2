@@ -4,8 +4,8 @@ import (
 	"net"
 	"time"
 
-	"github.com/gnolang/gno/pkgs/crypto/ed25519"
-	p2pconn "github.com/gnolang/gno/pkgs/p2p/conn"
+	"github.com/tendermint/tendermint2/pkgs/crypto/ed25519"
+	p2pconn "github.com/tendermint/tendermint2/pkgs/p2p/conn"
 )
 
 const (

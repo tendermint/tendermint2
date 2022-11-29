@@ -5,8 +5,8 @@ import (
 	"math/rand"
 	"testing"
 
-	"github.com/gnolang/gno/pkgs/db"
-	"github.com/gnolang/gno/pkgs/random"
+	"github.com/tendermint/tendermint2/pkgs/db"
+	"github.com/tendermint/tendermint2/pkgs/random"
 )
 
 // This file implement fuzz testing by generating programs and then running

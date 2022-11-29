@@ -8,14 +8,14 @@ import (
 	"strings"
 	"syscall"
 
-	"github.com/gnolang/gno/pkgs/amino"
-	abci "github.com/gnolang/gno/pkgs/bft/abci/types"
-	bft "github.com/gnolang/gno/pkgs/bft/types"
-	dbm "github.com/gnolang/gno/pkgs/db"
-	"github.com/gnolang/gno/pkgs/errors"
-	"github.com/gnolang/gno/pkgs/log"
-	"github.com/gnolang/gno/pkgs/std"
-	"github.com/gnolang/gno/pkgs/store"
+	"github.com/tendermint/tendermint2/pkgs/amino"
+	abci "github.com/tendermint/tendermint2/pkgs/bft/abci/types"
+	bft "github.com/tendermint/tendermint2/pkgs/bft/types"
+	dbm "github.com/tendermint/tendermint2/pkgs/db"
+	"github.com/tendermint/tendermint2/pkgs/errors"
+	"github.com/tendermint/tendermint2/pkgs/log"
+	"github.com/tendermint/tendermint2/pkgs/std"
+	"github.com/tendermint/tendermint2/pkgs/store"
 )
 
 // Key to store the consensus params in the main store.

@@ -4,17 +4,17 @@ import (
 	"fmt"
 	"sync"
 
-	"github.com/gnolang/gno/pkgs/amino"
-	abci "github.com/gnolang/gno/pkgs/bft/abci/types"
-	"github.com/gnolang/gno/pkgs/crypto/merkle"
-	dbm "github.com/gnolang/gno/pkgs/db"
-	"github.com/gnolang/gno/pkgs/errors"
-	"github.com/gnolang/gno/pkgs/iavl"
-	"github.com/gnolang/gno/pkgs/std"
+	"github.com/tendermint/tendermint2/pkgs/amino"
+	abci "github.com/tendermint/tendermint2/pkgs/bft/abci/types"
+	"github.com/tendermint/tendermint2/pkgs/crypto/merkle"
+	dbm "github.com/tendermint/tendermint2/pkgs/db"
+	"github.com/tendermint/tendermint2/pkgs/errors"
+	"github.com/tendermint/tendermint2/pkgs/iavl"
+	"github.com/tendermint/tendermint2/pkgs/std"
 
-	"github.com/gnolang/gno/pkgs/store/cache"
-	serrors "github.com/gnolang/gno/pkgs/store/errors"
-	"github.com/gnolang/gno/pkgs/store/types"
+	"github.com/tendermint/tendermint2/pkgs/store/cache"
+	serrors "github.com/tendermint/tendermint2/pkgs/store/errors"
+	"github.com/tendermint/tendermint2/pkgs/store/types"
 )
 
 const (

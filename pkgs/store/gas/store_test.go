@@ -4,11 +4,11 @@ import (
 	"fmt"
 	"testing"
 
-	dbm "github.com/gnolang/gno/pkgs/db"
+	dbm "github.com/tendermint/tendermint2/pkgs/db"
 
-	"github.com/gnolang/gno/pkgs/store/dbadapter"
-	"github.com/gnolang/gno/pkgs/store/gas"
-	"github.com/gnolang/gno/pkgs/store/types"
+	"github.com/tendermint/tendermint2/pkgs/store/dbadapter"
+	"github.com/tendermint/tendermint2/pkgs/store/gas"
+	"github.com/tendermint/tendermint2/pkgs/store/types"
 
 	"github.com/stretchr/testify/require"
 )

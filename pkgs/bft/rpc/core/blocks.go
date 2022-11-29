@@ -3,11 +3,11 @@ package core
 import (
 	"fmt"
 
-	ctypes "github.com/gnolang/gno/pkgs/bft/rpc/core/types"
-	rpctypes "github.com/gnolang/gno/pkgs/bft/rpc/lib/types"
-	sm "github.com/gnolang/gno/pkgs/bft/state"
-	"github.com/gnolang/gno/pkgs/bft/types"
-	"github.com/gnolang/gno/pkgs/maths"
+	ctypes "github.com/tendermint/tendermint2/pkgs/bft/rpc/core/types"
+	rpctypes "github.com/tendermint/tendermint2/pkgs/bft/rpc/lib/types"
+	sm "github.com/tendermint/tendermint2/pkgs/bft/state"
+	"github.com/tendermint/tendermint2/pkgs/bft/types"
+	"github.com/tendermint/tendermint2/pkgs/maths"
 )
 
 // Get block headers for minHeight <= height <= maxHeight.

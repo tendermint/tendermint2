@@ -7,10 +7,10 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	"github.com/gnolang/gno/pkgs/amino"
-	"github.com/gnolang/gno/pkgs/db"
-	"github.com/gnolang/gno/pkgs/random"
-	"github.com/gnolang/gno/pkgs/testutils"
+	"github.com/tendermint/tendermint2/pkgs/amino"
+	"github.com/tendermint/tendermint2/pkgs/db"
+	"github.com/tendermint/tendermint2/pkgs/random"
+	"github.com/tendermint/tendermint2/pkgs/testutils"
 )
 
 func TestTreeGetWithProof(t *testing.T) {

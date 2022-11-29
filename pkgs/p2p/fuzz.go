@@ -5,8 +5,8 @@ import (
 	"sync"
 	"time"
 
-	"github.com/gnolang/gno/pkgs/p2p/config"
-	"github.com/gnolang/gno/pkgs/random"
+	"github.com/tendermint/tendermint2/pkgs/p2p/config"
+	"github.com/tendermint/tendermint2/pkgs/random"
 )
 
 // FuzzedConnection wraps any net.Conn and depending on the mode either delays

@@ -7,12 +7,12 @@ import (
 	"sync"
 	"time"
 
-	"github.com/gnolang/gno/pkgs/amino"
-	cfg "github.com/gnolang/gno/pkgs/bft/mempool/config"
-	"github.com/gnolang/gno/pkgs/bft/types"
-	"github.com/gnolang/gno/pkgs/clist"
-	"github.com/gnolang/gno/pkgs/log"
-	"github.com/gnolang/gno/pkgs/p2p"
+	"github.com/tendermint/tendermint2/pkgs/amino"
+	cfg "github.com/tendermint/tendermint2/pkgs/bft/mempool/config"
+	"github.com/tendermint/tendermint2/pkgs/bft/types"
+	"github.com/tendermint/tendermint2/pkgs/clist"
+	"github.com/tendermint/tendermint2/pkgs/log"
+	"github.com/tendermint/tendermint2/pkgs/p2p"
 )
 
 const (

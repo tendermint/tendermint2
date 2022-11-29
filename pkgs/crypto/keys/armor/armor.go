@@ -4,12 +4,12 @@ import (
 	"encoding/hex"
 	"fmt"
 
-	"github.com/gnolang/gno/pkgs/crypto"
-	"github.com/gnolang/gno/pkgs/crypto/armor"
-	"github.com/gnolang/gno/pkgs/crypto/bcrypt"
-	"github.com/gnolang/gno/pkgs/crypto/keys/keyerror"
-	"github.com/gnolang/gno/pkgs/crypto/xsalsa20symmetric"
-	"github.com/gnolang/gno/pkgs/os"
+	"github.com/tendermint/tendermint2/pkgs/crypto"
+	"github.com/tendermint/tendermint2/pkgs/crypto/armor"
+	"github.com/tendermint/tendermint2/pkgs/crypto/bcrypt"
+	"github.com/tendermint/tendermint2/pkgs/crypto/keys/keyerror"
+	"github.com/tendermint/tendermint2/pkgs/crypto/xsalsa20symmetric"
+	"github.com/tendermint/tendermint2/pkgs/os"
 )
 
 const (

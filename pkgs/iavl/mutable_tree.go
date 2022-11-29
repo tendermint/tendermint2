@@ -4,8 +4,8 @@ import (
 	"bytes"
 	"fmt"
 
-	dbm "github.com/gnolang/gno/pkgs/db"
-	"github.com/gnolang/gno/pkgs/errors"
+	dbm "github.com/tendermint/tendermint2/pkgs/db"
+	"github.com/tendermint/tendermint2/pkgs/errors"
 )
 
 // ErrVersionDoesNotExist is returned if a requested version does not exist.

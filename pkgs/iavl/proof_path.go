@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/gnolang/gno/pkgs/errors"
+	"github.com/tendermint/tendermint2/pkgs/errors"
 )
 
 // pathWithLeaf is a path to a leaf node and the leaf node itself.

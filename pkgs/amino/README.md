@@ -1,6 +1,6 @@
 # Amino
 
-http://github.com/gnolang/gno/pkgs/amino
+http://github.com/tendermint/tendermint2/pkgs/amino
 
 NOTE: This project used to be gnolang/gno/pkgs/amino, derived from
 tendermint/go-amino.
@@ -62,12 +62,12 @@ Each package should declare in a package local file (by convention called amino.
 which should look like the following:
 
 ```go
-// see github.com/gnolang/gno/pkgs/amino/protogen/example/main.go
+// see github.com/tendermint/tendermint2/pkgs/amino/protogen/example/main.go
 package main
 
 import (
-	"github.com/gnolang/gno/pkgs/amino"
-	"github.com/gnolang/gno/pkgs/amino/genproto/example/submodule"
+	"github.com/tendermint/tendermint2/pkgs/amino"
+	"github.com/tendermint/tendermint2/pkgs/amino/genproto/example/submodule"
 )
 
 var Package = amino.RegisterPackage(

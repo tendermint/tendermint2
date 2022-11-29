@@ -8,9 +8,9 @@ import (
 	"strconv"
 	"strings"
 
-	auto "github.com/gnolang/gno/pkgs/autofile"
-	"github.com/gnolang/gno/pkgs/flow"
-	osm "github.com/gnolang/gno/pkgs/os"
+	auto "github.com/tendermint/tendermint2/pkgs/autofile"
+	"github.com/tendermint/tendermint2/pkgs/flow"
+	osm "github.com/tendermint/tendermint2/pkgs/os"
 )
 
 const (

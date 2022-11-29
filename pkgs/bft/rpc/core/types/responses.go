@@ -4,13 +4,13 @@ import (
 	"encoding/json"
 	"time"
 
-	abci "github.com/gnolang/gno/pkgs/bft/abci/types"
-	cnscfg "github.com/gnolang/gno/pkgs/bft/consensus/config"
-	cstypes "github.com/gnolang/gno/pkgs/bft/consensus/types"
-	"github.com/gnolang/gno/pkgs/bft/state"
-	"github.com/gnolang/gno/pkgs/bft/types"
-	"github.com/gnolang/gno/pkgs/crypto"
-	"github.com/gnolang/gno/pkgs/p2p"
+	abci "github.com/tendermint/tendermint2/pkgs/bft/abci/types"
+	cnscfg "github.com/tendermint/tendermint2/pkgs/bft/consensus/config"
+	cstypes "github.com/tendermint/tendermint2/pkgs/bft/consensus/types"
+	"github.com/tendermint/tendermint2/pkgs/bft/state"
+	"github.com/tendermint/tendermint2/pkgs/bft/types"
+	"github.com/tendermint/tendermint2/pkgs/crypto"
+	"github.com/tendermint/tendermint2/pkgs/p2p"
 )
 
 // List of blocks

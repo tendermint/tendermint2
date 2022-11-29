@@ -1,7 +1,7 @@
 package p2p
 
 import (
-	"github.com/gnolang/gno/pkgs/p2p/conn"
+	"github.com/tendermint/tendermint2/pkgs/p2p/conn"
 )
 
 type (

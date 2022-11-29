@@ -7,16 +7,16 @@ import (
 	"strings"
 	"time"
 
-	abci "github.com/gnolang/gno/pkgs/bft/abci/types"
-	cfg "github.com/gnolang/gno/pkgs/bft/config"
-	nm "github.com/gnolang/gno/pkgs/bft/node"
-	"github.com/gnolang/gno/pkgs/bft/privval"
-	"github.com/gnolang/gno/pkgs/bft/proxy"
-	ctypes "github.com/gnolang/gno/pkgs/bft/rpc/core/types"
-	rpcclient "github.com/gnolang/gno/pkgs/bft/rpc/lib/client"
-	"github.com/gnolang/gno/pkgs/log"
-	osm "github.com/gnolang/gno/pkgs/os"
-	"github.com/gnolang/gno/pkgs/p2p"
+	abci "github.com/tendermint/tendermint2/pkgs/bft/abci/types"
+	cfg "github.com/tendermint/tendermint2/pkgs/bft/config"
+	nm "github.com/tendermint/tendermint2/pkgs/bft/node"
+	"github.com/tendermint/tendermint2/pkgs/bft/privval"
+	"github.com/tendermint/tendermint2/pkgs/bft/proxy"
+	ctypes "github.com/tendermint/tendermint2/pkgs/bft/rpc/core/types"
+	rpcclient "github.com/tendermint/tendermint2/pkgs/bft/rpc/lib/client"
+	"github.com/tendermint/tendermint2/pkgs/log"
+	osm "github.com/tendermint/tendermint2/pkgs/os"
+	"github.com/tendermint/tendermint2/pkgs/p2p"
 )
 
 // Options helps with specifying some parameters for our RPC testing for greater

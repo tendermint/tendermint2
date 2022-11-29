@@ -3,13 +3,13 @@ package client
 import (
 	"io/ioutil"
 
-	"github.com/gnolang/gno/pkgs/amino"
-	abci "github.com/gnolang/gno/pkgs/bft/abci/types"
-	"github.com/gnolang/gno/pkgs/bft/rpc/client"
-	ctypes "github.com/gnolang/gno/pkgs/bft/rpc/core/types"
-	"github.com/gnolang/gno/pkgs/command"
-	"github.com/gnolang/gno/pkgs/errors"
-	"github.com/gnolang/gno/pkgs/std"
+	"github.com/tendermint/tendermint2/pkgs/amino"
+	abci "github.com/tendermint/tendermint2/pkgs/bft/abci/types"
+	"github.com/tendermint/tendermint2/pkgs/bft/rpc/client"
+	ctypes "github.com/tendermint/tendermint2/pkgs/bft/rpc/core/types"
+	"github.com/tendermint/tendermint2/pkgs/command"
+	"github.com/tendermint/tendermint2/pkgs/errors"
+	"github.com/tendermint/tendermint2/pkgs/std"
 )
 
 type BroadcastOptions struct {

@@ -8,9 +8,9 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	"github.com/gnolang/gno/pkgs/bft/types"
-	"github.com/gnolang/gno/pkgs/random"
-	"github.com/gnolang/gno/pkgs/testutils"
+	"github.com/tendermint/tendermint2/pkgs/bft/types"
+	"github.com/tendermint/tendermint2/pkgs/random"
+	"github.com/tendermint/tendermint2/pkgs/testutils"
 )
 
 type signerTestCase struct {

@@ -3,7 +3,7 @@ package events
 import (
 	"fmt"
 
-	auto "github.com/gnolang/gno/pkgs/autofile"
+	auto "github.com/tendermint/tendermint2/pkgs/autofile"
 )
 
 // StoreStream stores events to disk but is also listenaable.

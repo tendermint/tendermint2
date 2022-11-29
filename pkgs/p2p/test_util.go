@@ -5,15 +5,15 @@ import (
 	"net"
 	"time"
 
-	"github.com/gnolang/gno/pkgs/crypto"
-	"github.com/gnolang/gno/pkgs/crypto/ed25519"
-	"github.com/gnolang/gno/pkgs/errors"
-	"github.com/gnolang/gno/pkgs/log"
-	osm "github.com/gnolang/gno/pkgs/os"
-	"github.com/gnolang/gno/pkgs/p2p/config"
-	"github.com/gnolang/gno/pkgs/p2p/conn"
-	"github.com/gnolang/gno/pkgs/random"
-	"github.com/gnolang/gno/pkgs/versionset"
+	"github.com/tendermint/tendermint2/pkgs/crypto"
+	"github.com/tendermint/tendermint2/pkgs/crypto/ed25519"
+	"github.com/tendermint/tendermint2/pkgs/errors"
+	"github.com/tendermint/tendermint2/pkgs/log"
+	osm "github.com/tendermint/tendermint2/pkgs/os"
+	"github.com/tendermint/tendermint2/pkgs/p2p/config"
+	"github.com/tendermint/tendermint2/pkgs/p2p/conn"
+	"github.com/tendermint/tendermint2/pkgs/random"
+	"github.com/tendermint/tendermint2/pkgs/versionset"
 )
 
 const testCh = 0x01

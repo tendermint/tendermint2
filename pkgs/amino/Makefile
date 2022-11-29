@@ -28,7 +28,7 @@ gofuzz_binary:
 	rm -rf tests/fuzz/binary/crashers/
 	rm -rf tests/fuzz/binary/suppressions/
 	go run tests/fuzz/binary/init-corpus/main.go --corpus-parent=tests/fuzz/binary
-	go-fuzz-build github.com/gnolang/gno/pkgs/amino/tests/fuzz/binary
+	go-fuzz-build github.com/tendermint/tendermint2/pkgs/amino/tests/fuzz/binary
 	go-fuzz -bin=./fuzzbinary-fuzz.zip -workdir=tests/fuzz/binary
 	rm -rf ./fuzzbinary-fuzz.zip
 
@@ -36,7 +36,7 @@ gofuzz_json:
 	rm -rf tests/fuzz/json/corpus/
 	rm -rf tests/fuzz/json/crashers/
 	rm -rf tests/fuzz/json/suppressions/
-	go-fuzz-build github.com/gnolang/gno/pkgs/amino/tests/fuzz/json
+	go-fuzz-build github.com/tendermint/tendermint2/pkgs/amino/tests/fuzz/json
 	go-fuzz -bin=./fuzzjson-fuzz.zip -workdir=tests/fuzz/json
 	rm -rf ./fuzzjson-fuzz.zip
 

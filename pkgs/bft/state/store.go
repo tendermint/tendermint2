@@ -3,12 +3,12 @@ package state
 import (
 	"fmt"
 
-	"github.com/gnolang/gno/pkgs/amino"
-	abci "github.com/gnolang/gno/pkgs/bft/abci/types"
-	"github.com/gnolang/gno/pkgs/bft/types"
-	dbm "github.com/gnolang/gno/pkgs/db"
-	"github.com/gnolang/gno/pkgs/maths"
-	osm "github.com/gnolang/gno/pkgs/os"
+	"github.com/tendermint/tendermint2/pkgs/amino"
+	abci "github.com/tendermint/tendermint2/pkgs/bft/abci/types"
+	"github.com/tendermint/tendermint2/pkgs/bft/types"
+	dbm "github.com/tendermint/tendermint2/pkgs/db"
+	"github.com/tendermint/tendermint2/pkgs/maths"
+	osm "github.com/tendermint/tendermint2/pkgs/os"
 )
 
 const (

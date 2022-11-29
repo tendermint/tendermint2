@@ -6,12 +6,12 @@ import (
 	"sync"
 	"time"
 
-	"github.com/gnolang/gno/pkgs/cmap"
-	"github.com/gnolang/gno/pkgs/errors"
-	"github.com/gnolang/gno/pkgs/p2p/config"
-	"github.com/gnolang/gno/pkgs/p2p/conn"
-	"github.com/gnolang/gno/pkgs/random"
-	"github.com/gnolang/gno/pkgs/service"
+	"github.com/tendermint/tendermint2/pkgs/cmap"
+	"github.com/tendermint/tendermint2/pkgs/errors"
+	"github.com/tendermint/tendermint2/pkgs/p2p/config"
+	"github.com/tendermint/tendermint2/pkgs/p2p/conn"
+	"github.com/tendermint/tendermint2/pkgs/random"
+	"github.com/tendermint/tendermint2/pkgs/service"
 )
 
 const (

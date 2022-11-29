@@ -11,8 +11,8 @@ import (
 	"runtime"
 	"time"
 
-	"github.com/gnolang/gno/pkgs/amino/pkg"
-	"github.com/gnolang/gno/pkgs/errors"
+	"github.com/tendermint/tendermint2/pkgs/amino/pkg"
+	"github.com/tendermint/tendermint2/pkgs/errors"
 	"google.golang.org/protobuf/proto"
 	"google.golang.org/protobuf/types/known/durationpb"
 	"google.golang.org/protobuf/types/known/timestamppb"

@@ -1,7 +1,7 @@
 package merkle
 
 import (
-	amino "github.com/gnolang/gno/pkgs/amino"
+	amino "github.com/tendermint/tendermint2/pkgs/amino"
 )
 
 var cdc *amino.Codec

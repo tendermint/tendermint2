@@ -14,7 +14,7 @@ import (
 	"sync"
 	"time"
 
-	"github.com/gnolang/gno/pkgs/service"
+	"github.com/tendermint/tendermint2/pkgs/service"
 )
 
 const (

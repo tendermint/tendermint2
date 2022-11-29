@@ -5,9 +5,9 @@ import (
 	"errors"
 	"fmt"
 
-	abci "github.com/gnolang/gno/pkgs/bft/abci/types"
-	"github.com/gnolang/gno/pkgs/crypto/merkle"
-	"github.com/gnolang/gno/pkgs/crypto/tmhash"
+	abci "github.com/tendermint/tendermint2/pkgs/bft/abci/types"
+	"github.com/tendermint/tendermint2/pkgs/crypto/merkle"
+	"github.com/tendermint/tendermint2/pkgs/crypto/tmhash"
 )
 
 // Tx is an arbitrary byte array.

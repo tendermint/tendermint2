@@ -4,8 +4,8 @@ import (
 	"encoding/binary"
 	"fmt"
 
-	"github.com/gnolang/gno/pkgs/bft/abci/example/errors"
-	abci "github.com/gnolang/gno/pkgs/bft/abci/types"
+	"github.com/tendermint/tendermint2/pkgs/bft/abci/example/errors"
+	abci "github.com/tendermint/tendermint2/pkgs/bft/abci/types"
 )
 
 type CounterApplication struct {

@@ -4,9 +4,9 @@ import (
 	"crypto/sha256"
 	"fmt"
 
-	"github.com/gnolang/gno/pkgs/command"
-	"github.com/gnolang/gno/pkgs/crypto/bip39"
-	"github.com/gnolang/gno/pkgs/errors"
+	"github.com/tendermint/tendermint2/pkgs/command"
+	"github.com/tendermint/tendermint2/pkgs/crypto/bip39"
+	"github.com/tendermint/tendermint2/pkgs/errors"
 )
 
 type GenerateOptions struct {

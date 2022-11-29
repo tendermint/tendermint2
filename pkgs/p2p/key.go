@@ -5,10 +5,10 @@ import (
 	"fmt"
 	"io/ioutil"
 
-	"github.com/gnolang/gno/pkgs/amino"
-	"github.com/gnolang/gno/pkgs/crypto"
-	"github.com/gnolang/gno/pkgs/crypto/ed25519"
-	osm "github.com/gnolang/gno/pkgs/os"
+	"github.com/tendermint/tendermint2/pkgs/amino"
+	"github.com/tendermint/tendermint2/pkgs/crypto"
+	"github.com/tendermint/tendermint2/pkgs/crypto/ed25519"
+	osm "github.com/tendermint/tendermint2/pkgs/os"
 )
 
 //------------------------------------------------------------------------------

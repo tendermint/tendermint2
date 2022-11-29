@@ -3,8 +3,8 @@ package auth
 import (
 	"testing"
 
-	"github.com/gnolang/gno/pkgs/crypto"
-	"github.com/gnolang/gno/pkgs/std"
+	"github.com/tendermint/tendermint2/pkgs/crypto"
+	"github.com/tendermint/tendermint2/pkgs/std"
 )
 
 func BenchmarkAccountMapperGetAccountFound(b *testing.B) {

@@ -16,11 +16,11 @@ import (
 
 	"github.com/gorilla/websocket"
 
-	"github.com/gnolang/gno/pkgs/amino"
-	types "github.com/gnolang/gno/pkgs/bft/rpc/lib/types"
-	"github.com/gnolang/gno/pkgs/errors"
-	"github.com/gnolang/gno/pkgs/log"
-	"github.com/gnolang/gno/pkgs/service"
+	"github.com/tendermint/tendermint2/pkgs/amino"
+	types "github.com/tendermint/tendermint2/pkgs/bft/rpc/lib/types"
+	"github.com/tendermint/tendermint2/pkgs/errors"
+	"github.com/tendermint/tendermint2/pkgs/log"
+	"github.com/tendermint/tendermint2/pkgs/service"
 )
 
 // RegisterRPCFuncs adds a route for each function in the funcMap, as well as general jsonrpc and websocket handlers for all functions.
@@ -741,7 +741,7 @@ func (wsc *wsConnection) writeRoutine() {
 }
 
 // All writes to the websocket must (re)set the write deadline.
-// If some writes don't set it while others do, they may timeout incorrectly (https://github.com/gnolang/gno/pkgs/bft/issues/553)
+// If some writes don't set it while others do, they may timeout incorrectly (https://github.com/tendermint/tendermint2/pkgs/bft/issues/553)
 func (wsc *wsConnection) writeMessageWithDeadline(msgType int, msg []byte) error {
 	if err := wsc.baseConn.SetWriteDeadline(time.Now().Add(wsc.writeWait)); err != nil {
 		return err

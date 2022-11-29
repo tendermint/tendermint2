@@ -9,7 +9,7 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	"github.com/gnolang/gno/pkgs/db"
+	"github.com/tendermint/tendermint2/pkgs/db"
 )
 
 func TestBasic(t *testing.T) {

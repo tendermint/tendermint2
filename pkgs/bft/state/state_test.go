@@ -10,13 +10,13 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	abci "github.com/gnolang/gno/pkgs/bft/abci/types"
-	cfg "github.com/gnolang/gno/pkgs/bft/config"
-	sm "github.com/gnolang/gno/pkgs/bft/state"
-	"github.com/gnolang/gno/pkgs/bft/types"
-	"github.com/gnolang/gno/pkgs/crypto/ed25519"
-	dbm "github.com/gnolang/gno/pkgs/db"
-	"github.com/gnolang/gno/pkgs/random"
+	abci "github.com/tendermint/tendermint2/pkgs/bft/abci/types"
+	cfg "github.com/tendermint/tendermint2/pkgs/bft/config"
+	sm "github.com/tendermint/tendermint2/pkgs/bft/state"
+	"github.com/tendermint/tendermint2/pkgs/bft/types"
+	"github.com/tendermint/tendermint2/pkgs/crypto/ed25519"
+	dbm "github.com/tendermint/tendermint2/pkgs/db"
+	"github.com/tendermint/tendermint2/pkgs/random"
 )
 
 // setupTestCase does setup common to all test cases.

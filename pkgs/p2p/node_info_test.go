@@ -5,8 +5,8 @@ import (
 	"net"
 	"testing"
 
-	"github.com/gnolang/gno/pkgs/crypto/ed25519"
-	"github.com/gnolang/gno/pkgs/versionset"
+	"github.com/tendermint/tendermint2/pkgs/crypto/ed25519"
+	"github.com/tendermint/tendermint2/pkgs/versionset"
 	"github.com/stretchr/testify/assert"
 )
 

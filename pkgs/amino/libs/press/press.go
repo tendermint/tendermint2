@@ -5,7 +5,7 @@ import (
 	"math/rand"
 	"strings"
 
-	"github.com/gnolang/gno/pkgs/amino/libs/detrand"
+	"github.com/tendermint/tendermint2/pkgs/amino/libs/detrand"
 )
 
 type line struct {

@@ -6,9 +6,9 @@ import (
 	"encoding/json"
 	"fmt"
 
-	abci "github.com/gnolang/gno/pkgs/bft/abci/types"
-	abciver "github.com/gnolang/gno/pkgs/bft/abci/version"
-	dbm "github.com/gnolang/gno/pkgs/db"
+	abci "github.com/tendermint/tendermint2/pkgs/bft/abci/types"
+	abciver "github.com/tendermint/tendermint2/pkgs/bft/abci/version"
+	dbm "github.com/tendermint/tendermint2/pkgs/db"
 )
 
 var (

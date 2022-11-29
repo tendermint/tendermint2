@@ -6,13 +6,13 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	dbm "github.com/gnolang/gno/pkgs/db"
-	tiavl "github.com/gnolang/gno/pkgs/iavl"
+	dbm "github.com/tendermint/tendermint2/pkgs/db"
+	tiavl "github.com/tendermint/tendermint2/pkgs/iavl"
 
-	"github.com/gnolang/gno/pkgs/store/dbadapter"
-	"github.com/gnolang/gno/pkgs/store/gas"
-	"github.com/gnolang/gno/pkgs/store/iavl"
-	"github.com/gnolang/gno/pkgs/store/types"
+	"github.com/tendermint/tendermint2/pkgs/store/dbadapter"
+	"github.com/tendermint/tendermint2/pkgs/store/gas"
+	"github.com/tendermint/tendermint2/pkgs/store/iavl"
+	"github.com/tendermint/tendermint2/pkgs/store/types"
 )
 
 // copied from iavl/store_test.go

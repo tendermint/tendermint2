@@ -10,35 +10,35 @@ import (
 
 	"github.com/gnolang/cors"
 
-	"github.com/gnolang/gno/pkgs/amino"
-	abci "github.com/gnolang/gno/pkgs/bft/abci/types"
-	bc "github.com/gnolang/gno/pkgs/bft/blockchain"
-	cfg "github.com/gnolang/gno/pkgs/bft/config"
-	"github.com/gnolang/gno/pkgs/bft/consensus"
-	cs "github.com/gnolang/gno/pkgs/bft/consensus"
-	mempl "github.com/gnolang/gno/pkgs/bft/mempool"
-	"github.com/gnolang/gno/pkgs/bft/privval"
-	"github.com/gnolang/gno/pkgs/bft/proxy"
-	rpccore "github.com/gnolang/gno/pkgs/bft/rpc/core"
-	_ "github.com/gnolang/gno/pkgs/bft/rpc/core/types"
-	rpcserver "github.com/gnolang/gno/pkgs/bft/rpc/lib/server"
-	sm "github.com/gnolang/gno/pkgs/bft/state"
-	"github.com/gnolang/gno/pkgs/bft/state/txindex"
-	"github.com/gnolang/gno/pkgs/events"
+	"github.com/tendermint/tendermint2/pkgs/amino"
+	abci "github.com/tendermint/tendermint2/pkgs/bft/abci/types"
+	bc "github.com/tendermint/tendermint2/pkgs/bft/blockchain"
+	cfg "github.com/tendermint/tendermint2/pkgs/bft/config"
+	"github.com/tendermint/tendermint2/pkgs/bft/consensus"
+	cs "github.com/tendermint/tendermint2/pkgs/bft/consensus"
+	mempl "github.com/tendermint/tendermint2/pkgs/bft/mempool"
+	"github.com/tendermint/tendermint2/pkgs/bft/privval"
+	"github.com/tendermint/tendermint2/pkgs/bft/proxy"
+	rpccore "github.com/tendermint/tendermint2/pkgs/bft/rpc/core"
+	_ "github.com/tendermint/tendermint2/pkgs/bft/rpc/core/types"
+	rpcserver "github.com/tendermint/tendermint2/pkgs/bft/rpc/lib/server"
+	sm "github.com/tendermint/tendermint2/pkgs/bft/state"
+	"github.com/tendermint/tendermint2/pkgs/bft/state/txindex"
+	"github.com/tendermint/tendermint2/pkgs/events"
 
-	//"github.com/gnolang/gno/pkgs/bft/state/txindex/kv"
-	"github.com/gnolang/gno/pkgs/bft/state/txindex/null"
-	"github.com/gnolang/gno/pkgs/bft/store"
-	"github.com/gnolang/gno/pkgs/bft/types"
-	tmtime "github.com/gnolang/gno/pkgs/bft/types/time"
-	"github.com/gnolang/gno/pkgs/bft/version"
-	"github.com/gnolang/gno/pkgs/crypto"
-	dbm "github.com/gnolang/gno/pkgs/db"
-	"github.com/gnolang/gno/pkgs/errors"
-	"github.com/gnolang/gno/pkgs/log"
-	"github.com/gnolang/gno/pkgs/p2p"
-	"github.com/gnolang/gno/pkgs/service"
-	verset "github.com/gnolang/gno/pkgs/versionset"
+	//"github.com/tendermint/tendermint2/pkgs/bft/state/txindex/kv"
+	"github.com/tendermint/tendermint2/pkgs/bft/state/txindex/null"
+	"github.com/tendermint/tendermint2/pkgs/bft/store"
+	"github.com/tendermint/tendermint2/pkgs/bft/types"
+	tmtime "github.com/tendermint/tendermint2/pkgs/bft/types/time"
+	"github.com/tendermint/tendermint2/pkgs/bft/version"
+	"github.com/tendermint/tendermint2/pkgs/crypto"
+	dbm "github.com/tendermint/tendermint2/pkgs/db"
+	"github.com/tendermint/tendermint2/pkgs/errors"
+	"github.com/tendermint/tendermint2/pkgs/log"
+	"github.com/tendermint/tendermint2/pkgs/p2p"
+	"github.com/tendermint/tendermint2/pkgs/service"
+	verset "github.com/tendermint/tendermint2/pkgs/versionset"
 )
 
 //------------------------------------------------------------------------------
@@ -467,7 +467,7 @@ func NewNode(config *cfg.Config,
 
 	pubKey := privValidator.GetPubKey()
 	if pubKey == nil {
-		// TODO: GetPubKey should return errors - https://github.com/gnolang/gno/pkgs/bft/issues/3602
+		// TODO: GetPubKey should return errors - https://github.com/tendermint/tendermint2/pkgs/bft/issues/3602
 		return nil, errors.New("could not retrieve public key from private validator")
 	}
 
@@ -674,7 +674,7 @@ func (n *Node) startRPC() ([]net.Listener, error) {
 	config.MaxOpenConnections = n.config.RPC.MaxOpenConnections
 	// If necessary adjust global WriteTimeout to ensure it's greater than
 	// TimeoutBroadcastTxCommit.
-	// See https://github.com/gnolang/gno/pkgs/bft/issues/3435
+	// See https://github.com/tendermint/tendermint2/pkgs/bft/issues/3435
 	if config.WriteTimeout <= n.config.RPC.TimeoutBroadcastTxCommit {
 		config.WriteTimeout = n.config.RPC.TimeoutBroadcastTxCommit + 1*time.Second
 	}

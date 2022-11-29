@@ -40,7 +40,7 @@ func TestNewPackage(t *testing.T) {
 
 func TestFullNameForType(t *testing.T) {
 	// The Go package depends on how this test is invoked.
-	// Sometimes it is "github.com/gnolang/gno/pkgs/amino/packagepkg_test".
+	// Sometimes it is "github.com/tendermint/tendermint2/pkgs/amino/packagepkg_test".
 	// Sometimes it is "command-line-arguments"
 	// Sometimes it is "command-line-arguments_test"
 	gopkg := reflect.TypeOf(Foo{}).PkgPath()

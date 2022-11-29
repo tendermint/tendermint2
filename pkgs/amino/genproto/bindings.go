@@ -13,8 +13,8 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/gnolang/gno/pkgs/amino"
-	"github.com/gnolang/gno/pkgs/amino/pkg"
+	"github.com/tendermint/tendermint2/pkgs/amino"
+	"github.com/tendermint/tendermint2/pkgs/amino/pkg"
 )
 
 // Given genproto generated schema files for Go objects, generate
@@ -35,7 +35,7 @@ func GenerateProtoBindingsForTypes(pkg *amino.Package, rtz ...reflect.Type) (fil
 	scope := ast.NewScope(nil)
 	imports := _imports(
 		"proto", "google.golang.org/protobuf/proto",
-		"amino", "github.com/gnolang/gno/pkgs/amino")
+		"amino", "github.com/tendermint/tendermint2/pkgs/amino")
 	addImportAuto(imports, scope, pkg.GoPkgName+"pb", pkg.P3GoPkgPath)
 	file.Decls = append(file.Decls, imports)
 

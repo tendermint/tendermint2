@@ -6,12 +6,12 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	dbm "github.com/gnolang/gno/pkgs/db"
-	"github.com/gnolang/gno/pkgs/random"
+	dbm "github.com/tendermint/tendermint2/pkgs/db"
+	"github.com/tendermint/tendermint2/pkgs/random"
 
-	"github.com/gnolang/gno/pkgs/store/cache"
-	"github.com/gnolang/gno/pkgs/store/dbadapter"
-	"github.com/gnolang/gno/pkgs/store/types"
+	"github.com/tendermint/tendermint2/pkgs/store/cache"
+	"github.com/tendermint/tendermint2/pkgs/store/dbadapter"
+	"github.com/tendermint/tendermint2/pkgs/store/types"
 )
 
 func newCacheStore() types.Store {

@@ -5,9 +5,9 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	"github.com/gnolang/gno/pkgs/crypto"
-	"github.com/gnolang/gno/pkgs/sdk"
-	"github.com/gnolang/gno/pkgs/std"
+	"github.com/tendermint/tendermint2/pkgs/crypto"
+	"github.com/tendermint/tendermint2/pkgs/sdk"
+	"github.com/tendermint/tendermint2/pkgs/std"
 )
 
 func TestKeeper(t *testing.T) {

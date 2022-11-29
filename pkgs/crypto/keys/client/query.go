@@ -3,10 +3,10 @@ package client
 import (
 	"fmt"
 
-	"github.com/gnolang/gno/pkgs/bft/rpc/client"
-	ctypes "github.com/gnolang/gno/pkgs/bft/rpc/core/types"
-	"github.com/gnolang/gno/pkgs/command"
-	"github.com/gnolang/gno/pkgs/errors"
+	"github.com/tendermint/tendermint2/pkgs/bft/rpc/client"
+	ctypes "github.com/tendermint/tendermint2/pkgs/bft/rpc/core/types"
+	"github.com/tendermint/tendermint2/pkgs/command"
+	"github.com/tendermint/tendermint2/pkgs/errors"
 )
 
 type QueryOptions struct {

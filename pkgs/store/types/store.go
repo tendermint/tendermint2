@@ -4,9 +4,9 @@ import (
 	"bytes"
 	"fmt"
 
-	abci "github.com/gnolang/gno/pkgs/bft/abci/types"
-	dbm "github.com/gnolang/gno/pkgs/db"
-	std "github.com/gnolang/gno/pkgs/std"
+	abci "github.com/tendermint/tendermint2/pkgs/bft/abci/types"
+	dbm "github.com/tendermint/tendermint2/pkgs/db"
+	std "github.com/tendermint/tendermint2/pkgs/std"
 )
 
 type Store interface {

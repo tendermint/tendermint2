@@ -7,7 +7,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/gnolang/gno/pkgs/random"
+	"github.com/tendermint/tendermint2/pkgs/random"
 	"github.com/stretchr/testify/assert"
 )
 

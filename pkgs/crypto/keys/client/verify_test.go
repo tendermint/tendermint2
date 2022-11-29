@@ -6,9 +6,9 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/gnolang/gno/pkgs/command"
-	"github.com/gnolang/gno/pkgs/crypto/keys"
-	"github.com/gnolang/gno/pkgs/testutils"
+	"github.com/tendermint/tendermint2/pkgs/command"
+	"github.com/tendermint/tendermint2/pkgs/crypto/keys"
+	"github.com/tendermint/tendermint2/pkgs/testutils"
 	"github.com/jaekwon/testify/assert"
 )
 

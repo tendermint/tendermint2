@@ -5,8 +5,8 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/gnolang/gno/pkgs/amino"
-	tmtime "github.com/gnolang/gno/pkgs/bft/types/time"
+	"github.com/tendermint/tendermint2/pkgs/amino"
+	tmtime "github.com/tendermint/tendermint2/pkgs/bft/types/time"
 )
 
 var (

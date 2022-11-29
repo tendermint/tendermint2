@@ -4,7 +4,7 @@ import (
 	"io"
 	"testing"
 
-	"github.com/gnolang/gno/pkgs/crypto"
+	"github.com/tendermint/tendermint2/pkgs/crypto"
 )
 
 // The code in this file is adapted from agl/ed25519.

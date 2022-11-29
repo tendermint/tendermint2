@@ -1,10 +1,10 @@
 package version
 
 import (
-	abciver "github.com/gnolang/gno/pkgs/bft/abci/version"
-	bcver "github.com/gnolang/gno/pkgs/bft/blockchain/version"
-	p2pver "github.com/gnolang/gno/pkgs/p2p/version"
-	verset "github.com/gnolang/gno/pkgs/versionset"
+	abciver "github.com/tendermint/tendermint2/pkgs/bft/abci/version"
+	bcver "github.com/tendermint/tendermint2/pkgs/bft/blockchain/version"
+	p2pver "github.com/tendermint/tendermint2/pkgs/p2p/version"
+	verset "github.com/tendermint/tendermint2/pkgs/versionset"
 )
 
 var (

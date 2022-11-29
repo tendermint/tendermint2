@@ -1,7 +1,7 @@
 package std
 
 import (
-	"github.com/gnolang/gno/pkgs/crypto"
+	"github.com/tendermint/tendermint2/pkgs/crypto"
 )
 
 // Transactions messages must fulfill the Msg.

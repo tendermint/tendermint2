@@ -3,8 +3,8 @@ package sdk
 import (
 	"fmt"
 
-	dbm "github.com/gnolang/gno/pkgs/db"
-	"github.com/gnolang/gno/pkgs/store"
+	dbm "github.com/tendermint/tendermint2/pkgs/db"
+	"github.com/tendermint/tendermint2/pkgs/store"
 )
 
 // File for storing in-package BaseApp optional functions,

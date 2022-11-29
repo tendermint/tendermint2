@@ -5,14 +5,14 @@ import (
 	"sync"
 	"time"
 
-	abci "github.com/gnolang/gno/pkgs/bft/abci/types"
-	ctypes "github.com/gnolang/gno/pkgs/bft/rpc/core/types"
-	rpctypes "github.com/gnolang/gno/pkgs/bft/rpc/lib/types"
-	"github.com/gnolang/gno/pkgs/bft/types"
-	"github.com/gnolang/gno/pkgs/errors"
-	"github.com/gnolang/gno/pkgs/events"
-	"github.com/gnolang/gno/pkgs/random"
-	"github.com/gnolang/gno/pkgs/service"
+	abci "github.com/tendermint/tendermint2/pkgs/bft/abci/types"
+	ctypes "github.com/tendermint/tendermint2/pkgs/bft/rpc/core/types"
+	rpctypes "github.com/tendermint/tendermint2/pkgs/bft/rpc/lib/types"
+	"github.com/tendermint/tendermint2/pkgs/bft/types"
+	"github.com/tendermint/tendermint2/pkgs/errors"
+	"github.com/tendermint/tendermint2/pkgs/events"
+	"github.com/tendermint/tendermint2/pkgs/random"
+	"github.com/tendermint/tendermint2/pkgs/service"
 )
 
 //-----------------------------------------------------------------------------
@@ -31,7 +31,7 @@ import (
 // 1. malicious node can drop or pretend it had committed your tx
 // 2. malicious proposer (not necessary the one you're communicating with) can
 // drop transactions, which might become valid in the future
-// (https://github.com/gnolang/gno/pkgs/bft/issues/3322)
+// (https://github.com/tendermint/tendermint2/pkgs/bft/issues/3322)
 // 3. node can be offline
 //
 // Please refer to
@@ -97,7 +97,7 @@ func BroadcastTxAsync(ctx *rpctypes.Context, tx types.Tx) (*ctypes.ResultBroadca
 // 1. malicious node can drop or pretend it had committed your tx
 // 2. malicious proposer (not necessary the one you're communicating with) can
 // drop transactions, which might become valid in the future
-// (https://github.com/gnolang/gno/pkgs/bft/issues/3322)
+// (https://github.com/tendermint/tendermint2/pkgs/bft/issues/3322)
 //
 // Please refer to
 // https://tendermint.com/docs/tendermint-core/using-tendermint.html#formatting

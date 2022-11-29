@@ -4,11 +4,11 @@ import (
 	"context"
 	"time"
 
-	"github.com/gnolang/gno/pkgs/amino"
-	abci "github.com/gnolang/gno/pkgs/bft/abci/types"
-	"github.com/gnolang/gno/pkgs/log"
-	"github.com/gnolang/gno/pkgs/store"
-	"github.com/gnolang/gno/pkgs/store/gas"
+	"github.com/tendermint/tendermint2/pkgs/amino"
+	abci "github.com/tendermint/tendermint2/pkgs/bft/abci/types"
+	"github.com/tendermint/tendermint2/pkgs/log"
+	"github.com/tendermint/tendermint2/pkgs/store"
+	"github.com/tendermint/tendermint2/pkgs/store/gas"
 )
 
 /*

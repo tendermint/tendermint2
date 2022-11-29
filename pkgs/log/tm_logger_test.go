@@ -6,7 +6,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/gnolang/gno/pkgs/log"
+	"github.com/tendermint/tendermint2/pkgs/log"
 )
 
 func TestLoggerLogsItsErrors(t *testing.T) {

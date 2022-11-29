@@ -1,11 +1,11 @@
 package secp256k1
 
 import (
-	"github.com/gnolang/gno/pkgs/amino"
+	"github.com/tendermint/tendermint2/pkgs/amino"
 )
 
 var Package = amino.RegisterPackage(amino.NewPackage(
-	"github.com/gnolang/gno/pkgs/crypto/secp256k1",
+	"github.com/tendermint/tendermint2/pkgs/crypto/secp256k1",
 	"tm",
 	amino.GetCallersDirname(),
 ).WithDependencies().WithTypes(

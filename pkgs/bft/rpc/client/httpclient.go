@@ -3,10 +3,10 @@ package client
 import (
 	"net/http"
 
-	ctypes "github.com/gnolang/gno/pkgs/bft/rpc/core/types"
-	rpcclient "github.com/gnolang/gno/pkgs/bft/rpc/lib/client"
-	"github.com/gnolang/gno/pkgs/bft/types"
-	"github.com/gnolang/gno/pkgs/errors"
+	ctypes "github.com/tendermint/tendermint2/pkgs/bft/rpc/core/types"
+	rpcclient "github.com/tendermint/tendermint2/pkgs/bft/rpc/lib/client"
+	"github.com/tendermint/tendermint2/pkgs/bft/types"
+	"github.com/tendermint/tendermint2/pkgs/errors"
 )
 
 /*

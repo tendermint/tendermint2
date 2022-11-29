@@ -1,10 +1,10 @@
 package dbadapter
 
 import (
-	dbm "github.com/gnolang/gno/pkgs/db"
+	dbm "github.com/tendermint/tendermint2/pkgs/db"
 
-	"github.com/gnolang/gno/pkgs/store/cache"
-	"github.com/gnolang/gno/pkgs/store/types"
+	"github.com/tendermint/tendermint2/pkgs/store/cache"
+	"github.com/tendermint/tendermint2/pkgs/store/types"
 )
 
 // Implements CommitStoreConstructor.

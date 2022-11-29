@@ -9,17 +9,17 @@ import (
 	"github.com/fortytw2/leaktest"
 	"github.com/stretchr/testify/assert"
 
-	"github.com/gnolang/gno/pkgs/bft/abci/example/kvstore"
-	memcfg "github.com/gnolang/gno/pkgs/bft/mempool/config"
-	"github.com/gnolang/gno/pkgs/bft/proxy"
-	"github.com/gnolang/gno/pkgs/bft/types"
-	"github.com/gnolang/gno/pkgs/colors"
-	"github.com/gnolang/gno/pkgs/errors"
-	"github.com/gnolang/gno/pkgs/log"
-	"github.com/gnolang/gno/pkgs/p2p"
-	p2pcfg "github.com/gnolang/gno/pkgs/p2p/config"
-	"github.com/gnolang/gno/pkgs/p2p/mock"
-	"github.com/gnolang/gno/pkgs/testutils"
+	"github.com/tendermint/tendermint2/pkgs/bft/abci/example/kvstore"
+	memcfg "github.com/tendermint/tendermint2/pkgs/bft/mempool/config"
+	"github.com/tendermint/tendermint2/pkgs/bft/proxy"
+	"github.com/tendermint/tendermint2/pkgs/bft/types"
+	"github.com/tendermint/tendermint2/pkgs/colors"
+	"github.com/tendermint/tendermint2/pkgs/errors"
+	"github.com/tendermint/tendermint2/pkgs/log"
+	"github.com/tendermint/tendermint2/pkgs/p2p"
+	p2pcfg "github.com/tendermint/tendermint2/pkgs/p2p/config"
+	"github.com/tendermint/tendermint2/pkgs/p2p/mock"
+	"github.com/tendermint/tendermint2/pkgs/testutils"
 )
 
 type peerState struct {

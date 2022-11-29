@@ -9,8 +9,8 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	osm "github.com/gnolang/gno/pkgs/os"
-	"github.com/gnolang/gno/pkgs/random"
+	osm "github.com/tendermint/tendermint2/pkgs/os"
+	"github.com/tendermint/tendermint2/pkgs/random"
 )
 
 func createTestGroupWithHeadSizeLimit(t *testing.T, headSizeLimit int64) *Group {

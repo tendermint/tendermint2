@@ -4,7 +4,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/gnolang/gno/pkgs/amino"
+	"github.com/tendermint/tendermint2/pkgs/amino"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 )

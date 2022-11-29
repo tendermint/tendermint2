@@ -3,7 +3,7 @@ package async
 import (
 	"sync/atomic"
 
-	"github.com/gnolang/gno/pkgs/errors"
+	"github.com/tendermint/tendermint2/pkgs/errors"
 )
 
 //----------------------------------------

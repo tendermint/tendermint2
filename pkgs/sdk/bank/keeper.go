@@ -3,11 +3,11 @@ package bank
 import (
 	"fmt"
 
-	"github.com/gnolang/gno/pkgs/crypto"
-	"github.com/gnolang/gno/pkgs/log"
-	"github.com/gnolang/gno/pkgs/sdk"
-	"github.com/gnolang/gno/pkgs/sdk/auth"
-	"github.com/gnolang/gno/pkgs/std"
+	"github.com/tendermint/tendermint2/pkgs/crypto"
+	"github.com/tendermint/tendermint2/pkgs/log"
+	"github.com/tendermint/tendermint2/pkgs/sdk"
+	"github.com/tendermint/tendermint2/pkgs/sdk/auth"
+	"github.com/tendermint/tendermint2/pkgs/std"
 )
 
 // bank.Keeper defines a module interface that facilitates the transfer of

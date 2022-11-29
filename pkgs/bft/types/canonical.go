@@ -3,7 +3,7 @@ package types
 import (
 	"time"
 
-	tmtime "github.com/gnolang/gno/pkgs/bft/types/time"
+	tmtime "github.com/tendermint/tendermint2/pkgs/bft/types/time"
 )
 
 // Canonical* wraps the structs in types for amino encoding them for use in SignBytes / the Signable interface.

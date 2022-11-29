@@ -3,15 +3,15 @@ package bank
 // DONTCOVER
 
 import (
-	bft "github.com/gnolang/gno/pkgs/bft/types"
-	dbm "github.com/gnolang/gno/pkgs/db"
-	"github.com/gnolang/gno/pkgs/log"
+	bft "github.com/tendermint/tendermint2/pkgs/bft/types"
+	dbm "github.com/tendermint/tendermint2/pkgs/db"
+	"github.com/tendermint/tendermint2/pkgs/log"
 
-	"github.com/gnolang/gno/pkgs/sdk"
-	"github.com/gnolang/gno/pkgs/sdk/auth"
-	"github.com/gnolang/gno/pkgs/std"
-	"github.com/gnolang/gno/pkgs/store"
-	"github.com/gnolang/gno/pkgs/store/iavl"
+	"github.com/tendermint/tendermint2/pkgs/sdk"
+	"github.com/tendermint/tendermint2/pkgs/sdk/auth"
+	"github.com/tendermint/tendermint2/pkgs/std"
+	"github.com/tendermint/tendermint2/pkgs/store"
+	"github.com/tendermint/tendermint2/pkgs/store/iavl"
 )
 
 type testEnv struct {

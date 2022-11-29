@@ -7,14 +7,14 @@ import (
 	"sync"
 	"time"
 
-	"github.com/gnolang/gno/pkgs/amino"
-	typesver "github.com/gnolang/gno/pkgs/bft/types/version"
-	"github.com/gnolang/gno/pkgs/bitarray"
-	"github.com/gnolang/gno/pkgs/crypto"
-	"github.com/gnolang/gno/pkgs/crypto/merkle"
-	"github.com/gnolang/gno/pkgs/crypto/tmhash"
-	"github.com/gnolang/gno/pkgs/errors"
-	"github.com/gnolang/gno/pkgs/maths"
+	"github.com/tendermint/tendermint2/pkgs/amino"
+	typesver "github.com/tendermint/tendermint2/pkgs/bft/types/version"
+	"github.com/tendermint/tendermint2/pkgs/bitarray"
+	"github.com/tendermint/tendermint2/pkgs/crypto"
+	"github.com/tendermint/tendermint2/pkgs/crypto/merkle"
+	"github.com/tendermint/tendermint2/pkgs/crypto/tmhash"
+	"github.com/tendermint/tendermint2/pkgs/errors"
+	"github.com/tendermint/tendermint2/pkgs/maths"
 )
 
 // Block defines the atomic unit of a Tendermint blockchain.

@@ -9,8 +9,8 @@ import (
 	"strconv"
 	"strings"
 
-	dbm "github.com/gnolang/gno/pkgs/db"
-	"github.com/gnolang/gno/pkgs/iavl"
+	dbm "github.com/tendermint/tendermint2/pkgs/db"
+	"github.com/tendermint/tendermint2/pkgs/iavl"
 )
 
 // TODO: make this configurable?

@@ -1,7 +1,7 @@
 package gas
 
 import (
-	"github.com/gnolang/gno/pkgs/store/types"
+	"github.com/tendermint/tendermint2/pkgs/store/types"
 )
 
 var _ types.Store = &Store{}

@@ -9,9 +9,9 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	"github.com/gnolang/gno/pkgs/crypto"
-	"github.com/gnolang/gno/pkgs/crypto/bip39"
-	"github.com/gnolang/gno/pkgs/crypto/secp256k1"
+	"github.com/tendermint/tendermint2/pkgs/crypto"
+	"github.com/tendermint/tendermint2/pkgs/crypto/bip39"
+	"github.com/tendermint/tendermint2/pkgs/crypto/secp256k1"
 )
 
 type addrData struct {

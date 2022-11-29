@@ -3,7 +3,7 @@ package config
 import (
 	"time"
 
-	"github.com/gnolang/gno/pkgs/errors"
+	"github.com/tendermint/tendermint2/pkgs/errors"
 )
 
 //-----------------------------------------------------------------------------

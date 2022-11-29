@@ -1,11 +1,11 @@
 package bank
 
 import (
-	"github.com/gnolang/gno/pkgs/amino"
+	"github.com/tendermint/tendermint2/pkgs/amino"
 )
 
 var Package = amino.RegisterPackage(amino.NewPackage(
-	"github.com/gnolang/gno/pkgs/sdk/bank",
+	"github.com/tendermint/tendermint2/pkgs/sdk/bank",
 	"bank",
 	amino.GetCallersDirname(),
 ).WithDependencies().WithTypes(

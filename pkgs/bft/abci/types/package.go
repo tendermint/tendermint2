@@ -1,12 +1,12 @@
 package abci
 
 import (
-	"github.com/gnolang/gno/pkgs/amino"
-	"github.com/gnolang/gno/pkgs/crypto/merkle"
+	"github.com/tendermint/tendermint2/pkgs/amino"
+	"github.com/tendermint/tendermint2/pkgs/crypto/merkle"
 )
 
 var Package = amino.RegisterPackage(amino.NewPackage(
-	"github.com/gnolang/gno/pkgs/bft/abci/types",
+	"github.com/tendermint/tendermint2/pkgs/bft/abci/types",
 	"abci",
 	amino.GetCallersDirname(),
 ).

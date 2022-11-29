@@ -7,7 +7,7 @@ import (
 	"path/filepath"
 	"text/template"
 
-	osm "github.com/gnolang/gno/pkgs/os"
+	osm "github.com/tendermint/tendermint2/pkgs/os"
 	"github.com/pelletier/go-toml"
 )
 

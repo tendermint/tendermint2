@@ -9,13 +9,13 @@ import (
 
 	"github.com/stretchr/testify/assert"
 
-	"github.com/gnolang/gno/pkgs/bft/abci/example/errors"
-	abci "github.com/gnolang/gno/pkgs/bft/abci/types"
-	cstypes "github.com/gnolang/gno/pkgs/bft/consensus/types"
-	mempl "github.com/gnolang/gno/pkgs/bft/mempool"
-	sm "github.com/gnolang/gno/pkgs/bft/state"
-	"github.com/gnolang/gno/pkgs/bft/types"
-	dbm "github.com/gnolang/gno/pkgs/db"
+	"github.com/tendermint/tendermint2/pkgs/bft/abci/example/errors"
+	abci "github.com/tendermint/tendermint2/pkgs/bft/abci/types"
+	cstypes "github.com/tendermint/tendermint2/pkgs/bft/consensus/types"
+	mempl "github.com/tendermint/tendermint2/pkgs/bft/mempool"
+	sm "github.com/tendermint/tendermint2/pkgs/bft/state"
+	"github.com/tendermint/tendermint2/pkgs/bft/types"
+	dbm "github.com/tendermint/tendermint2/pkgs/db"
 )
 
 // for testing

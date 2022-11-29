@@ -3,12 +3,12 @@ package conn
 import (
 	"reflect"
 
-	"github.com/gnolang/gno/pkgs/amino"
-	"github.com/gnolang/gno/pkgs/amino/pkg"
+	"github.com/tendermint/tendermint2/pkgs/amino"
+	"github.com/tendermint/tendermint2/pkgs/amino/pkg"
 )
 
 var Package = amino.RegisterPackage(amino.NewPackage(
-	"github.com/gnolang/gno/pkgs/p2p/conn",
+	"github.com/tendermint/tendermint2/pkgs/p2p/conn",
 	"p2p", // keep short, do not change.
 	amino.GetCallersDirname(),
 ).

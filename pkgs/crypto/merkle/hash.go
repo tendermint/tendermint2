@@ -1,7 +1,7 @@
 package merkle
 
 import (
-	"github.com/gnolang/gno/pkgs/crypto/tmhash"
+	"github.com/tendermint/tendermint2/pkgs/crypto/tmhash"
 )
 
 // TODO: make these have a large predefined capacity

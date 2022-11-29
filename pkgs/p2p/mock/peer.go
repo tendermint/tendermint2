@@ -3,10 +3,10 @@ package mock
 import (
 	"net"
 
-	"github.com/gnolang/gno/pkgs/crypto/ed25519"
-	"github.com/gnolang/gno/pkgs/p2p"
-	"github.com/gnolang/gno/pkgs/p2p/conn"
-	"github.com/gnolang/gno/pkgs/service"
+	"github.com/tendermint/tendermint2/pkgs/crypto/ed25519"
+	"github.com/tendermint/tendermint2/pkgs/p2p"
+	"github.com/tendermint/tendermint2/pkgs/p2p/conn"
+	"github.com/tendermint/tendermint2/pkgs/service"
 )
 
 type Peer struct {

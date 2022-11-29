@@ -4,8 +4,8 @@ import (
 	"io"
 	"sync"
 
-	"github.com/gnolang/gno/pkgs/bft/types"
-	"github.com/gnolang/gno/pkgs/service"
+	"github.com/tendermint/tendermint2/pkgs/bft/types"
+	"github.com/tendermint/tendermint2/pkgs/service"
 )
 
 // ValidationRequestHandlerFunc handles different remoteSigner requests

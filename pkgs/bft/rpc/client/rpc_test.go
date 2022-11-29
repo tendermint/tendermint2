@@ -9,12 +9,12 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	"github.com/gnolang/gno/pkgs/bft/rpc/client"
-	ctypes "github.com/gnolang/gno/pkgs/bft/rpc/core/types"
-	rpcclient "github.com/gnolang/gno/pkgs/bft/rpc/lib/client"
-	rpctest "github.com/gnolang/gno/pkgs/bft/rpc/test"
-	"github.com/gnolang/gno/pkgs/bft/types"
-	"github.com/gnolang/gno/pkgs/maths"
+	"github.com/tendermint/tendermint2/pkgs/bft/rpc/client"
+	ctypes "github.com/tendermint/tendermint2/pkgs/bft/rpc/core/types"
+	rpcclient "github.com/tendermint/tendermint2/pkgs/bft/rpc/lib/client"
+	rpctest "github.com/tendermint/tendermint2/pkgs/bft/rpc/test"
+	"github.com/tendermint/tendermint2/pkgs/bft/types"
+	"github.com/tendermint/tendermint2/pkgs/maths"
 )
 
 func getHTTPClient() *client.HTTP {

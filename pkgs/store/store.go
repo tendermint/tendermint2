@@ -3,11 +3,11 @@ package store
 import (
 	"fmt"
 
-	dbm "github.com/gnolang/gno/pkgs/db"
-	"github.com/gnolang/gno/pkgs/strings"
+	dbm "github.com/tendermint/tendermint2/pkgs/db"
+	"github.com/tendermint/tendermint2/pkgs/strings"
 
-	"github.com/gnolang/gno/pkgs/store/rootmulti"
-	"github.com/gnolang/gno/pkgs/store/types"
+	"github.com/tendermint/tendermint2/pkgs/store/rootmulti"
+	"github.com/tendermint/tendermint2/pkgs/store/types"
 )
 
 func NewCommitMultiStore(db dbm.DB) types.CommitMultiStore {

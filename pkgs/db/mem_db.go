@@ -5,7 +5,7 @@ import (
 	"sort"
 	"sync"
 
-	"github.com/gnolang/gno/pkgs/strings"
+	"github.com/tendermint/tendermint2/pkgs/strings"
 )
 
 func init() {

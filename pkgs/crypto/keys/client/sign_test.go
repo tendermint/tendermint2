@@ -5,12 +5,12 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/gnolang/gno/pkgs/amino"
-	"github.com/gnolang/gno/pkgs/command"
-	"github.com/gnolang/gno/pkgs/crypto/keys"
-	testutils2 "github.com/gnolang/gno/pkgs/sdk/testutils"
-	"github.com/gnolang/gno/pkgs/std"
-	"github.com/gnolang/gno/pkgs/testutils"
+	"github.com/tendermint/tendermint2/pkgs/amino"
+	"github.com/tendermint/tendermint2/pkgs/command"
+	"github.com/tendermint/tendermint2/pkgs/crypto/keys"
+	testutils2 "github.com/tendermint/tendermint2/pkgs/sdk/testutils"
+	"github.com/tendermint/tendermint2/pkgs/std"
+	"github.com/tendermint/tendermint2/pkgs/testutils"
 	"github.com/jaekwon/testify/assert"
 )
 

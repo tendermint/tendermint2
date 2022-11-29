@@ -7,8 +7,8 @@ import (
 	"runtime"
 	"testing"
 
-	"github.com/gnolang/gno/pkgs/db"
-	"github.com/gnolang/gno/pkgs/iavl"
+	"github.com/tendermint/tendermint2/pkgs/db"
+	"github.com/tendermint/tendermint2/pkgs/iavl"
 )
 
 const historySize = 20

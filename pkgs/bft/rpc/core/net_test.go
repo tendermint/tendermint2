@@ -6,10 +6,10 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	rpctypes "github.com/gnolang/gno/pkgs/bft/rpc/lib/types"
-	"github.com/gnolang/gno/pkgs/log"
-	"github.com/gnolang/gno/pkgs/p2p"
-	p2pcfg "github.com/gnolang/gno/pkgs/p2p/config"
+	rpctypes "github.com/tendermint/tendermint2/pkgs/bft/rpc/lib/types"
+	"github.com/tendermint/tendermint2/pkgs/log"
+	"github.com/tendermint/tendermint2/pkgs/p2p"
+	p2pcfg "github.com/tendermint/tendermint2/pkgs/p2p/config"
 )
 
 func TestUnsafeDialSeeds(t *testing.T) {

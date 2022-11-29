@@ -1,7 +1,7 @@
 package testutils
 
 import (
-	"github.com/gnolang/gno/pkgs/random"
+	"github.com/tendermint/tendermint2/pkgs/random"
 )
 
 // Contract: !bytes.Equal(input, output) && len(input) >= len(output)

@@ -1,7 +1,7 @@
 package version
 
 import (
-	"github.com/gnolang/gno/pkgs/crypto"
+	"github.com/tendermint/tendermint2/pkgs/crypto"
 )
 
 // Versioning for just the structure of the block.

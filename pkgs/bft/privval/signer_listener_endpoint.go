@@ -6,8 +6,8 @@ import (
 	"sync"
 	"time"
 
-	"github.com/gnolang/gno/pkgs/log"
-	"github.com/gnolang/gno/pkgs/service"
+	"github.com/tendermint/tendermint2/pkgs/log"
+	"github.com/tendermint/tendermint2/pkgs/service"
 )
 
 // SignerValidatorEndpointOption sets an optional parameter on the SocketVal.

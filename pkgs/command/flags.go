@@ -10,7 +10,7 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/gnolang/gno/pkgs/errors"
+	"github.com/tendermint/tendermint2/pkgs/errors"
 )
 
 var reFlagName = regexp.MustCompile(`^--[a-z0-9.\-]+(#[a-z0-9.\-]+)?$`)

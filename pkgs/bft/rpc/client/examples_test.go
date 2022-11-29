@@ -4,10 +4,10 @@ import (
 	"bytes"
 	"fmt"
 
-	"github.com/gnolang/gno/pkgs/bft/abci/example/kvstore"
-	"github.com/gnolang/gno/pkgs/bft/rpc/client"
-	ctypes "github.com/gnolang/gno/pkgs/bft/rpc/core/types"
-	rpctest "github.com/gnolang/gno/pkgs/bft/rpc/test"
+	"github.com/tendermint/tendermint2/pkgs/bft/abci/example/kvstore"
+	"github.com/tendermint/tendermint2/pkgs/bft/rpc/client"
+	ctypes "github.com/tendermint/tendermint2/pkgs/bft/rpc/core/types"
+	rpctest "github.com/tendermint/tendermint2/pkgs/bft/rpc/test"
 )
 
 func ExampleHTTP_simple() {

@@ -5,10 +5,10 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	"github.com/gnolang/gno/pkgs/crypto"
-	"github.com/gnolang/gno/pkgs/crypto/keys"
-	"github.com/gnolang/gno/pkgs/crypto/keys/armor"
-	"github.com/gnolang/gno/pkgs/crypto/secp256k1"
+	"github.com/tendermint/tendermint2/pkgs/crypto"
+	"github.com/tendermint/tendermint2/pkgs/crypto/keys"
+	"github.com/tendermint/tendermint2/pkgs/crypto/keys/armor"
+	"github.com/tendermint/tendermint2/pkgs/crypto/secp256k1"
 )
 
 func TestArmorUnarmorPrivKey(t *testing.T) {

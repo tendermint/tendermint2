@@ -4,10 +4,10 @@ import (
 	"fmt"
 	"net"
 
-	"github.com/gnolang/gno/pkgs/cmap"
-	"github.com/gnolang/gno/pkgs/log"
-	connm "github.com/gnolang/gno/pkgs/p2p/conn"
-	"github.com/gnolang/gno/pkgs/service"
+	"github.com/tendermint/tendermint2/pkgs/cmap"
+	"github.com/tendermint/tendermint2/pkgs/log"
+	connm "github.com/tendermint/tendermint2/pkgs/p2p/conn"
+	"github.com/tendermint/tendermint2/pkgs/service"
 )
 
 // Peer is an interface representing a peer connected on a reactor.

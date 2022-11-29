@@ -1,25 +1,25 @@
 package main
 
 import (
-	"github.com/gnolang/gno/pkgs/amino"
-	"github.com/gnolang/gno/pkgs/amino/genproto"
+	"github.com/tendermint/tendermint2/pkgs/amino"
+	"github.com/tendermint/tendermint2/pkgs/amino/genproto"
 
 	// TODO: move these out.
-	abci "github.com/gnolang/gno/pkgs/bft/abci/types"
-	"github.com/gnolang/gno/pkgs/bft/blockchain"
-	"github.com/gnolang/gno/pkgs/bft/consensus"
-	ctypes "github.com/gnolang/gno/pkgs/bft/consensus/types"
-	"github.com/gnolang/gno/pkgs/bft/mempool"
-	btypes "github.com/gnolang/gno/pkgs/bft/types"
-	"github.com/gnolang/gno/pkgs/bitarray"
-	"github.com/gnolang/gno/pkgs/crypto/ed25519"
-	"github.com/gnolang/gno/pkgs/crypto/hd"
-	"github.com/gnolang/gno/pkgs/crypto/merkle"
-	"github.com/gnolang/gno/pkgs/crypto/multisig"
-	"github.com/gnolang/gno/pkgs/sdk"
-	"github.com/gnolang/gno/pkgs/sdk/bank"
-	"github.com/gnolang/gno/pkgs/sdk/vm"
-	"github.com/gnolang/gno/pkgs/std"
+	abci "github.com/tendermint/tendermint2/pkgs/bft/abci/types"
+	"github.com/tendermint/tendermint2/pkgs/bft/blockchain"
+	"github.com/tendermint/tendermint2/pkgs/bft/consensus"
+	ctypes "github.com/tendermint/tendermint2/pkgs/bft/consensus/types"
+	"github.com/tendermint/tendermint2/pkgs/bft/mempool"
+	btypes "github.com/tendermint/tendermint2/pkgs/bft/types"
+	"github.com/tendermint/tendermint2/pkgs/bitarray"
+	"github.com/tendermint/tendermint2/pkgs/crypto/ed25519"
+	"github.com/tendermint/tendermint2/pkgs/crypto/hd"
+	"github.com/tendermint/tendermint2/pkgs/crypto/merkle"
+	"github.com/tendermint/tendermint2/pkgs/crypto/multisig"
+	"github.com/tendermint/tendermint2/pkgs/sdk"
+	"github.com/tendermint/tendermint2/pkgs/sdk/bank"
+	"github.com/tendermint/tendermint2/pkgs/sdk/vm"
+	"github.com/tendermint/tendermint2/pkgs/std"
 )
 
 func main() {

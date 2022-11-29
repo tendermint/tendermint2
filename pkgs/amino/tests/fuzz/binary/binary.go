@@ -1,8 +1,8 @@
 package fuzzbinary
 
 import (
-	amino "github.com/gnolang/gno/pkgs/amino"
-	"github.com/gnolang/gno/pkgs/amino/tests"
+	amino "github.com/tendermint/tendermint2/pkgs/amino"
+	"github.com/tendermint/tendermint2/pkgs/amino/tests"
 )
 
 //-------------------------------------

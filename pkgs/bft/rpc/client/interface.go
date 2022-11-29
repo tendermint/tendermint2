@@ -21,8 +21,8 @@ implementation.
 */
 
 import (
-	ctypes "github.com/gnolang/gno/pkgs/bft/rpc/core/types"
-	"github.com/gnolang/gno/pkgs/bft/types"
+	ctypes "github.com/tendermint/tendermint2/pkgs/bft/rpc/core/types"
+	"github.com/tendermint/tendermint2/pkgs/bft/types"
 )
 
 // Client wraps most important rpc calls a client would make.

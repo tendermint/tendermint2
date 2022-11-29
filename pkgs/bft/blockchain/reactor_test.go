@@ -8,19 +8,19 @@ import (
 
 	"github.com/stretchr/testify/assert"
 
-	abci "github.com/gnolang/gno/pkgs/bft/abci/types"
-	cfg "github.com/gnolang/gno/pkgs/bft/config"
-	"github.com/gnolang/gno/pkgs/bft/mempool/mock"
-	"github.com/gnolang/gno/pkgs/bft/proxy"
-	sm "github.com/gnolang/gno/pkgs/bft/state"
-	"github.com/gnolang/gno/pkgs/bft/store"
-	"github.com/gnolang/gno/pkgs/bft/types"
-	tmtime "github.com/gnolang/gno/pkgs/bft/types/time"
-	dbm "github.com/gnolang/gno/pkgs/db"
-	"github.com/gnolang/gno/pkgs/errors"
-	"github.com/gnolang/gno/pkgs/log"
-	"github.com/gnolang/gno/pkgs/p2p"
-	"github.com/gnolang/gno/pkgs/testutils"
+	abci "github.com/tendermint/tendermint2/pkgs/bft/abci/types"
+	cfg "github.com/tendermint/tendermint2/pkgs/bft/config"
+	"github.com/tendermint/tendermint2/pkgs/bft/mempool/mock"
+	"github.com/tendermint/tendermint2/pkgs/bft/proxy"
+	sm "github.com/tendermint/tendermint2/pkgs/bft/state"
+	"github.com/tendermint/tendermint2/pkgs/bft/store"
+	"github.com/tendermint/tendermint2/pkgs/bft/types"
+	tmtime "github.com/tendermint/tendermint2/pkgs/bft/types/time"
+	dbm "github.com/tendermint/tendermint2/pkgs/db"
+	"github.com/tendermint/tendermint2/pkgs/errors"
+	"github.com/tendermint/tendermint2/pkgs/log"
+	"github.com/tendermint/tendermint2/pkgs/p2p"
+	"github.com/tendermint/tendermint2/pkgs/testutils"
 )
 
 var config *cfg.Config

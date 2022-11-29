@@ -1,7 +1,7 @@
 package crypto
 
 import (
-	"github.com/gnolang/gno/pkgs/amino"
+	"github.com/tendermint/tendermint2/pkgs/amino"
 )
 
 func PrivKeyFromBytes(privKeyBytes []byte) (privKey PrivKey, err error) {

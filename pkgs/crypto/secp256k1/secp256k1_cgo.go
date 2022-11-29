@@ -4,8 +4,8 @@
 package secp256k1
 
 import (
-	"github.com/gnolang/gno/pkgs/crypto"
-	"github.com/gnolang/gno/pkgs/crypto/secp256k1/internal/secp256k1"
+	"github.com/tendermint/tendermint2/pkgs/crypto"
+	"github.com/tendermint/tendermint2/pkgs/crypto/secp256k1/internal/secp256k1"
 )
 
 // Sign creates an ECDSA signature on curve Secp256k1, using SHA256 on the msg.

@@ -8,7 +8,7 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	amino "github.com/gnolang/gno/pkgs/amino"
+	amino "github.com/tendermint/tendermint2/pkgs/amino"
 )
 
 func TestNilSliceEmptySlice(t *testing.T) {

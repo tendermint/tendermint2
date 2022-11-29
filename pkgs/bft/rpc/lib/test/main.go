@@ -5,11 +5,11 @@ import (
 	"net/http"
 	"os"
 
-	"github.com/gnolang/gno/pkgs/log"
-	osm "github.com/gnolang/gno/pkgs/os"
+	"github.com/tendermint/tendermint2/pkgs/log"
+	osm "github.com/tendermint/tendermint2/pkgs/os"
 
-	rpcserver "github.com/gnolang/gno/pkgs/bft/rpc/lib/server"
-	rpctypes "github.com/gnolang/gno/pkgs/bft/rpc/lib/types"
+	rpcserver "github.com/tendermint/tendermint2/pkgs/bft/rpc/lib/server"
+	rpctypes "github.com/tendermint/tendermint2/pkgs/bft/rpc/lib/types"
 )
 
 var routes = map[string]*rpcserver.RPCFunc{

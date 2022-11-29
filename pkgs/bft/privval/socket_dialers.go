@@ -4,10 +4,10 @@ import (
 	"net"
 	"time"
 
-	"github.com/gnolang/gno/pkgs/crypto/ed25519"
-	"github.com/gnolang/gno/pkgs/errors"
-	osm "github.com/gnolang/gno/pkgs/os"
-	p2pconn "github.com/gnolang/gno/pkgs/p2p/conn"
+	"github.com/tendermint/tendermint2/pkgs/crypto/ed25519"
+	"github.com/tendermint/tendermint2/pkgs/errors"
+	osm "github.com/tendermint/tendermint2/pkgs/os"
+	p2pconn "github.com/tendermint/tendermint2/pkgs/p2p/conn"
 )
 
 // Socket errors.

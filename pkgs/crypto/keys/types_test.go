@@ -4,9 +4,9 @@ import (
 	"encoding/hex"
 	"testing"
 
-	"github.com/gnolang/gno/pkgs/crypto"
-	"github.com/gnolang/gno/pkgs/crypto/hd"
-	"github.com/gnolang/gno/pkgs/crypto/secp256k1"
+	"github.com/tendermint/tendermint2/pkgs/crypto"
+	"github.com/tendermint/tendermint2/pkgs/crypto/hd"
+	"github.com/tendermint/tendermint2/pkgs/crypto/secp256k1"
 	"github.com/stretchr/testify/assert"
 )
 

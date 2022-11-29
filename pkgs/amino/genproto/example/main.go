@@ -3,10 +3,10 @@ package main
 import (
 	"fmt"
 
-	"github.com/gnolang/gno/pkgs/amino"
-	"github.com/gnolang/gno/pkgs/amino/genproto"
-	"github.com/gnolang/gno/pkgs/amino/genproto/example/submodule"
-	"github.com/gnolang/gno/pkgs/amino/genproto/example/submodule2"
+	"github.com/tendermint/tendermint2/pkgs/amino"
+	"github.com/tendermint/tendermint2/pkgs/amino/genproto"
+	"github.com/tendermint/tendermint2/pkgs/amino/genproto/example/submodule"
+	"github.com/tendermint/tendermint2/pkgs/amino/genproto/example/submodule2"
 )
 
 // amino

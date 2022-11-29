@@ -1,11 +1,11 @@
 package std
 
 import (
-	"github.com/gnolang/gno/pkgs/amino"
+	"github.com/tendermint/tendermint2/pkgs/amino"
 )
 
 var Package = amino.RegisterPackage(amino.NewPackage(
-	"github.com/gnolang/gno/pkgs/std",
+	"github.com/tendermint/tendermint2/pkgs/std",
 	"std",
 	amino.GetCallersDirname(),
 ).WithDependencies().WithTypes(

@@ -1,10 +1,10 @@
 package testutils
 
 import (
-	"github.com/gnolang/gno/pkgs/amino"
-	"github.com/gnolang/gno/pkgs/crypto"
-	"github.com/gnolang/gno/pkgs/crypto/secp256k1"
-	"github.com/gnolang/gno/pkgs/std"
+	"github.com/tendermint/tendermint2/pkgs/amino"
+	"github.com/tendermint/tendermint2/pkgs/crypto"
+	"github.com/tendermint/tendermint2/pkgs/crypto/secp256k1"
+	"github.com/tendermint/tendermint2/pkgs/std"
 )
 
 // msg type for testing

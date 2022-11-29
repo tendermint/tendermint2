@@ -8,9 +8,9 @@ import (
 	"fmt"
 	"io"
 
-	"github.com/gnolang/gno/pkgs/amino"
-	"github.com/gnolang/gno/pkgs/crypto/tmhash"
-	"github.com/gnolang/gno/pkgs/errors"
+	"github.com/tendermint/tendermint2/pkgs/amino"
+	"github.com/tendermint/tendermint2/pkgs/crypto/tmhash"
+	"github.com/tendermint/tendermint2/pkgs/errors"
 )
 
 // Node represents a node in a Tree.

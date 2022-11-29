@@ -7,8 +7,8 @@ import (
 	"strings"
 	"sync"
 
-	"github.com/gnolang/gno/pkgs/maths"
-	"github.com/gnolang/gno/pkgs/random"
+	"github.com/tendermint/tendermint2/pkgs/maths"
+	"github.com/tendermint/tendermint2/pkgs/random"
 )
 
 // BitArray is a thread-safe implementation of a bit array.

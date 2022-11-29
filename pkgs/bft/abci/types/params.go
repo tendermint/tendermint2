@@ -1,8 +1,8 @@
 package abci
 
 import (
-	"github.com/gnolang/gno/pkgs/amino"
-	"github.com/gnolang/gno/pkgs/crypto/tmhash"
+	"github.com/tendermint/tendermint2/pkgs/amino"
+	"github.com/tendermint/tendermint2/pkgs/crypto/tmhash"
 )
 
 func (params ValidatorParams) IsValidPubKeyTypeURL(pubKeyTypeURL string) bool {

@@ -3,8 +3,8 @@ package prefix
 import (
 	"bytes"
 
-	"github.com/gnolang/gno/pkgs/store/cache"
-	"github.com/gnolang/gno/pkgs/store/types"
+	"github.com/tendermint/tendermint2/pkgs/store/cache"
+	"github.com/tendermint/tendermint2/pkgs/store/types"
 )
 
 var _ types.Store = Store{}

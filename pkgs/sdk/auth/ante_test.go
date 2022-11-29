@@ -9,17 +9,17 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	"github.com/gnolang/gno/pkgs/amino"
-	abci "github.com/gnolang/gno/pkgs/bft/abci/types"
-	bft "github.com/gnolang/gno/pkgs/bft/types"
-	"github.com/gnolang/gno/pkgs/crypto"
-	"github.com/gnolang/gno/pkgs/crypto/ed25519"
-	"github.com/gnolang/gno/pkgs/crypto/multisig"
-	"github.com/gnolang/gno/pkgs/crypto/secp256k1"
-	"github.com/gnolang/gno/pkgs/sdk"
-	tu "github.com/gnolang/gno/pkgs/sdk/testutils"
-	"github.com/gnolang/gno/pkgs/std"
-	"github.com/gnolang/gno/pkgs/store"
+	"github.com/tendermint/tendermint2/pkgs/amino"
+	abci "github.com/tendermint/tendermint2/pkgs/bft/abci/types"
+	bft "github.com/tendermint/tendermint2/pkgs/bft/types"
+	"github.com/tendermint/tendermint2/pkgs/crypto"
+	"github.com/tendermint/tendermint2/pkgs/crypto/ed25519"
+	"github.com/tendermint/tendermint2/pkgs/crypto/multisig"
+	"github.com/tendermint/tendermint2/pkgs/crypto/secp256k1"
+	"github.com/tendermint/tendermint2/pkgs/sdk"
+	tu "github.com/tendermint/tendermint2/pkgs/sdk/testutils"
+	"github.com/tendermint/tendermint2/pkgs/std"
+	"github.com/tendermint/tendermint2/pkgs/store"
 )
 
 // run the tx through the anteHandler and ensure its valid

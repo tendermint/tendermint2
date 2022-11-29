@@ -1,12 +1,12 @@
 package sdk
 
 import (
-	"github.com/gnolang/gno/pkgs/amino"
-	abci "github.com/gnolang/gno/pkgs/bft/abci/types"
+	"github.com/tendermint/tendermint2/pkgs/amino"
+	abci "github.com/tendermint/tendermint2/pkgs/bft/abci/types"
 )
 
 var Package = amino.RegisterPackage(amino.NewPackage(
-	"github.com/gnolang/gno/pkgs/sdk",
+	"github.com/tendermint/tendermint2/pkgs/sdk",
 	"tm",
 	amino.GetCallersDirname(),
 ).

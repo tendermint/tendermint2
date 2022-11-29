@@ -6,12 +6,12 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	abci "github.com/gnolang/gno/pkgs/bft/abci/types"
-	"github.com/gnolang/gno/pkgs/crypto/merkle"
-	dbm "github.com/gnolang/gno/pkgs/db"
+	abci "github.com/tendermint/tendermint2/pkgs/bft/abci/types"
+	"github.com/tendermint/tendermint2/pkgs/crypto/merkle"
+	dbm "github.com/tendermint/tendermint2/pkgs/db"
 
-	"github.com/gnolang/gno/pkgs/store/iavl"
-	"github.com/gnolang/gno/pkgs/store/types"
+	"github.com/tendermint/tendermint2/pkgs/store/iavl"
+	"github.com/tendermint/tendermint2/pkgs/store/types"
 )
 
 func TestStoreType(t *testing.T) {

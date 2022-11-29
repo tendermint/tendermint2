@@ -1,8 +1,8 @@
 package txindex
 
 import (
-	"github.com/gnolang/gno/pkgs/events"
-	"github.com/gnolang/gno/pkgs/service"
+	"github.com/tendermint/tendermint2/pkgs/events"
+	"github.com/tendermint/tendermint2/pkgs/service"
 )
 
 // IndexerService connects event bus and transaction indexer together in order

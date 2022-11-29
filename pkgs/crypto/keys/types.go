@@ -3,10 +3,10 @@ package keys
 import (
 	"fmt"
 
-	"github.com/gnolang/gno/pkgs/amino"
-	"github.com/gnolang/gno/pkgs/crypto"
-	"github.com/gnolang/gno/pkgs/crypto/hd"
-	"github.com/gnolang/gno/pkgs/crypto/multisig"
+	"github.com/tendermint/tendermint2/pkgs/amino"
+	"github.com/tendermint/tendermint2/pkgs/crypto"
+	"github.com/tendermint/tendermint2/pkgs/crypto/hd"
+	"github.com/tendermint/tendermint2/pkgs/crypto/multisig"
 )
 
 // Keybase exposes operations on a generic keystore

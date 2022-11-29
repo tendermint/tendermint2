@@ -1,14 +1,14 @@
 package types
 
 import (
-	"github.com/gnolang/gno/pkgs/amino"
-	abci "github.com/gnolang/gno/pkgs/bft/abci/types"
-	"github.com/gnolang/gno/pkgs/bitarray"
-	"github.com/gnolang/gno/pkgs/crypto/merkle"
+	"github.com/tendermint/tendermint2/pkgs/amino"
+	abci "github.com/tendermint/tendermint2/pkgs/bft/abci/types"
+	"github.com/tendermint/tendermint2/pkgs/bitarray"
+	"github.com/tendermint/tendermint2/pkgs/crypto/merkle"
 )
 
 var Package = amino.RegisterPackage(amino.NewPackage(
-	"github.com/gnolang/gno/pkgs/bft/types",
+	"github.com/tendermint/tendermint2/pkgs/bft/types",
 	"tm",
 	amino.GetCallersDirname(),
 ).

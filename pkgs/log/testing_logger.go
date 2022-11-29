@@ -5,7 +5,7 @@ import (
 	"os"
 	"testing"
 
-	"github.com/gnolang/gno/pkgs/colors"
+	"github.com/tendermint/tendermint2/pkgs/colors"
 )
 
 // reuse the same logger across all tests

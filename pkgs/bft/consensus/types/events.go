@@ -3,8 +3,8 @@ package cstypes
 import (
 	"fmt"
 
-	"github.com/gnolang/gno/pkgs/bft/types"
-	"github.com/gnolang/gno/pkgs/bitarray"
+	"github.com/tendermint/tendermint2/pkgs/bft/types"
+	"github.com/tendermint/tendermint2/pkgs/bitarray"
 )
 
 type ConsensusEvent interface {

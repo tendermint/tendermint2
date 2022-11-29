@@ -1,8 +1,8 @@
 package mock
 
 import (
-	"github.com/gnolang/gno/pkgs/bft/rpc/client"
-	ctypes "github.com/gnolang/gno/pkgs/bft/rpc/core/types"
+	"github.com/tendermint/tendermint2/pkgs/bft/rpc/client"
+	ctypes "github.com/tendermint/tendermint2/pkgs/bft/rpc/core/types"
 )
 
 // StatusMock returns the result specified by the Call

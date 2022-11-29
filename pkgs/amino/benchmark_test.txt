@@ -1,6 +1,6 @@
 goos: darwin
 goarch: amd64
-pkg: github.com/gnolang/gno/pkgs/amino
+pkg: github.com/tendermint/tendermint2/pkgs/amino
 BenchmarkBinary/EmptyStruct:encode-12         	 2014173	       600 ns/op
 BenchmarkBinary/EmptyStruct:decode-12         	 2552624	       476 ns/op
 BenchmarkBinary/PrimitivesStruct:encode-12    	  195601	      5863 ns/op
@@ -36,7 +36,7 @@ BenchmarkBinary/AminoMarshalerStruct:decode-12         	  213175	      5642 ns/o
 
 goos: darwin
 goarch: amd64
-pkg: github.com/gnolang/gno/pkgs/amino
+pkg: github.com/tendermint/tendermint2/pkgs/amino
 BenchmarkBinaryPBBindings/EmptyStruct:encode:pbbindings-12         	                 3058335	       417 ns/op
 BenchmarkBinaryPBBindings/EmptyStruct:encode:pbbindings:translate_only-12         	10182542	       122 ns/op
 BenchmarkBinaryPBBindings/EmptyStruct:decode:pbbindings-12                        	 1792140	       627 ns/op

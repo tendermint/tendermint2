@@ -3,8 +3,8 @@ package bank
 import (
 	"fmt"
 
-	"github.com/gnolang/gno/pkgs/sdk"
-	"github.com/gnolang/gno/pkgs/sdk/auth"
+	"github.com/tendermint/tendermint2/pkgs/sdk"
+	"github.com/tendermint/tendermint2/pkgs/sdk/auth"
 )
 
 // RegisterInvariants registers the bank module invariants

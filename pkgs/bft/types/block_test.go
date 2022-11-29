@@ -11,13 +11,13 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	"github.com/gnolang/gno/pkgs/amino"
-	tmtime "github.com/gnolang/gno/pkgs/bft/types/time"
-	typesver "github.com/gnolang/gno/pkgs/bft/types/version"
-	"github.com/gnolang/gno/pkgs/bitarray"
-	"github.com/gnolang/gno/pkgs/crypto"
-	"github.com/gnolang/gno/pkgs/crypto/tmhash"
-	"github.com/gnolang/gno/pkgs/random"
+	"github.com/tendermint/tendermint2/pkgs/amino"
+	tmtime "github.com/tendermint/tendermint2/pkgs/bft/types/time"
+	typesver "github.com/tendermint/tendermint2/pkgs/bft/types/version"
+	"github.com/tendermint/tendermint2/pkgs/bitarray"
+	"github.com/tendermint/tendermint2/pkgs/crypto"
+	"github.com/tendermint/tendermint2/pkgs/crypto/tmhash"
+	"github.com/tendermint/tendermint2/pkgs/random"
 )
 
 func TestBlockValidateBasic(t *testing.T) {

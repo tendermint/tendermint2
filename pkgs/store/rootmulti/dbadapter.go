@@ -1,8 +1,8 @@
 package rootmulti
 
 import (
-	"github.com/gnolang/gno/pkgs/store/dbadapter"
-	"github.com/gnolang/gno/pkgs/store/types"
+	"github.com/tendermint/tendermint2/pkgs/store/dbadapter"
+	"github.com/tendermint/tendermint2/pkgs/store/types"
 )
 
 var commithash = []byte("FAKE_HASH")

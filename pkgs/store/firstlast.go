@@ -3,8 +3,8 @@ package store
 import (
 	"bytes"
 
-	"github.com/gnolang/gno/pkgs/std"
-	"github.com/gnolang/gno/pkgs/store/types"
+	"github.com/tendermint/tendermint2/pkgs/std"
+	"github.com/tendermint/tendermint2/pkgs/store/types"
 )
 
 // Gets the first item.

@@ -3,7 +3,7 @@ package cache
 import (
 	"bytes"
 
-	"github.com/gnolang/gno/pkgs/store/types"
+	"github.com/tendermint/tendermint2/pkgs/store/types"
 )
 
 // cacheMergeIterator merges a parent Iterator and a cache Iterator.

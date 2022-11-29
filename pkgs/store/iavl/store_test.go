@@ -6,14 +6,14 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	"github.com/gnolang/gno/pkgs/amino"
-	abci "github.com/gnolang/gno/pkgs/bft/abci/types"
-	dbm "github.com/gnolang/gno/pkgs/db"
-	"github.com/gnolang/gno/pkgs/iavl"
-	"github.com/gnolang/gno/pkgs/random"
+	"github.com/tendermint/tendermint2/pkgs/amino"
+	abci "github.com/tendermint/tendermint2/pkgs/bft/abci/types"
+	dbm "github.com/tendermint/tendermint2/pkgs/db"
+	"github.com/tendermint/tendermint2/pkgs/iavl"
+	"github.com/tendermint/tendermint2/pkgs/random"
 
-	//"github.com/gnolang/gno/pkgs/store/errors"
-	"github.com/gnolang/gno/pkgs/store/types"
+	//"github.com/tendermint/tendermint2/pkgs/store/errors"
+	"github.com/tendermint/tendermint2/pkgs/store/types"
 )
 
 var (

@@ -3,9 +3,9 @@ package merkle
 import (
 	"bytes"
 
-	amino "github.com/gnolang/gno/pkgs/amino"
-	"github.com/gnolang/gno/pkgs/crypto/tmhash"
-	"github.com/gnolang/gno/pkgs/std"
+	amino "github.com/tendermint/tendermint2/pkgs/amino"
+	"github.com/tendermint/tendermint2/pkgs/crypto/tmhash"
+	"github.com/tendermint/tendermint2/pkgs/std"
 )
 
 // Merkle tree from a map.

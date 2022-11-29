@@ -5,15 +5,15 @@ import (
 	"reflect"
 	"strings"
 
-	"github.com/gnolang/gno/pkgs/crypto"
-	"github.com/gnolang/gno/pkgs/crypto/bip39"
-	"github.com/gnolang/gno/pkgs/crypto/hd"
-	"github.com/gnolang/gno/pkgs/crypto/keys/armor"
-	"github.com/gnolang/gno/pkgs/crypto/keys/keyerror"
-	"github.com/gnolang/gno/pkgs/crypto/ledger"
-	"github.com/gnolang/gno/pkgs/crypto/secp256k1"
-	dbm "github.com/gnolang/gno/pkgs/db"
-	"github.com/gnolang/gno/pkgs/errors"
+	"github.com/tendermint/tendermint2/pkgs/crypto"
+	"github.com/tendermint/tendermint2/pkgs/crypto/bip39"
+	"github.com/tendermint/tendermint2/pkgs/crypto/hd"
+	"github.com/tendermint/tendermint2/pkgs/crypto/keys/armor"
+	"github.com/tendermint/tendermint2/pkgs/crypto/keys/keyerror"
+	"github.com/tendermint/tendermint2/pkgs/crypto/ledger"
+	"github.com/tendermint/tendermint2/pkgs/crypto/secp256k1"
+	dbm "github.com/tendermint/tendermint2/pkgs/db"
+	"github.com/tendermint/tendermint2/pkgs/errors"
 )
 
 var _ Keybase = dbKeybase{}

@@ -3,7 +3,7 @@ package client
 import (
 	"time"
 
-	"github.com/gnolang/gno/pkgs/errors"
+	"github.com/tendermint/tendermint2/pkgs/errors"
 )
 
 // Waiter is informed of current height, decided whether to quit early

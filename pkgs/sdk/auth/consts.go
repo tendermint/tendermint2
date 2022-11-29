@@ -1,7 +1,7 @@
 package auth
 
 import (
-	"github.com/gnolang/gno/pkgs/crypto"
+	"github.com/tendermint/tendermint2/pkgs/crypto"
 )
 
 const (

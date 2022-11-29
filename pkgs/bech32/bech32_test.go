@@ -6,8 +6,8 @@ import (
 	"encoding/hex"
 	"testing"
 
-	"github.com/gnolang/gno/pkgs/bech32"
-	"github.com/gnolang/gno/pkgs/crypto"
+	"github.com/tendermint/tendermint2/pkgs/bech32"
+	"github.com/tendermint/tendermint2/pkgs/crypto"
 	"github.com/jaekwon/testify/assert"
 )
 

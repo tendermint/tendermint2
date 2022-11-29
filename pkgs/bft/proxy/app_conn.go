@@ -1,8 +1,8 @@
 package proxy
 
 import (
-	abcicli "github.com/gnolang/gno/pkgs/bft/abci/client"
-	abci "github.com/gnolang/gno/pkgs/bft/abci/types"
+	abcicli "github.com/tendermint/tendermint2/pkgs/bft/abci/client"
+	abci "github.com/tendermint/tendermint2/pkgs/bft/abci/types"
 )
 
 //----------------------------------------------------------------------------------------

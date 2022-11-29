@@ -5,9 +5,9 @@ import (
 	"os"
 	"testing"
 
-	cfg "github.com/gnolang/gno/pkgs/bft/config"
-	"github.com/gnolang/gno/pkgs/bft/types"
-	tmtime "github.com/gnolang/gno/pkgs/bft/types/time"
+	cfg "github.com/tendermint/tendermint2/pkgs/bft/config"
+	"github.com/tendermint/tendermint2/pkgs/bft/types"
+	tmtime "github.com/tendermint/tendermint2/pkgs/bft/types/time"
 )
 
 var config *cfg.Config // NOTE: must be reset for each _test.go file

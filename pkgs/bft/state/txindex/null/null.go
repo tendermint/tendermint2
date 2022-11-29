@@ -1,7 +1,7 @@
 package null
 
 import (
-	"github.com/gnolang/gno/pkgs/bft/state/txindex"
+	"github.com/tendermint/tendermint2/pkgs/bft/state/txindex"
 )
 
 var _ txindex.TxIndexer = (*TxIndex)(nil)

@@ -7,12 +7,12 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	"github.com/gnolang/gno/pkgs/amino"
-	abci "github.com/gnolang/gno/pkgs/bft/abci/types"
-	bft "github.com/gnolang/gno/pkgs/bft/types"
-	"github.com/gnolang/gno/pkgs/sdk"
-	tu "github.com/gnolang/gno/pkgs/sdk/testutils"
-	"github.com/gnolang/gno/pkgs/std"
+	"github.com/tendermint/tendermint2/pkgs/amino"
+	abci "github.com/tendermint/tendermint2/pkgs/bft/abci/types"
+	bft "github.com/tendermint/tendermint2/pkgs/bft/types"
+	"github.com/tendermint/tendermint2/pkgs/sdk"
+	tu "github.com/tendermint/tendermint2/pkgs/sdk/testutils"
+	"github.com/tendermint/tendermint2/pkgs/std"
 )
 
 func TestInvalidMsg(t *testing.T) {

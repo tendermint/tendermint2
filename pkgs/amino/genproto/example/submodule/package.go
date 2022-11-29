@@ -1,13 +1,13 @@
 package submodule
 
 import (
-	"github.com/gnolang/gno/pkgs/amino"
-	"github.com/gnolang/gno/pkgs/amino/genproto/example/submodule2"
+	"github.com/tendermint/tendermint2/pkgs/amino"
+	"github.com/tendermint/tendermint2/pkgs/amino/genproto/example/submodule2"
 )
 
 var Package = amino.RegisterPackage(
 	amino.NewPackage(
-		"github.com/gnolang/gno/pkgs/amino/genproto/example/submodule",
+		"github.com/tendermint/tendermint2/pkgs/amino/genproto/example/submodule",
 		"submodule",
 		amino.GetCallersDirname(),
 	).WithDependencies(

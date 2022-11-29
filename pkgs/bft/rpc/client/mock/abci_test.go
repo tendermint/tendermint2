@@ -7,13 +7,13 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	"github.com/gnolang/gno/pkgs/bft/abci/example/kvstore"
-	abci "github.com/gnolang/gno/pkgs/bft/abci/types"
-	"github.com/gnolang/gno/pkgs/bft/rpc/client"
-	"github.com/gnolang/gno/pkgs/bft/rpc/client/mock"
-	ctypes "github.com/gnolang/gno/pkgs/bft/rpc/core/types"
-	"github.com/gnolang/gno/pkgs/bft/types"
-	"github.com/gnolang/gno/pkgs/errors"
+	"github.com/tendermint/tendermint2/pkgs/bft/abci/example/kvstore"
+	abci "github.com/tendermint/tendermint2/pkgs/bft/abci/types"
+	"github.com/tendermint/tendermint2/pkgs/bft/rpc/client"
+	"github.com/tendermint/tendermint2/pkgs/bft/rpc/client/mock"
+	ctypes "github.com/tendermint/tendermint2/pkgs/bft/rpc/core/types"
+	"github.com/tendermint/tendermint2/pkgs/bft/types"
+	"github.com/tendermint/tendermint2/pkgs/errors"
 )
 
 func TestABCIMock(t *testing.T) {

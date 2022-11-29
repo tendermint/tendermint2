@@ -1,7 +1,7 @@
 package store
 
 import (
-	"github.com/gnolang/gno/pkgs/store/types"
+	"github.com/tendermint/tendermint2/pkgs/store/types"
 )
 
 // Import cosmos-sdk/types/store.go for convenience.

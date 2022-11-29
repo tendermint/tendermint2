@@ -1,10 +1,10 @@
 package mock
 
 import (
-	abci "github.com/gnolang/gno/pkgs/bft/abci/types"
-	mempl "github.com/gnolang/gno/pkgs/bft/mempool"
-	"github.com/gnolang/gno/pkgs/bft/types"
-	"github.com/gnolang/gno/pkgs/clist"
+	abci "github.com/tendermint/tendermint2/pkgs/bft/abci/types"
+	mempl "github.com/tendermint/tendermint2/pkgs/bft/mempool"
+	"github.com/tendermint/tendermint2/pkgs/bft/types"
+	"github.com/tendermint/tendermint2/pkgs/clist"
 )
 
 // Mempool is an empty implementation of a Mempool, useful for testing.

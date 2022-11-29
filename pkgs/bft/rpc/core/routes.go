@@ -1,7 +1,7 @@
 package core
 
 import (
-	rpc "github.com/gnolang/gno/pkgs/bft/rpc/lib/server"
+	rpc "github.com/tendermint/tendermint2/pkgs/bft/rpc/lib/server"
 )
 
 // TODO: better system than "unsafe" prefix

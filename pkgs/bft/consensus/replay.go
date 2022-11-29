@@ -8,16 +8,16 @@ import (
 	"reflect"
 	"time"
 
-	abci "github.com/gnolang/gno/pkgs/bft/abci/types"
-	cstypes "github.com/gnolang/gno/pkgs/bft/consensus/types"
-	"github.com/gnolang/gno/pkgs/bft/mempool/mock"
-	"github.com/gnolang/gno/pkgs/bft/proxy"
-	sm "github.com/gnolang/gno/pkgs/bft/state"
-	"github.com/gnolang/gno/pkgs/bft/types"
-	walm "github.com/gnolang/gno/pkgs/bft/wal"
-	dbm "github.com/gnolang/gno/pkgs/db"
-	"github.com/gnolang/gno/pkgs/events"
-	"github.com/gnolang/gno/pkgs/log"
+	abci "github.com/tendermint/tendermint2/pkgs/bft/abci/types"
+	cstypes "github.com/tendermint/tendermint2/pkgs/bft/consensus/types"
+	"github.com/tendermint/tendermint2/pkgs/bft/mempool/mock"
+	"github.com/tendermint/tendermint2/pkgs/bft/proxy"
+	sm "github.com/tendermint/tendermint2/pkgs/bft/state"
+	"github.com/tendermint/tendermint2/pkgs/bft/types"
+	walm "github.com/tendermint/tendermint2/pkgs/bft/wal"
+	dbm "github.com/tendermint/tendermint2/pkgs/db"
+	"github.com/tendermint/tendermint2/pkgs/events"
+	"github.com/tendermint/tendermint2/pkgs/log"
 )
 
 var crc32c = crc32.MakeTable(crc32.Castagnoli)

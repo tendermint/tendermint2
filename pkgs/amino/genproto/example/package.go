@@ -1,8 +1,8 @@
 package main
 
 import (
-	"github.com/gnolang/gno/pkgs/amino"
-	"github.com/gnolang/gno/pkgs/amino/genproto/example/submodule"
+	"github.com/tendermint/tendermint2/pkgs/amino"
+	"github.com/tendermint/tendermint2/pkgs/amino/genproto/example/submodule"
 )
 
 var Package = amino.RegisterPackage(
@@ -11,7 +11,7 @@ var Package = amino.RegisterPackage(
 		"main",
 		amino.GetCallersDirname(),
 	).WithP3GoPkgPath(
-		"github.com/gnolang/gno/pkgs/amino/genproto/example/pb",
+		"github.com/tendermint/tendermint2/pkgs/amino/genproto/example/pb",
 	).WithDependencies(
 		submodule.Package,
 	).WithTypes(

@@ -3,8 +3,8 @@ package abcicli
 import (
 	"sync"
 
-	abci "github.com/gnolang/gno/pkgs/bft/abci/types"
-	"github.com/gnolang/gno/pkgs/service"
+	abci "github.com/tendermint/tendermint2/pkgs/bft/abci/types"
+	"github.com/tendermint/tendermint2/pkgs/service"
 )
 
 var _ Client = (*localClient)(nil)

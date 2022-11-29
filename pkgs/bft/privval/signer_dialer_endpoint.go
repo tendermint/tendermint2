@@ -3,8 +3,8 @@ package privval
 import (
 	"time"
 
-	"github.com/gnolang/gno/pkgs/log"
-	"github.com/gnolang/gno/pkgs/service"
+	"github.com/tendermint/tendermint2/pkgs/log"
+	"github.com/tendermint/tendermint2/pkgs/service"
 )
 
 const (

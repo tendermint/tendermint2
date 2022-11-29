@@ -16,8 +16,6 @@ build/*
 *.gno.gen_test.go
 .vscode
 .idea
-*.pb.go
-pbbindings.go
 *~
 .#*
 *#

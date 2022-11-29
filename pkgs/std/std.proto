@@ -1,7 +1,7 @@
 syntax = "proto3";
 package std;
 
-option go_package = "github.com/gnolang/gno/pkgs/std/pb";
+option go_package = "github.com/tendermint/tendermint2/pkgs/std/pb";
 
 // imports
 import "google/protobuf/any.proto";

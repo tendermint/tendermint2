@@ -10,8 +10,8 @@ import (
 	"golang.org/x/crypto/ripemd160"
 
 	secp256k1 "github.com/btcsuite/btcd/btcec"
-	"github.com/gnolang/gno/pkgs/amino"
-	"github.com/gnolang/gno/pkgs/crypto"
+	"github.com/tendermint/tendermint2/pkgs/amino"
+	"github.com/tendermint/tendermint2/pkgs/crypto"
 )
 
 //-------------------------------------
