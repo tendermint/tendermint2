@@ -24,15 +24,7 @@ jobs:
           - test.go1
           - test.go2
           - test.go3
-          - test.go4
-          - test.files1
-          - test.files2
-          - test.packages0
-          - test.packages1
-          - test.packages2
-          - test.examples
           - test.flappy
-          - test.docker-integration
     runs-on: ubuntu-latest
     timeout-minutes: 15
     steps:
