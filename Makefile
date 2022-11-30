@@ -50,9 +50,9 @@ test.go3:
 
 genproto:
 	rm -rf proto/*
-	find pkgs | grep -v "^pkgs\/amino" | grep "\.proto" | xargs rm
-	find pkgs | grep -v "^pkgs\/amino" | grep "pbbindings" | xargs rm
-	find pkgs | grep -v "^pkgs\/amino" | grep "pb.go" | xargs rm
+	-find pkgs | grep -v "^pkgs\/amino" | grep "\.proto" | xargs rm
+	-find pkgs | grep -v "^pkgs\/amino" | grep "pbbindings" | xargs rm
+	-find pkgs | grep -v "^pkgs\/amino" | grep "pb.go" | xargs rm
 	@rm gno.proto || true
 	@rm pbbindings.go || true
 	@rm gno.pb.go || true

@@ -1,9 +1,9 @@
 package hd
 
 import (
+	proto "google.golang.org/protobuf/proto"
 	amino "github.com/tendermint/tendermint2/pkgs/amino"
 	hdpb "github.com/tendermint/tendermint2/pkgs/crypto/hd/pb"
-	proto "google.golang.org/protobuf/proto"
 )
 
 func (goo BIP44Params) ToPBMessage(cdc *amino.Codec) (msg proto.Message, err error) {
@@ -34,13 +34,11 @@ func (goo BIP44Params) ToPBMessage(cdc *amino.Codec) (msg proto.Message, err err
 	msg = pbo
 	return
 }
-
 func (goo BIP44Params) EmptyPBMessage(cdc *amino.Codec) (msg proto.Message) {
 	pbo := new(hdpb.Bip44Params)
 	msg = pbo
 	return
 }
-
 func (goo *BIP44Params) FromPBMessage(cdc *amino.Codec, msg proto.Message) (err error) {
 	var pbo *hdpb.Bip44Params = msg.(*hdpb.Bip44Params)
 	{
@@ -64,11 +62,9 @@ func (goo *BIP44Params) FromPBMessage(cdc *amino.Codec, msg proto.Message) (err 
 	}
 	return
 }
-
 func (_ BIP44Params) GetTypeURL() (typeURL string) {
 	return "/tm.Bip44Params"
 }
-
 func IsBip44ParamsReprEmpty(goor BIP44Params) (empty bool) {
 	{
 		empty = true

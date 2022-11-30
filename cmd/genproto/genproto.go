@@ -18,7 +18,6 @@ import (
 	"github.com/tendermint/tendermint2/pkgs/crypto/multisig"
 	"github.com/tendermint/tendermint2/pkgs/sdk"
 	"github.com/tendermint/tendermint2/pkgs/sdk/bank"
-	"github.com/tendermint/tendermint2/pkgs/sdk/vm"
 	"github.com/tendermint/tendermint2/pkgs/std"
 )
 
@@ -38,7 +37,6 @@ func main() {
 		std.Package,
 		sdk.Package,
 		bank.Package,
-		vm.Package,
 	}
 	for _, pkg := range pkgs {
 		genproto.WriteProto3Schema(pkg)

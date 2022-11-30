@@ -1,17 +1,14 @@
 package consensus
 
 import (
-	time "time"
-
+	proto "google.golang.org/protobuf/proto"
 	amino "github.com/tendermint/tendermint2/pkgs/amino"
 	consensuspb "github.com/tendermint/tendermint2/pkgs/bft/consensus/pb"
-	cstypes "github.com/tendermint/tendermint2/pkgs/bft/consensus/types"
 	types "github.com/tendermint/tendermint2/pkgs/bft/consensus/types"
-	cstypespb "github.com/tendermint/tendermint2/pkgs/bft/consensus/types/pb"
+	typespb "github.com/tendermint/tendermint2/pkgs/bft/types/pb"
+	bitarraypb "github.com/tendermint/tendermint2/pkgs/bitarray/pb"
+	bitarray "github.com/tendermint/tendermint2/pkgs/bitarray"
 	types1 "github.com/tendermint/tendermint2/pkgs/bft/types"
-	types10 "github.com/tendermint/tendermint2/pkgs/bft/types"
-	types11 "github.com/tendermint/tendermint2/pkgs/bft/types"
-	types12 "github.com/tendermint/tendermint2/pkgs/bft/types"
 	types2 "github.com/tendermint/tendermint2/pkgs/bft/types"
 	types3 "github.com/tendermint/tendermint2/pkgs/bft/types"
 	types4 "github.com/tendermint/tendermint2/pkgs/bft/types"
@@ -20,13 +17,15 @@ import (
 	types7 "github.com/tendermint/tendermint2/pkgs/bft/types"
 	types8 "github.com/tendermint/tendermint2/pkgs/bft/types"
 	types9 "github.com/tendermint/tendermint2/pkgs/bft/types"
-	typespb "github.com/tendermint/tendermint2/pkgs/bft/types/pb"
-	bitarray "github.com/tendermint/tendermint2/pkgs/bitarray"
-	bitarraypb "github.com/tendermint/tendermint2/pkgs/bitarray/pb"
-	crypto "github.com/tendermint/tendermint2/pkgs/crypto"
-	proto "google.golang.org/protobuf/proto"
+	types10 "github.com/tendermint/tendermint2/pkgs/bft/types"
+	types11 "github.com/tendermint/tendermint2/pkgs/bft/types"
+	types12 "github.com/tendermint/tendermint2/pkgs/bft/types"
+	cstypespb "github.com/tendermint/tendermint2/pkgs/bft/consensus/types/pb"
+	cstypes "github.com/tendermint/tendermint2/pkgs/bft/consensus/types"
 	anypb "google.golang.org/protobuf/types/known/anypb"
+	crypto "github.com/tendermint/tendermint2/pkgs/crypto"
 	durationpb "google.golang.org/protobuf/types/known/durationpb"
+	time "time"
 )
 
 func (goo NewRoundStepMessage) ToPBMessage(cdc *amino.Codec) (msg proto.Message, err error) {
@@ -57,13 +56,11 @@ func (goo NewRoundStepMessage) ToPBMessage(cdc *amino.Codec) (msg proto.Message,
 	msg = pbo
 	return
 }
-
 func (goo NewRoundStepMessage) EmptyPBMessage(cdc *amino.Codec) (msg proto.Message) {
 	pbo := new(consensuspb.NewRoundStepMessage)
 	msg = pbo
 	return
 }
-
 func (goo *NewRoundStepMessage) FromPBMessage(cdc *amino.Codec, msg proto.Message) (err error) {
 	var pbo *consensuspb.NewRoundStepMessage = msg.(*consensuspb.NewRoundStepMessage)
 	{
@@ -87,11 +84,9 @@ func (goo *NewRoundStepMessage) FromPBMessage(cdc *amino.Codec, msg proto.Messag
 	}
 	return
 }
-
 func (_ NewRoundStepMessage) GetTypeURL() (typeURL string) {
 	return "/tm.NewRoundStepMessage"
 }
-
 func IsNewRoundStepMessageReprEmpty(goor NewRoundStepMessage) (empty bool) {
 	{
 		empty = true
@@ -123,7 +118,6 @@ func IsNewRoundStepMessageReprEmpty(goor NewRoundStepMessage) (empty bool) {
 	}
 	return
 }
-
 func (goo NewValidBlockMessage) ToPBMessage(cdc *amino.Codec) (msg proto.Message, err error) {
 	var pbo *consensuspb.NewValidBlockMessage
 	{
@@ -167,13 +161,11 @@ func (goo NewValidBlockMessage) ToPBMessage(cdc *amino.Codec) (msg proto.Message
 	msg = pbo
 	return
 }
-
 func (goo NewValidBlockMessage) EmptyPBMessage(cdc *amino.Codec) (msg proto.Message) {
 	pbo := new(consensuspb.NewValidBlockMessage)
 	msg = pbo
 	return
 }
-
 func (goo *NewValidBlockMessage) FromPBMessage(cdc *amino.Codec, msg proto.Message) (err error) {
 	var pbo *consensuspb.NewValidBlockMessage = msg.(*consensuspb.NewValidBlockMessage)
 	{
@@ -208,11 +200,9 @@ func (goo *NewValidBlockMessage) FromPBMessage(cdc *amino.Codec, msg proto.Messa
 	}
 	return
 }
-
 func (_ NewValidBlockMessage) GetTypeURL() (typeURL string) {
 	return "/tm.NewValidBlockMessage"
 }
-
 func IsNewValidBlockMessageReprEmpty(goor NewValidBlockMessage) (empty bool) {
 	{
 		empty = true
@@ -245,7 +235,6 @@ func IsNewValidBlockMessageReprEmpty(goor NewValidBlockMessage) (empty bool) {
 	}
 	return
 }
-
 func (goo ProposalMessage) ToPBMessage(cdc *amino.Codec) (msg proto.Message, err error) {
 	var pbo *consensuspb.ProposalMessage
 	{
@@ -272,13 +261,11 @@ func (goo ProposalMessage) ToPBMessage(cdc *amino.Codec) (msg proto.Message, err
 	msg = pbo
 	return
 }
-
 func (goo ProposalMessage) EmptyPBMessage(cdc *amino.Codec) (msg proto.Message) {
 	pbo := new(consensuspb.ProposalMessage)
 	msg = pbo
 	return
 }
-
 func (goo *ProposalMessage) FromPBMessage(cdc *amino.Codec, msg proto.Message) (err error) {
 	var pbo *consensuspb.ProposalMessage = msg.(*consensuspb.ProposalMessage)
 	{
@@ -296,11 +283,9 @@ func (goo *ProposalMessage) FromPBMessage(cdc *amino.Codec, msg proto.Message) (
 	}
 	return
 }
-
 func (_ ProposalMessage) GetTypeURL() (typeURL string) {
 	return "/tm.ProposalMessage"
 }
-
 func IsProposalMessageReprEmpty(goor ProposalMessage) (empty bool) {
 	{
 		empty = true
@@ -312,7 +297,6 @@ func IsProposalMessageReprEmpty(goor ProposalMessage) (empty bool) {
 	}
 	return
 }
-
 func (goo ProposalPOLMessage) ToPBMessage(cdc *amino.Codec) (msg proto.Message, err error) {
 	var pbo *consensuspb.ProposalPOLMessage
 	{
@@ -345,13 +329,11 @@ func (goo ProposalPOLMessage) ToPBMessage(cdc *amino.Codec) (msg proto.Message, 
 	msg = pbo
 	return
 }
-
 func (goo ProposalPOLMessage) EmptyPBMessage(cdc *amino.Codec) (msg proto.Message) {
 	pbo := new(consensuspb.ProposalPOLMessage)
 	msg = pbo
 	return
 }
-
 func (goo *ProposalPOLMessage) FromPBMessage(cdc *amino.Codec, msg proto.Message) (err error) {
 	var pbo *consensuspb.ProposalPOLMessage = msg.(*consensuspb.ProposalPOLMessage)
 	{
@@ -375,11 +357,9 @@ func (goo *ProposalPOLMessage) FromPBMessage(cdc *amino.Codec, msg proto.Message
 	}
 	return
 }
-
 func (_ ProposalPOLMessage) GetTypeURL() (typeURL string) {
 	return "/tm.ProposalPOLMessage"
 }
-
 func IsProposalPOLMessageReprEmpty(goor ProposalPOLMessage) (empty bool) {
 	{
 		empty = true
@@ -401,7 +381,6 @@ func IsProposalPOLMessageReprEmpty(goor ProposalPOLMessage) (empty bool) {
 	}
 	return
 }
-
 func (goo BlockPartMessage) ToPBMessage(cdc *amino.Codec) (msg proto.Message, err error) {
 	var pbo *consensuspb.BlockPartMessage
 	{
@@ -434,13 +413,11 @@ func (goo BlockPartMessage) ToPBMessage(cdc *amino.Codec) (msg proto.Message, er
 	msg = pbo
 	return
 }
-
 func (goo BlockPartMessage) EmptyPBMessage(cdc *amino.Codec) (msg proto.Message) {
 	pbo := new(consensuspb.BlockPartMessage)
 	msg = pbo
 	return
 }
-
 func (goo *BlockPartMessage) FromPBMessage(cdc *amino.Codec, msg proto.Message) (err error) {
 	var pbo *consensuspb.BlockPartMessage = msg.(*consensuspb.BlockPartMessage)
 	{
@@ -464,11 +441,9 @@ func (goo *BlockPartMessage) FromPBMessage(cdc *amino.Codec, msg proto.Message) 
 	}
 	return
 }
-
 func (_ BlockPartMessage) GetTypeURL() (typeURL string) {
 	return "/tm.BlockPartMessage"
 }
-
 func IsBlockPartMessageReprEmpty(goor BlockPartMessage) (empty bool) {
 	{
 		empty = true
@@ -490,7 +465,6 @@ func IsBlockPartMessageReprEmpty(goor BlockPartMessage) (empty bool) {
 	}
 	return
 }
-
 func (goo VoteMessage) ToPBMessage(cdc *amino.Codec) (msg proto.Message, err error) {
 	var pbo *consensuspb.VoteMessage
 	{
@@ -517,13 +491,11 @@ func (goo VoteMessage) ToPBMessage(cdc *amino.Codec) (msg proto.Message, err err
 	msg = pbo
 	return
 }
-
 func (goo VoteMessage) EmptyPBMessage(cdc *amino.Codec) (msg proto.Message) {
 	pbo := new(consensuspb.VoteMessage)
 	msg = pbo
 	return
 }
-
 func (goo *VoteMessage) FromPBMessage(cdc *amino.Codec, msg proto.Message) (err error) {
 	var pbo *consensuspb.VoteMessage = msg.(*consensuspb.VoteMessage)
 	{
@@ -541,11 +513,9 @@ func (goo *VoteMessage) FromPBMessage(cdc *amino.Codec, msg proto.Message) (err 
 	}
 	return
 }
-
 func (_ VoteMessage) GetTypeURL() (typeURL string) {
 	return "/tm.VoteMessage"
 }
-
 func IsVoteMessageReprEmpty(goor VoteMessage) (empty bool) {
 	{
 		empty = true
@@ -557,7 +527,6 @@ func IsVoteMessageReprEmpty(goor VoteMessage) (empty bool) {
 	}
 	return
 }
-
 func (goo HasVoteMessage) ToPBMessage(cdc *amino.Codec) (msg proto.Message, err error) {
 	var pbo *consensuspb.HasVoteMessage
 	{
@@ -583,13 +552,11 @@ func (goo HasVoteMessage) ToPBMessage(cdc *amino.Codec) (msg proto.Message, err 
 	msg = pbo
 	return
 }
-
 func (goo HasVoteMessage) EmptyPBMessage(cdc *amino.Codec) (msg proto.Message) {
 	pbo := new(consensuspb.HasVoteMessage)
 	msg = pbo
 	return
 }
-
 func (goo *HasVoteMessage) FromPBMessage(cdc *amino.Codec, msg proto.Message) (err error) {
 	var pbo *consensuspb.HasVoteMessage = msg.(*consensuspb.HasVoteMessage)
 	{
@@ -610,11 +577,9 @@ func (goo *HasVoteMessage) FromPBMessage(cdc *amino.Codec, msg proto.Message) (e
 	}
 	return
 }
-
 func (_ HasVoteMessage) GetTypeURL() (typeURL string) {
 	return "/tm.HasVoteMessage"
 }
-
 func IsHasVoteMessageReprEmpty(goor HasVoteMessage) (empty bool) {
 	{
 		empty = true
@@ -641,7 +606,6 @@ func IsHasVoteMessageReprEmpty(goor HasVoteMessage) (empty bool) {
 	}
 	return
 }
-
 func (goo VoteSetMaj23Message) ToPBMessage(cdc *amino.Codec) (msg proto.Message, err error) {
 	var pbo *consensuspb.VoteSetMaj23Message
 	{
@@ -672,13 +636,11 @@ func (goo VoteSetMaj23Message) ToPBMessage(cdc *amino.Codec) (msg proto.Message,
 	msg = pbo
 	return
 }
-
 func (goo VoteSetMaj23Message) EmptyPBMessage(cdc *amino.Codec) (msg proto.Message) {
 	pbo := new(consensuspb.VoteSetMaj23Message)
 	msg = pbo
 	return
 }
-
 func (goo *VoteSetMaj23Message) FromPBMessage(cdc *amino.Codec, msg proto.Message) (err error) {
 	var pbo *consensuspb.VoteSetMaj23Message = msg.(*consensuspb.VoteSetMaj23Message)
 	{
@@ -704,11 +666,9 @@ func (goo *VoteSetMaj23Message) FromPBMessage(cdc *amino.Codec, msg proto.Messag
 	}
 	return
 }
-
 func (_ VoteSetMaj23Message) GetTypeURL() (typeURL string) {
 	return "/tm.VoteSetMaj23Message"
 }
-
 func IsVoteSetMaj23MessageReprEmpty(goor VoteSetMaj23Message) (empty bool) {
 	{
 		empty = true
@@ -736,7 +696,6 @@ func IsVoteSetMaj23MessageReprEmpty(goor VoteSetMaj23Message) (empty bool) {
 	}
 	return
 }
-
 func (goo VoteSetBitsMessage) ToPBMessage(cdc *amino.Codec) (msg proto.Message, err error) {
 	var pbo *consensuspb.VoteSetBitsMessage
 	{
@@ -780,13 +739,11 @@ func (goo VoteSetBitsMessage) ToPBMessage(cdc *amino.Codec) (msg proto.Message, 
 	msg = pbo
 	return
 }
-
 func (goo VoteSetBitsMessage) EmptyPBMessage(cdc *amino.Codec) (msg proto.Message) {
 	pbo := new(consensuspb.VoteSetBitsMessage)
 	msg = pbo
 	return
 }
-
 func (goo *VoteSetBitsMessage) FromPBMessage(cdc *amino.Codec, msg proto.Message) (err error) {
 	var pbo *consensuspb.VoteSetBitsMessage = msg.(*consensuspb.VoteSetBitsMessage)
 	{
@@ -821,11 +778,9 @@ func (goo *VoteSetBitsMessage) FromPBMessage(cdc *amino.Codec, msg proto.Message
 	}
 	return
 }
-
 func (_ VoteSetBitsMessage) GetTypeURL() (typeURL string) {
 	return "/tm.VoteSetBitsMessage"
 }
-
 func IsVoteSetBitsMessageReprEmpty(goor VoteSetBitsMessage) (empty bool) {
 	{
 		empty = true
@@ -858,7 +813,6 @@ func IsVoteSetBitsMessageReprEmpty(goor VoteSetBitsMessage) (empty bool) {
 	}
 	return
 }
-
 func (goo newRoundStepInfo) ToPBMessage(cdc *amino.Codec) (msg proto.Message, err error) {
 	var pbo *consensuspb.NewRoundStepInfo
 	{
@@ -880,13 +834,11 @@ func (goo newRoundStepInfo) ToPBMessage(cdc *amino.Codec) (msg proto.Message, er
 	msg = pbo
 	return
 }
-
 func (goo newRoundStepInfo) EmptyPBMessage(cdc *amino.Codec) (msg proto.Message) {
 	pbo := new(consensuspb.NewRoundStepInfo)
 	msg = pbo
 	return
 }
-
 func (goo *newRoundStepInfo) FromPBMessage(cdc *amino.Codec, msg proto.Message) (err error) {
 	var pbo *consensuspb.NewRoundStepInfo = msg.(*consensuspb.NewRoundStepInfo)
 	{
@@ -903,11 +855,9 @@ func (goo *newRoundStepInfo) FromPBMessage(cdc *amino.Codec, msg proto.Message) 
 	}
 	return
 }
-
 func (_ newRoundStepInfo) GetTypeURL() (typeURL string) {
 	return "/tm.newRoundStepInfo"
 }
-
 func IsnewRoundStepInfoReprEmpty(goor newRoundStepInfo) (empty bool) {
 	{
 		empty = true
@@ -920,7 +870,6 @@ func IsnewRoundStepInfoReprEmpty(goor newRoundStepInfo) (empty bool) {
 	}
 	return
 }
-
 func (goo msgInfo) ToPBMessage(cdc *amino.Codec) (msg proto.Message, err error) {
 	var pbo *consensuspb.MsgInfo
 	{
@@ -948,13 +897,11 @@ func (goo msgInfo) ToPBMessage(cdc *amino.Codec) (msg proto.Message, err error) 
 	msg = pbo
 	return
 }
-
 func (goo msgInfo) EmptyPBMessage(cdc *amino.Codec) (msg proto.Message) {
 	pbo := new(consensuspb.MsgInfo)
 	msg = pbo
 	return
 }
-
 func (goo *msgInfo) FromPBMessage(cdc *amino.Codec, msg proto.Message) (err error) {
 	var pbo *consensuspb.MsgInfo = msg.(*consensuspb.MsgInfo)
 	{
@@ -977,11 +924,9 @@ func (goo *msgInfo) FromPBMessage(cdc *amino.Codec, msg proto.Message) (err erro
 	}
 	return
 }
-
 func (_ msgInfo) GetTypeURL() (typeURL string) {
 	return "/tm.msgInfo"
 }
-
 func IsmsgInfoReprEmpty(goor msgInfo) (empty bool) {
 	{
 		empty = true
@@ -998,7 +943,6 @@ func IsmsgInfoReprEmpty(goor msgInfo) (empty bool) {
 	}
 	return
 }
-
 func (goo timeoutInfo) ToPBMessage(cdc *amino.Codec) (msg proto.Message, err error) {
 	var pbo *consensuspb.TimeoutInfo
 	{
@@ -1026,13 +970,11 @@ func (goo timeoutInfo) ToPBMessage(cdc *amino.Codec) (msg proto.Message, err err
 	msg = pbo
 	return
 }
-
 func (goo timeoutInfo) EmptyPBMessage(cdc *amino.Codec) (msg proto.Message) {
 	pbo := new(consensuspb.TimeoutInfo)
 	msg = pbo
 	return
 }
-
 func (goo *timeoutInfo) FromPBMessage(cdc *amino.Codec, msg proto.Message) (err error) {
 	var pbo *consensuspb.TimeoutInfo = msg.(*consensuspb.TimeoutInfo)
 	{
@@ -1053,11 +995,9 @@ func (goo *timeoutInfo) FromPBMessage(cdc *amino.Codec, msg proto.Message) (err 
 	}
 	return
 }
-
 func (_ timeoutInfo) GetTypeURL() (typeURL string) {
 	return "/tm.timeoutInfo"
 }
-
 func IstimeoutInfoReprEmpty(goor timeoutInfo) (empty bool) {
 	{
 		empty = true

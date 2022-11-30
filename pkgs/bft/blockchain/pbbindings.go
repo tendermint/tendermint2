@@ -1,11 +1,11 @@
 package blockchain
 
 import (
+	proto "google.golang.org/protobuf/proto"
 	amino "github.com/tendermint/tendermint2/pkgs/amino"
 	blockchainpb "github.com/tendermint/tendermint2/pkgs/bft/blockchain/pb"
-	types "github.com/tendermint/tendermint2/pkgs/bft/types"
 	typespb "github.com/tendermint/tendermint2/pkgs/bft/types/pb"
-	proto "google.golang.org/protobuf/proto"
+	types "github.com/tendermint/tendermint2/pkgs/bft/types"
 )
 
 func (goo bcBlockRequestMessage) ToPBMessage(cdc *amino.Codec) (msg proto.Message, err error) {
@@ -24,13 +24,11 @@ func (goo bcBlockRequestMessage) ToPBMessage(cdc *amino.Codec) (msg proto.Messag
 	msg = pbo
 	return
 }
-
 func (goo bcBlockRequestMessage) EmptyPBMessage(cdc *amino.Codec) (msg proto.Message) {
 	pbo := new(blockchainpb.BlockRequest)
 	msg = pbo
 	return
 }
-
 func (goo *bcBlockRequestMessage) FromPBMessage(cdc *amino.Codec, msg proto.Message) (err error) {
 	var pbo *blockchainpb.BlockRequest = msg.(*blockchainpb.BlockRequest)
 	{
@@ -42,11 +40,9 @@ func (goo *bcBlockRequestMessage) FromPBMessage(cdc *amino.Codec, msg proto.Mess
 	}
 	return
 }
-
 func (_ bcBlockRequestMessage) GetTypeURL() (typeURL string) {
 	return "/tm.BlockRequest"
 }
-
 func IsBlockRequestReprEmpty(goor bcBlockRequestMessage) (empty bool) {
 	{
 		empty = true
@@ -58,7 +54,6 @@ func IsBlockRequestReprEmpty(goor bcBlockRequestMessage) (empty bool) {
 	}
 	return
 }
-
 func (goo bcBlockResponseMessage) ToPBMessage(cdc *amino.Codec) (msg proto.Message, err error) {
 	var pbo *blockchainpb.BlockResponse
 	{
@@ -85,13 +80,11 @@ func (goo bcBlockResponseMessage) ToPBMessage(cdc *amino.Codec) (msg proto.Messa
 	msg = pbo
 	return
 }
-
 func (goo bcBlockResponseMessage) EmptyPBMessage(cdc *amino.Codec) (msg proto.Message) {
 	pbo := new(blockchainpb.BlockResponse)
 	msg = pbo
 	return
 }
-
 func (goo *bcBlockResponseMessage) FromPBMessage(cdc *amino.Codec, msg proto.Message) (err error) {
 	var pbo *blockchainpb.BlockResponse = msg.(*blockchainpb.BlockResponse)
 	{
@@ -109,11 +102,9 @@ func (goo *bcBlockResponseMessage) FromPBMessage(cdc *amino.Codec, msg proto.Mes
 	}
 	return
 }
-
 func (_ bcBlockResponseMessage) GetTypeURL() (typeURL string) {
 	return "/tm.BlockResponse"
 }
-
 func IsBlockResponseReprEmpty(goor bcBlockResponseMessage) (empty bool) {
 	{
 		empty = true
@@ -125,7 +116,6 @@ func IsBlockResponseReprEmpty(goor bcBlockResponseMessage) (empty bool) {
 	}
 	return
 }
-
 func (goo bcNoBlockResponseMessage) ToPBMessage(cdc *amino.Codec) (msg proto.Message, err error) {
 	var pbo *blockchainpb.NoBlockResponse
 	{
@@ -142,13 +132,11 @@ func (goo bcNoBlockResponseMessage) ToPBMessage(cdc *amino.Codec) (msg proto.Mes
 	msg = pbo
 	return
 }
-
 func (goo bcNoBlockResponseMessage) EmptyPBMessage(cdc *amino.Codec) (msg proto.Message) {
 	pbo := new(blockchainpb.NoBlockResponse)
 	msg = pbo
 	return
 }
-
 func (goo *bcNoBlockResponseMessage) FromPBMessage(cdc *amino.Codec, msg proto.Message) (err error) {
 	var pbo *blockchainpb.NoBlockResponse = msg.(*blockchainpb.NoBlockResponse)
 	{
@@ -160,11 +148,9 @@ func (goo *bcNoBlockResponseMessage) FromPBMessage(cdc *amino.Codec, msg proto.M
 	}
 	return
 }
-
 func (_ bcNoBlockResponseMessage) GetTypeURL() (typeURL string) {
 	return "/tm.NoBlockResponse"
 }
-
 func IsNoBlockResponseReprEmpty(goor bcNoBlockResponseMessage) (empty bool) {
 	{
 		empty = true
@@ -176,7 +162,6 @@ func IsNoBlockResponseReprEmpty(goor bcNoBlockResponseMessage) (empty bool) {
 	}
 	return
 }
-
 func (goo bcStatusRequestMessage) ToPBMessage(cdc *amino.Codec) (msg proto.Message, err error) {
 	var pbo *blockchainpb.StatusRequest
 	{
@@ -193,13 +178,11 @@ func (goo bcStatusRequestMessage) ToPBMessage(cdc *amino.Codec) (msg proto.Messa
 	msg = pbo
 	return
 }
-
 func (goo bcStatusRequestMessage) EmptyPBMessage(cdc *amino.Codec) (msg proto.Message) {
 	pbo := new(blockchainpb.StatusRequest)
 	msg = pbo
 	return
 }
-
 func (goo *bcStatusRequestMessage) FromPBMessage(cdc *amino.Codec, msg proto.Message) (err error) {
 	var pbo *blockchainpb.StatusRequest = msg.(*blockchainpb.StatusRequest)
 	{
@@ -211,11 +194,9 @@ func (goo *bcStatusRequestMessage) FromPBMessage(cdc *amino.Codec, msg proto.Mes
 	}
 	return
 }
-
 func (_ bcStatusRequestMessage) GetTypeURL() (typeURL string) {
 	return "/tm.StatusRequest"
 }
-
 func IsStatusRequestReprEmpty(goor bcStatusRequestMessage) (empty bool) {
 	{
 		empty = true
@@ -227,7 +208,6 @@ func IsStatusRequestReprEmpty(goor bcStatusRequestMessage) (empty bool) {
 	}
 	return
 }
-
 func (goo bcStatusResponseMessage) ToPBMessage(cdc *amino.Codec) (msg proto.Message, err error) {
 	var pbo *blockchainpb.StatusResponse
 	{
@@ -244,13 +224,11 @@ func (goo bcStatusResponseMessage) ToPBMessage(cdc *amino.Codec) (msg proto.Mess
 	msg = pbo
 	return
 }
-
 func (goo bcStatusResponseMessage) EmptyPBMessage(cdc *amino.Codec) (msg proto.Message) {
 	pbo := new(blockchainpb.StatusResponse)
 	msg = pbo
 	return
 }
-
 func (goo *bcStatusResponseMessage) FromPBMessage(cdc *amino.Codec, msg proto.Message) (err error) {
 	var pbo *blockchainpb.StatusResponse = msg.(*blockchainpb.StatusResponse)
 	{
@@ -262,11 +240,9 @@ func (goo *bcStatusResponseMessage) FromPBMessage(cdc *amino.Codec, msg proto.Me
 	}
 	return
 }
-
 func (_ bcStatusResponseMessage) GetTypeURL() (typeURL string) {
 	return "/tm.StatusResponse"
 }
-
 func IsStatusResponseReprEmpty(goor bcStatusResponseMessage) (empty bool) {
 	{
 		empty = true

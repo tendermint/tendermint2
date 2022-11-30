@@ -1,11 +1,11 @@
 package sdk
 
 import (
-	amino "github.com/tendermint/tendermint2/pkgs/amino"
-	abci "github.com/tendermint/tendermint2/pkgs/bft/abci/types"
-	abcipb "github.com/tendermint/tendermint2/pkgs/bft/abci/types/pb"
-	sdkpb "github.com/tendermint/tendermint2/pkgs/sdk/pb"
 	proto "google.golang.org/protobuf/proto"
+	amino "github.com/tendermint/tendermint2/pkgs/amino"
+	sdkpb "github.com/tendermint/tendermint2/pkgs/sdk/pb"
+	abcipb "github.com/tendermint/tendermint2/pkgs/bft/abci/types/pb"
+	abci "github.com/tendermint/tendermint2/pkgs/bft/abci/types"
 )
 
 func (goo Result) ToPBMessage(cdc *amino.Codec) (msg proto.Message, err error) {
@@ -35,13 +35,11 @@ func (goo Result) ToPBMessage(cdc *amino.Codec) (msg proto.Message, err error) {
 	msg = pbo
 	return
 }
-
 func (goo Result) EmptyPBMessage(cdc *amino.Codec) (msg proto.Message) {
 	pbo := new(sdkpb.Result)
 	msg = pbo
 	return
 }
-
 func (goo *Result) FromPBMessage(cdc *amino.Codec, msg proto.Message) (err error) {
 	var pbo *sdkpb.Result = msg.(*sdkpb.Result)
 	{
@@ -64,11 +62,9 @@ func (goo *Result) FromPBMessage(cdc *amino.Codec, msg proto.Message) (err error
 	}
 	return
 }
-
 func (_ Result) GetTypeURL() (typeURL string) {
 	return "/tm.Result"
 }
-
 func IsResultReprEmpty(goor Result) (empty bool) {
 	{
 		empty = true
