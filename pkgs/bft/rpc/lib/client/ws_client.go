@@ -9,11 +9,11 @@ import (
 	"sync"
 	"time"
 
+	"github.com/gorilla/websocket"
 	types "github.com/tendermint/tendermint2/pkgs/bft/rpc/lib/types"
 	"github.com/tendermint/tendermint2/pkgs/errors"
 	"github.com/tendermint/tendermint2/pkgs/random"
 	"github.com/tendermint/tendermint2/pkgs/service"
-	"github.com/gorilla/websocket"
 )
 
 const (

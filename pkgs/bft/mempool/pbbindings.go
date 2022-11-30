@@ -1,9 +1,9 @@
 package mempool
 
 import (
-	proto "google.golang.org/protobuf/proto"
 	amino "github.com/tendermint/tendermint2/pkgs/amino"
 	mempoolpb "github.com/tendermint/tendermint2/pkgs/bft/mempool/pb"
+	proto "google.golang.org/protobuf/proto"
 )
 
 func (goo TxMessage) ToPBMessage(cdc *amino.Codec) (msg proto.Message, err error) {
@@ -20,7 +20,7 @@ func (goo TxMessage) ToPBMessage(cdc *amino.Codec) (msg proto.Message, err error
 			if goorl == 0 {
 				pbo.Tx = nil
 			} else {
-				var pbos = make([]uint8, goorl)
+				pbos := make([]uint8, goorl)
 				for i := 0; i < goorl; i += 1 {
 					{
 						goore := goo.Tx[i]
@@ -36,11 +36,13 @@ func (goo TxMessage) ToPBMessage(cdc *amino.Codec) (msg proto.Message, err error
 	msg = pbo
 	return
 }
+
 func (goo TxMessage) EmptyPBMessage(cdc *amino.Codec) (msg proto.Message) {
 	pbo := new(mempoolpb.TxMessage)
 	msg = pbo
 	return
 }
+
 func (goo *TxMessage) FromPBMessage(cdc *amino.Codec, msg proto.Message) (err error) {
 	var pbo *mempoolpb.TxMessage = msg.(*mempoolpb.TxMessage)
 	{
@@ -53,7 +55,7 @@ func (goo *TxMessage) FromPBMessage(cdc *amino.Codec, msg proto.Message) (err er
 				if pbol == 0 {
 					(*goo).Tx = nil
 				} else {
-					var goors = make([]uint8, pbol)
+					goors := make([]uint8, pbol)
 					for i := 0; i < pbol; i += 1 {
 						{
 							pboe := pbo.Tx[i]
@@ -70,9 +72,11 @@ func (goo *TxMessage) FromPBMessage(cdc *amino.Codec, msg proto.Message) (err er
 	}
 	return
 }
+
 func (_ TxMessage) GetTypeURL() (typeURL string) {
 	return "/tm.TxMessage"
 }
+
 func IsTxMessageReprEmpty(goor TxMessage) (empty bool) {
 	{
 		empty = true

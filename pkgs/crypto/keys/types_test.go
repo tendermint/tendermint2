@@ -4,10 +4,10 @@ import (
 	"encoding/hex"
 	"testing"
 
+	"github.com/stretchr/testify/assert"
 	"github.com/tendermint/tendermint2/pkgs/crypto"
 	"github.com/tendermint/tendermint2/pkgs/crypto/hd"
 	"github.com/tendermint/tendermint2/pkgs/crypto/secp256k1"
-	"github.com/stretchr/testify/assert"
 )
 
 func Test_writeReadLedgerInfo(t *testing.T) {

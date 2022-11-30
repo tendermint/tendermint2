@@ -4,9 +4,9 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/tendermint/tendermint2/pkgs/command"
 	"github.com/jaekwon/testify/assert"
 	"github.com/jaekwon/testify/require"
+	"github.com/tendermint/tendermint2/pkgs/command"
 )
 
 func Test_RunGenerateCmdNormal(t *testing.T) {

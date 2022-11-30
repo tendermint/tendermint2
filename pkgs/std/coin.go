@@ -7,8 +7,8 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/tendermint/tendermint2/pkgs/errors"
 	"github.com/gnolang/overflow"
+	"github.com/tendermint/tendermint2/pkgs/errors"
 )
 
 //-----------------------------------------------------------------------------

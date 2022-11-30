@@ -3,10 +3,10 @@ package mock_test
 import (
 	"testing"
 
-	"github.com/tendermint/tendermint2/pkgs/crypto"
-	"github.com/tendermint/tendermint2/pkgs/crypto/mock"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
+	"github.com/tendermint/tendermint2/pkgs/crypto"
+	"github.com/tendermint/tendermint2/pkgs/crypto/mock"
 )
 
 func TestSignAndValidateMock(t *testing.T) {

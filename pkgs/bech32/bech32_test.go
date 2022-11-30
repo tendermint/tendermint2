@@ -6,9 +6,9 @@ import (
 	"encoding/hex"
 	"testing"
 
+	"github.com/jaekwon/testify/assert"
 	"github.com/tendermint/tendermint2/pkgs/bech32"
 	"github.com/tendermint/tendermint2/pkgs/crypto"
-	"github.com/jaekwon/testify/assert"
 )
 
 func TestEncodeAndDecode(t *testing.T) {

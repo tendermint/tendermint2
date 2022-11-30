@@ -4,8 +4,8 @@ import (
 	"errors"
 	"testing"
 
-	amino "github.com/tendermint/tendermint2/pkgs/amino"
 	"github.com/stretchr/testify/assert"
+	amino "github.com/tendermint/tendermint2/pkgs/amino"
 )
 
 type DCFoo1 struct{ a string }

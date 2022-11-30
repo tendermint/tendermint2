@@ -5,13 +5,13 @@ import (
 	"strings"
 	"testing"
 
+	"github.com/jaekwon/testify/assert"
 	"github.com/tendermint/tendermint2/pkgs/amino"
 	"github.com/tendermint/tendermint2/pkgs/command"
 	"github.com/tendermint/tendermint2/pkgs/crypto/keys"
 	testutils2 "github.com/tendermint/tendermint2/pkgs/sdk/testutils"
 	"github.com/tendermint/tendermint2/pkgs/std"
 	"github.com/tendermint/tendermint2/pkgs/testutils"
-	"github.com/jaekwon/testify/assert"
 )
 
 func Test_signAppBasic(t *testing.T) {

@@ -1,14 +1,14 @@
 package cstypes
 
 import (
-	proto "google.golang.org/protobuf/proto"
 	amino "github.com/tendermint/tendermint2/pkgs/amino"
 	cstypespb "github.com/tendermint/tendermint2/pkgs/bft/consensus/types/pb"
-	timestamppb "google.golang.org/protobuf/types/known/timestamppb"
-	typespb "github.com/tendermint/tendermint2/pkgs/bft/types/pb"
 	types "github.com/tendermint/tendermint2/pkgs/bft/types"
-	bitarraypb "github.com/tendermint/tendermint2/pkgs/bitarray/pb"
+	typespb "github.com/tendermint/tendermint2/pkgs/bft/types/pb"
 	bitarray "github.com/tendermint/tendermint2/pkgs/bitarray"
+	bitarraypb "github.com/tendermint/tendermint2/pkgs/bitarray/pb"
+	proto "google.golang.org/protobuf/proto"
+	timestamppb "google.golang.org/protobuf/types/known/timestamppb"
 )
 
 func (goo RoundState) ToPBMessage(cdc *amino.Codec) (msg proto.Message, err error) {
@@ -198,11 +198,13 @@ func (goo RoundState) ToPBMessage(cdc *amino.Codec) (msg proto.Message, err erro
 	msg = pbo
 	return
 }
+
 func (goo RoundState) EmptyPBMessage(cdc *amino.Codec) (msg proto.Message) {
 	pbo := new(cstypespb.RoundState)
 	msg = pbo
 	return
 }
+
 func (goo *RoundState) FromPBMessage(cdc *amino.Codec, msg proto.Message) (err error) {
 	var pbo *cstypespb.RoundState = msg.(*cstypespb.RoundState)
 	{
@@ -337,9 +339,11 @@ func (goo *RoundState) FromPBMessage(cdc *amino.Codec, msg proto.Message) (err e
 	}
 	return
 }
+
 func (_ RoundState) GetTypeURL() (typeURL string) {
 	return "/tm.RoundState"
 }
+
 func IsRoundStateReprEmpty(goor RoundState) (empty bool) {
 	{
 		empty = true
@@ -446,6 +450,7 @@ func IsRoundStateReprEmpty(goor RoundState) (empty bool) {
 	}
 	return
 }
+
 func (goo HRS) ToPBMessage(cdc *amino.Codec) (msg proto.Message, err error) {
 	var pbo *cstypespb.HRS
 	{
@@ -468,11 +473,13 @@ func (goo HRS) ToPBMessage(cdc *amino.Codec) (msg proto.Message, err error) {
 	msg = pbo
 	return
 }
+
 func (goo HRS) EmptyPBMessage(cdc *amino.Codec) (msg proto.Message) {
 	pbo := new(cstypespb.HRS)
 	msg = pbo
 	return
 }
+
 func (goo *HRS) FromPBMessage(cdc *amino.Codec, msg proto.Message) (err error) {
 	var pbo *cstypespb.HRS = msg.(*cstypespb.HRS)
 	{
@@ -490,9 +497,11 @@ func (goo *HRS) FromPBMessage(cdc *amino.Codec, msg proto.Message) (err error) {
 	}
 	return
 }
+
 func (_ HRS) GetTypeURL() (typeURL string) {
 	return "/tm.HRS"
 }
+
 func IsHRSReprEmpty(goor HRS) (empty bool) {
 	{
 		empty = true
@@ -514,6 +523,7 @@ func IsHRSReprEmpty(goor HRS) (empty bool) {
 	}
 	return
 }
+
 func (goo RoundStateSimple) ToPBMessage(cdc *amino.Codec) (msg proto.Message, err error) {
 	var pbo *cstypespb.RoundStateSimple
 	{
@@ -536,7 +546,7 @@ func (goo RoundStateSimple) ToPBMessage(cdc *amino.Codec) (msg proto.Message, er
 			if goorl == 0 {
 				pbo.ProposalBlockHash = nil
 			} else {
-				var pbos = make([]uint8, goorl)
+				pbos := make([]uint8, goorl)
 				for i := 0; i < goorl; i += 1 {
 					{
 						goore := goo.ProposalBlockHash[i]
@@ -553,7 +563,7 @@ func (goo RoundStateSimple) ToPBMessage(cdc *amino.Codec) (msg proto.Message, er
 			if goorl == 0 {
 				pbo.LockedBlockHash = nil
 			} else {
-				var pbos = make([]uint8, goorl)
+				pbos := make([]uint8, goorl)
 				for i := 0; i < goorl; i += 1 {
 					{
 						goore := goo.LockedBlockHash[i]
@@ -570,7 +580,7 @@ func (goo RoundStateSimple) ToPBMessage(cdc *amino.Codec) (msg proto.Message, er
 			if goorl == 0 {
 				pbo.ValidBlockHash = nil
 			} else {
-				var pbos = make([]uint8, goorl)
+				pbos := make([]uint8, goorl)
 				for i := 0; i < goorl; i += 1 {
 					{
 						goore := goo.ValidBlockHash[i]
@@ -599,11 +609,13 @@ func (goo RoundStateSimple) ToPBMessage(cdc *amino.Codec) (msg proto.Message, er
 	msg = pbo
 	return
 }
+
 func (goo RoundStateSimple) EmptyPBMessage(cdc *amino.Codec) (msg proto.Message) {
 	pbo := new(cstypespb.RoundStateSimple)
 	msg = pbo
 	return
 }
+
 func (goo *RoundStateSimple) FromPBMessage(cdc *amino.Codec, msg proto.Message) (err error) {
 	var pbo *cstypespb.RoundStateSimple = msg.(*cstypespb.RoundStateSimple)
 	{
@@ -622,7 +634,7 @@ func (goo *RoundStateSimple) FromPBMessage(cdc *amino.Codec, msg proto.Message) 
 				if pbol == 0 {
 					(*goo).ProposalBlockHash = nil
 				} else {
-					var goors = make([]uint8, pbol)
+					goors := make([]uint8, pbol)
 					for i := 0; i < pbol; i += 1 {
 						{
 							pboe := pbo.ProposalBlockHash[i]
@@ -643,7 +655,7 @@ func (goo *RoundStateSimple) FromPBMessage(cdc *amino.Codec, msg proto.Message) 
 				if pbol == 0 {
 					(*goo).LockedBlockHash = nil
 				} else {
-					var goors = make([]uint8, pbol)
+					goors := make([]uint8, pbol)
 					for i := 0; i < pbol; i += 1 {
 						{
 							pboe := pbo.LockedBlockHash[i]
@@ -664,7 +676,7 @@ func (goo *RoundStateSimple) FromPBMessage(cdc *amino.Codec, msg proto.Message) 
 				if pbol == 0 {
 					(*goo).ValidBlockHash = nil
 				} else {
-					var goors = make([]uint8, pbol)
+					goors := make([]uint8, pbol)
 					for i := 0; i < pbol; i += 1 {
 						{
 							pboe := pbo.ValidBlockHash[i]
@@ -690,9 +702,11 @@ func (goo *RoundStateSimple) FromPBMessage(cdc *amino.Codec, msg proto.Message) 
 	}
 	return
 }
+
 func (_ RoundStateSimple) GetTypeURL() (typeURL string) {
 	return "/tm.RoundStateSimple"
 }
+
 func IsRoundStateSimpleReprEmpty(goor RoundStateSimple) (empty bool) {
 	{
 		empty = true
@@ -729,6 +743,7 @@ func IsRoundStateSimpleReprEmpty(goor RoundStateSimple) (empty bool) {
 	}
 	return
 }
+
 func (goo PeerRoundState) ToPBMessage(cdc *amino.Codec) (msg proto.Message, err error) {
 	var pbo *cstypespb.PeerRoundState
 	{
@@ -854,11 +869,13 @@ func (goo PeerRoundState) ToPBMessage(cdc *amino.Codec) (msg proto.Message, err 
 	msg = pbo
 	return
 }
+
 func (goo PeerRoundState) EmptyPBMessage(cdc *amino.Codec) (msg proto.Message) {
 	pbo := new(cstypespb.PeerRoundState)
 	msg = pbo
 	return
 }
+
 func (goo *PeerRoundState) FromPBMessage(cdc *amino.Codec, msg proto.Message) (err error) {
 	var pbo *cstypespb.PeerRoundState = msg.(*cstypespb.PeerRoundState)
 	{
@@ -953,9 +970,11 @@ func (goo *PeerRoundState) FromPBMessage(cdc *amino.Codec, msg proto.Message) (e
 	}
 	return
 }
+
 func (_ PeerRoundState) GetTypeURL() (typeURL string) {
 	return "/tm.PeerRoundState"
 }
+
 func IsPeerRoundStateReprEmpty(goor PeerRoundState) (empty bool) {
 	{
 		empty = true
@@ -1038,6 +1057,7 @@ func IsPeerRoundStateReprEmpty(goor PeerRoundState) (empty bool) {
 	}
 	return
 }
+
 func (goo HeightVoteSet) ToPBMessage(cdc *amino.Codec) (msg proto.Message, err error) {
 	var pbo *cstypespb.HeightVoteSet
 	{
@@ -1051,11 +1071,13 @@ func (goo HeightVoteSet) ToPBMessage(cdc *amino.Codec) (msg proto.Message, err e
 	msg = pbo
 	return
 }
+
 func (goo HeightVoteSet) EmptyPBMessage(cdc *amino.Codec) (msg proto.Message) {
 	pbo := new(cstypespb.HeightVoteSet)
 	msg = pbo
 	return
 }
+
 func (goo *HeightVoteSet) FromPBMessage(cdc *amino.Codec, msg proto.Message) (err error) {
 	var pbo *cstypespb.HeightVoteSet = msg.(*cstypespb.HeightVoteSet)
 	{
@@ -1064,15 +1086,18 @@ func (goo *HeightVoteSet) FromPBMessage(cdc *amino.Codec, msg proto.Message) (er
 	}
 	return
 }
+
 func (_ HeightVoteSet) GetTypeURL() (typeURL string) {
 	return "/tm.HeightVoteSet"
 }
+
 func IsHeightVoteSetReprEmpty(goor HeightVoteSet) (empty bool) {
 	{
 		empty = true
 	}
 	return
 }
+
 func (goo EventNewRoundStep) ToPBMessage(cdc *amino.Codec) (msg proto.Message, err error) {
 	var pbo *cstypespb.EventNewRoundStep
 	{
@@ -1100,11 +1125,13 @@ func (goo EventNewRoundStep) ToPBMessage(cdc *amino.Codec) (msg proto.Message, e
 	msg = pbo
 	return
 }
+
 func (goo EventNewRoundStep) EmptyPBMessage(cdc *amino.Codec) (msg proto.Message) {
 	pbo := new(cstypespb.EventNewRoundStep)
 	msg = pbo
 	return
 }
+
 func (goo *EventNewRoundStep) FromPBMessage(cdc *amino.Codec, msg proto.Message) (err error) {
 	var pbo *cstypespb.EventNewRoundStep = msg.(*cstypespb.EventNewRoundStep)
 	{
@@ -1127,9 +1154,11 @@ func (goo *EventNewRoundStep) FromPBMessage(cdc *amino.Codec, msg proto.Message)
 	}
 	return
 }
+
 func (_ EventNewRoundStep) GetTypeURL() (typeURL string) {
 	return "/tm.EventNewRoundStep"
 }
+
 func IsEventNewRoundStepReprEmpty(goor EventNewRoundStep) (empty bool) {
 	{
 		empty = true
@@ -1152,6 +1181,7 @@ func IsEventNewRoundStepReprEmpty(goor EventNewRoundStep) (empty bool) {
 	}
 	return
 }
+
 func (goo EventNewValidBlock) ToPBMessage(cdc *amino.Codec) (msg proto.Message, err error) {
 	var pbo *cstypespb.EventNewValidBlock
 	{
@@ -1197,11 +1227,13 @@ func (goo EventNewValidBlock) ToPBMessage(cdc *amino.Codec) (msg proto.Message, 
 	msg = pbo
 	return
 }
+
 func (goo EventNewValidBlock) EmptyPBMessage(cdc *amino.Codec) (msg proto.Message) {
 	pbo := new(cstypespb.EventNewValidBlock)
 	msg = pbo
 	return
 }
+
 func (goo *EventNewValidBlock) FromPBMessage(cdc *amino.Codec, msg proto.Message) (err error) {
 	var pbo *cstypespb.EventNewValidBlock = msg.(*cstypespb.EventNewValidBlock)
 	{
@@ -1238,9 +1270,11 @@ func (goo *EventNewValidBlock) FromPBMessage(cdc *amino.Codec, msg proto.Message
 	}
 	return
 }
+
 func (_ EventNewValidBlock) GetTypeURL() (typeURL string) {
 	return "/tm.EventNewValidBlock"
 }
+
 func IsEventNewValidBlockReprEmpty(goor EventNewValidBlock) (empty bool) {
 	{
 		empty = true
@@ -1269,6 +1303,7 @@ func IsEventNewValidBlockReprEmpty(goor EventNewValidBlock) (empty bool) {
 	}
 	return
 }
+
 func (goo EventNewRound) ToPBMessage(cdc *amino.Codec) (msg proto.Message, err error) {
 	var pbo *cstypespb.EventNewRound
 	{
@@ -1301,11 +1336,13 @@ func (goo EventNewRound) ToPBMessage(cdc *amino.Codec) (msg proto.Message, err e
 	msg = pbo
 	return
 }
+
 func (goo EventNewRound) EmptyPBMessage(cdc *amino.Codec) (msg proto.Message) {
 	pbo := new(cstypespb.EventNewRound)
 	msg = pbo
 	return
 }
+
 func (goo *EventNewRound) FromPBMessage(cdc *amino.Codec, msg proto.Message) (err error) {
 	var pbo *cstypespb.EventNewRound = msg.(*cstypespb.EventNewRound)
 	{
@@ -1333,9 +1370,11 @@ func (goo *EventNewRound) FromPBMessage(cdc *amino.Codec, msg proto.Message) (er
 	}
 	return
 }
+
 func (_ EventNewRound) GetTypeURL() (typeURL string) {
 	return "/tm.EventNewRound"
 }
+
 func IsEventNewRoundReprEmpty(goor EventNewRound) (empty bool) {
 	{
 		empty = true
@@ -1359,6 +1398,7 @@ func IsEventNewRoundReprEmpty(goor EventNewRound) (empty bool) {
 	}
 	return
 }
+
 func (goo EventCompleteProposal) ToPBMessage(cdc *amino.Codec) (msg proto.Message, err error) {
 	var pbo *cstypespb.EventCompleteProposal
 	{
@@ -1388,11 +1428,13 @@ func (goo EventCompleteProposal) ToPBMessage(cdc *amino.Codec) (msg proto.Messag
 	msg = pbo
 	return
 }
+
 func (goo EventCompleteProposal) EmptyPBMessage(cdc *amino.Codec) (msg proto.Message) {
 	pbo := new(cstypespb.EventCompleteProposal)
 	msg = pbo
 	return
 }
+
 func (goo *EventCompleteProposal) FromPBMessage(cdc *amino.Codec, msg proto.Message) (err error) {
 	var pbo *cstypespb.EventCompleteProposal = msg.(*cstypespb.EventCompleteProposal)
 	{
@@ -1417,9 +1459,11 @@ func (goo *EventCompleteProposal) FromPBMessage(cdc *amino.Codec, msg proto.Mess
 	}
 	return
 }
+
 func (_ EventCompleteProposal) GetTypeURL() (typeURL string) {
 	return "/tm.EventCompleteProposal"
 }
+
 func IsEventCompleteProposalReprEmpty(goor EventCompleteProposal) (empty bool) {
 	{
 		empty = true
@@ -1438,6 +1482,7 @@ func IsEventCompleteProposalReprEmpty(goor EventCompleteProposal) (empty bool) {
 	}
 	return
 }
+
 func (goo EventTimeoutPropose) ToPBMessage(cdc *amino.Codec) (msg proto.Message, err error) {
 	var pbo *cstypespb.EventTimeoutPropose
 	{
@@ -1459,11 +1504,13 @@ func (goo EventTimeoutPropose) ToPBMessage(cdc *amino.Codec) (msg proto.Message,
 	msg = pbo
 	return
 }
+
 func (goo EventTimeoutPropose) EmptyPBMessage(cdc *amino.Codec) (msg proto.Message) {
 	pbo := new(cstypespb.EventTimeoutPropose)
 	msg = pbo
 	return
 }
+
 func (goo *EventTimeoutPropose) FromPBMessage(cdc *amino.Codec, msg proto.Message) (err error) {
 	var pbo *cstypespb.EventTimeoutPropose = msg.(*cstypespb.EventTimeoutPropose)
 	{
@@ -1480,9 +1527,11 @@ func (goo *EventTimeoutPropose) FromPBMessage(cdc *amino.Codec, msg proto.Messag
 	}
 	return
 }
+
 func (_ EventTimeoutPropose) GetTypeURL() (typeURL string) {
 	return "/tm.EventTimeoutPropose"
 }
+
 func IsEventTimeoutProposeReprEmpty(goor EventTimeoutPropose) (empty bool) {
 	{
 		empty = true
@@ -1495,6 +1544,7 @@ func IsEventTimeoutProposeReprEmpty(goor EventTimeoutPropose) (empty bool) {
 	}
 	return
 }
+
 func (goo EventTimeoutWait) ToPBMessage(cdc *amino.Codec) (msg proto.Message, err error) {
 	var pbo *cstypespb.EventTimeoutWait
 	{
@@ -1516,11 +1566,13 @@ func (goo EventTimeoutWait) ToPBMessage(cdc *amino.Codec) (msg proto.Message, er
 	msg = pbo
 	return
 }
+
 func (goo EventTimeoutWait) EmptyPBMessage(cdc *amino.Codec) (msg proto.Message) {
 	pbo := new(cstypespb.EventTimeoutWait)
 	msg = pbo
 	return
 }
+
 func (goo *EventTimeoutWait) FromPBMessage(cdc *amino.Codec, msg proto.Message) (err error) {
 	var pbo *cstypespb.EventTimeoutWait = msg.(*cstypespb.EventTimeoutWait)
 	{
@@ -1537,9 +1589,11 @@ func (goo *EventTimeoutWait) FromPBMessage(cdc *amino.Codec, msg proto.Message) 
 	}
 	return
 }
+
 func (_ EventTimeoutWait) GetTypeURL() (typeURL string) {
 	return "/tm.EventTimeoutWait"
 }
+
 func IsEventTimeoutWaitReprEmpty(goor EventTimeoutWait) (empty bool) {
 	{
 		empty = true

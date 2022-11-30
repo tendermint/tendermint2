@@ -1,11 +1,11 @@
 package vm
 
 import (
-	proto "google.golang.org/protobuf/proto"
 	amino "github.com/tendermint/tendermint2/pkgs/amino"
 	vmpb "github.com/tendermint/tendermint2/pkgs/sdk/vm/pb"
-	stdpb "github.com/tendermint/tendermint2/pkgs/std/pb"
 	std "github.com/tendermint/tendermint2/pkgs/std"
+	stdpb "github.com/tendermint/tendermint2/pkgs/std/pb"
+	proto "google.golang.org/protobuf/proto"
 )
 
 func (goo MsgCall) ToPBMessage(cdc *amino.Codec) (msg proto.Message, err error) {
@@ -42,7 +42,7 @@ func (goo MsgCall) ToPBMessage(cdc *amino.Codec) (msg proto.Message, err error) 
 			if goorl == 0 {
 				pbo.Args = nil
 			} else {
-				var pbos = make([]string, goorl)
+				pbos := make([]string, goorl)
 				for i := 0; i < goorl; i += 1 {
 					{
 						goore := goo.Args[i]
@@ -58,11 +58,13 @@ func (goo MsgCall) ToPBMessage(cdc *amino.Codec) (msg proto.Message, err error) 
 	msg = pbo
 	return
 }
+
 func (goo MsgCall) EmptyPBMessage(cdc *amino.Codec) (msg proto.Message) {
 	pbo := new(vmpb.MCall)
 	msg = pbo
 	return
 }
+
 func (goo *MsgCall) FromPBMessage(cdc *amino.Codec, msg proto.Message) (err error) {
 	var pbo *vmpb.MCall = msg.(*vmpb.MCall)
 	{
@@ -97,7 +99,7 @@ func (goo *MsgCall) FromPBMessage(cdc *amino.Codec, msg proto.Message) (err erro
 				if pbol == 0 {
 					(*goo).Args = nil
 				} else {
-					var goors = make([]string, pbol)
+					goors := make([]string, pbol)
 					for i := 0; i < pbol; i += 1 {
 						{
 							pboe := pbo.Args[i]
@@ -114,9 +116,11 @@ func (goo *MsgCall) FromPBMessage(cdc *amino.Codec, msg proto.Message) (err erro
 	}
 	return
 }
+
 func (_ MsgCall) GetTypeURL() (typeURL string) {
 	return "/vm.m_call"
 }
+
 func Ism_callReprEmpty(goor MsgCall) (empty bool) {
 	{
 		empty = true
@@ -156,6 +160,7 @@ func Ism_callReprEmpty(goor MsgCall) (empty bool) {
 	}
 	return
 }
+
 func (goo MsgAddPackage) ToPBMessage(cdc *amino.Codec) (msg proto.Message, err error) {
 	var pbo *vmpb.MAddpkg
 	{
@@ -196,11 +201,13 @@ func (goo MsgAddPackage) ToPBMessage(cdc *amino.Codec) (msg proto.Message, err e
 	msg = pbo
 	return
 }
+
 func (goo MsgAddPackage) EmptyPBMessage(cdc *amino.Codec) (msg proto.Message) {
 	pbo := new(vmpb.MAddpkg)
 	msg = pbo
 	return
 }
+
 func (goo *MsgAddPackage) FromPBMessage(cdc *amino.Codec, msg proto.Message) (err error) {
 	var pbo *vmpb.MAddpkg = msg.(*vmpb.MAddpkg)
 	{
@@ -234,9 +241,11 @@ func (goo *MsgAddPackage) FromPBMessage(cdc *amino.Codec, msg proto.Message) (er
 	}
 	return
 }
+
 func (_ MsgAddPackage) GetTypeURL() (typeURL string) {
 	return "/vm.m_addpkg"
 }
+
 func Ism_addpkgReprEmpty(goor MsgAddPackage) (empty bool) {
 	{
 		empty = true
@@ -266,6 +275,7 @@ func Ism_addpkgReprEmpty(goor MsgAddPackage) (empty bool) {
 	}
 	return
 }
+
 func (goo InvalidPkgPathError) ToPBMessage(cdc *amino.Codec) (msg proto.Message, err error) {
 	var pbo *vmpb.InvalidPkgPathError
 	{
@@ -279,11 +289,13 @@ func (goo InvalidPkgPathError) ToPBMessage(cdc *amino.Codec) (msg proto.Message,
 	msg = pbo
 	return
 }
+
 func (goo InvalidPkgPathError) EmptyPBMessage(cdc *amino.Codec) (msg proto.Message) {
 	pbo := new(vmpb.InvalidPkgPathError)
 	msg = pbo
 	return
 }
+
 func (goo *InvalidPkgPathError) FromPBMessage(cdc *amino.Codec, msg proto.Message) (err error) {
 	var pbo *vmpb.InvalidPkgPathError = msg.(*vmpb.InvalidPkgPathError)
 	{
@@ -292,15 +304,18 @@ func (goo *InvalidPkgPathError) FromPBMessage(cdc *amino.Codec, msg proto.Messag
 	}
 	return
 }
+
 func (_ InvalidPkgPathError) GetTypeURL() (typeURL string) {
 	return "/vm.InvalidPkgPathError"
 }
+
 func IsInvalidPkgPathErrorReprEmpty(goor InvalidPkgPathError) (empty bool) {
 	{
 		empty = true
 	}
 	return
 }
+
 func (goo InvalidStmtError) ToPBMessage(cdc *amino.Codec) (msg proto.Message, err error) {
 	var pbo *vmpb.InvalidStmtError
 	{
@@ -314,11 +329,13 @@ func (goo InvalidStmtError) ToPBMessage(cdc *amino.Codec) (msg proto.Message, er
 	msg = pbo
 	return
 }
+
 func (goo InvalidStmtError) EmptyPBMessage(cdc *amino.Codec) (msg proto.Message) {
 	pbo := new(vmpb.InvalidStmtError)
 	msg = pbo
 	return
 }
+
 func (goo *InvalidStmtError) FromPBMessage(cdc *amino.Codec, msg proto.Message) (err error) {
 	var pbo *vmpb.InvalidStmtError = msg.(*vmpb.InvalidStmtError)
 	{
@@ -327,15 +344,18 @@ func (goo *InvalidStmtError) FromPBMessage(cdc *amino.Codec, msg proto.Message) 
 	}
 	return
 }
+
 func (_ InvalidStmtError) GetTypeURL() (typeURL string) {
 	return "/vm.InvalidStmtError"
 }
+
 func IsInvalidStmtErrorReprEmpty(goor InvalidStmtError) (empty bool) {
 	{
 		empty = true
 	}
 	return
 }
+
 func (goo InvalidExprError) ToPBMessage(cdc *amino.Codec) (msg proto.Message, err error) {
 	var pbo *vmpb.InvalidExprError
 	{
@@ -349,11 +369,13 @@ func (goo InvalidExprError) ToPBMessage(cdc *amino.Codec) (msg proto.Message, er
 	msg = pbo
 	return
 }
+
 func (goo InvalidExprError) EmptyPBMessage(cdc *amino.Codec) (msg proto.Message) {
 	pbo := new(vmpb.InvalidExprError)
 	msg = pbo
 	return
 }
+
 func (goo *InvalidExprError) FromPBMessage(cdc *amino.Codec, msg proto.Message) (err error) {
 	var pbo *vmpb.InvalidExprError = msg.(*vmpb.InvalidExprError)
 	{
@@ -362,9 +384,11 @@ func (goo *InvalidExprError) FromPBMessage(cdc *amino.Codec, msg proto.Message) 
 	}
 	return
 }
+
 func (_ InvalidExprError) GetTypeURL() (typeURL string) {
 	return "/vm.InvalidExprError"
 }
+
 func IsInvalidExprErrorReprEmpty(goor InvalidExprError) (empty bool) {
 	{
 		empty = true

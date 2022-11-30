@@ -1,11 +1,11 @@
 ########################################
 # Dist suite
-.PHONY: reset 
+.PHONY: reset
 all: build
 
-build: 
+build:
 
-install: 
+install:
 
 reset:
 	rm -rf testdir
@@ -20,11 +20,10 @@ clean:
 .PHONY: fmt
 fmt:
 	go run -modfile ./misc/devdeps/go.mod mvdan.cc/gofumpt -w .
-	go run -modfile ./misc/devdeps/go.mod mvdan.cc/gofumpt -w `find stdlibs examples -name "*.gno"`
 
 ########################################
 # Test suite
-.PHONY: test test.go test.go1 test.go2 test.go3 test.flappy 
+.PHONY: test test.go test.go1 test.go2 test.go3 test.flappy
 test: test.go test.flappy
 	@echo "Full test suite finished."
 
@@ -33,7 +32,7 @@ test.flappy:
 	TEST_STABILITY=flappy go run -modfile ./misc/devdeps/go.mod moul.io/testman test -test.v -timeout=20m -retry=10 -run ^TestFlappy \
 		./pkgs/bft/consensus ./pkgs/bft/blockchain ./pkgs/bft/mempool ./pkgs/p2p ./pkgs/bft/privval
 
-test.go: test.go1 test.go2 test.go3 
+test.go: test.go1 test.go2 test.go3
 
 test.go1:
 	# test most of pkgs/* except amino and bft.

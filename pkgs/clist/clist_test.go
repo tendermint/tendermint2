@@ -7,8 +7,8 @@ import (
 	"testing"
 	"time"
 
-	"github.com/tendermint/tendermint2/pkgs/random"
 	"github.com/stretchr/testify/assert"
+	"github.com/tendermint/tendermint2/pkgs/random"
 )
 
 func TestPanicOnMaxLength(t *testing.T) {

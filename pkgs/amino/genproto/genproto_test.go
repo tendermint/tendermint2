@@ -4,8 +4,8 @@ import (
 	"reflect"
 	"testing"
 
-	sm1 "github.com/tendermint/tendermint2/pkgs/amino/genproto/example/submodule"
 	"github.com/jaekwon/testify/assert"
+	sm1 "github.com/tendermint/tendermint2/pkgs/amino/genproto/example/submodule"
 )
 
 func TestBasic(t *testing.T) {

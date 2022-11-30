@@ -4,9 +4,9 @@ import (
 	"fmt"
 	"testing"
 
+	"github.com/stretchr/testify/require"
 	"github.com/tendermint/tendermint2/pkgs/crypto"
 	"github.com/tendermint/tendermint2/pkgs/crypto/bcrypt"
-	"github.com/stretchr/testify/require"
 )
 
 func BenchmarkBcryptGenerateFromPassword(b *testing.B) {

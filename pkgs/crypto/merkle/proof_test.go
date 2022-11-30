@@ -3,9 +3,9 @@ package merkle
 import (
 	"testing"
 
+	"github.com/stretchr/testify/assert"
 	amino "github.com/tendermint/tendermint2/pkgs/amino"
 	"github.com/tendermint/tendermint2/pkgs/errors"
-	"github.com/stretchr/testify/assert"
 )
 
 const ProofOpDomino = "test:domino"
