@@ -4,8 +4,11 @@
 all: build
 
 build:
+	mkdir -p build
+	go build -o ./build/tendermint2 ./cmd/tendermint2
 
 install:
+	go install ./cmd/tendermint2
 
 reset:
 	rm -rf testdir
