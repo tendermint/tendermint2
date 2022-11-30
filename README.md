@@ -96,3 +96,8 @@ porting necessary fixes from Tendermint++ over to Tendermint2.
 We will also reach out to ecosystem partners and survey and create a
 directory/taxonomy for Tendermint and CosmosSDK derivatives and manage a forum
 for interfork collaboration.
+
+## Challenge
+
+Either make a PR to Gaia/CosmosSDK/TendermintCore to be like Tendermint2, or
+make a PR to Tendermint2 to import a feature or fix of TendermintCore.
