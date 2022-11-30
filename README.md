@@ -97,6 +97,8 @@ We will also reach out to ecosystem partners and survey and create a
 directory/taxonomy for Tendermint and CosmosSDK derivatives and manage a forum
 for interfork collaboration.
 
+Ideally, Tendermint2 and TendermintCore/++ merge into one. 
+
 ## Challenge
 
 Either make a PR to Gaia/CosmosSDK/TendermintCore to be like Tendermint2, or
