@@ -57,3 +57,4 @@ genproto:
 	@rm pbbindings.go || true
 	@rm gno.pb.go || true
 	go run cmd/genproto/genproto.go
+	make fmt

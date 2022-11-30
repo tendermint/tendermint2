@@ -1,15 +1,15 @@
 package types
 
 import (
-	proto "google.golang.org/protobuf/proto"
 	amino "github.com/tendermint/tendermint2/pkgs/amino"
-	typespb "github.com/tendermint/tendermint2/pkgs/bft/types/pb"
-	timestamppb "google.golang.org/protobuf/types/known/timestamppb"
-	merklepb "github.com/tendermint/tendermint2/pkgs/crypto/merkle/pb"
-	merkle "github.com/tendermint/tendermint2/pkgs/crypto/merkle"
-	anypb "google.golang.org/protobuf/types/known/anypb"
-	abcipb "github.com/tendermint/tendermint2/pkgs/bft/abci/types/pb"
 	abci "github.com/tendermint/tendermint2/pkgs/bft/abci/types"
+	abcipb "github.com/tendermint/tendermint2/pkgs/bft/abci/types/pb"
+	typespb "github.com/tendermint/tendermint2/pkgs/bft/types/pb"
+	merkle "github.com/tendermint/tendermint2/pkgs/crypto/merkle"
+	merklepb "github.com/tendermint/tendermint2/pkgs/crypto/merkle/pb"
+	proto "google.golang.org/protobuf/proto"
+	anypb "google.golang.org/protobuf/types/known/anypb"
+	timestamppb "google.golang.org/protobuf/types/known/timestamppb"
 )
 
 func (goo Proposal) ToPBMessage(cdc *amino.Codec) (msg proto.Message, err error) {
@@ -51,7 +51,7 @@ func (goo Proposal) ToPBMessage(cdc *amino.Codec) (msg proto.Message, err error)
 			if goorl == 0 {
 				pbo.Signature = nil
 			} else {
-				var pbos = make([]uint8, goorl)
+				pbos := make([]uint8, goorl)
 				for i := 0; i < goorl; i += 1 {
 					{
 						goore := goo.Signature[i]
@@ -67,11 +67,13 @@ func (goo Proposal) ToPBMessage(cdc *amino.Codec) (msg proto.Message, err error)
 	msg = pbo
 	return
 }
+
 func (goo Proposal) EmptyPBMessage(cdc *amino.Codec) (msg proto.Message) {
 	pbo := new(typespb.Proposal)
 	msg = pbo
 	return
 }
+
 func (goo *Proposal) FromPBMessage(cdc *amino.Codec, msg proto.Message) (err error) {
 	var pbo *typespb.Proposal = msg.(*typespb.Proposal)
 	{
@@ -107,7 +109,7 @@ func (goo *Proposal) FromPBMessage(cdc *amino.Codec, msg proto.Message) (err err
 				if pbol == 0 {
 					(*goo).Signature = nil
 				} else {
-					var goors = make([]uint8, pbol)
+					goors := make([]uint8, pbol)
 					for i := 0; i < pbol; i += 1 {
 						{
 							pboe := pbo.Signature[i]
@@ -124,9 +126,11 @@ func (goo *Proposal) FromPBMessage(cdc *amino.Codec, msg proto.Message) (err err
 	}
 	return
 }
+
 func (_ Proposal) GetTypeURL() (typeURL string) {
 	return "/tm.Proposal"
 }
+
 func IsProposalReprEmpty(goor Proposal) (empty bool) {
 	{
 		empty = true
@@ -169,6 +173,7 @@ func IsProposalReprEmpty(goor Proposal) (empty bool) {
 	}
 	return
 }
+
 func (goo Block) ToPBMessage(cdc *amino.Codec) (msg proto.Message, err error) {
 	var pbo *typespb.Block
 	{
@@ -211,11 +216,13 @@ func (goo Block) ToPBMessage(cdc *amino.Codec) (msg proto.Message, err error) {
 	msg = pbo
 	return
 }
+
 func (goo Block) EmptyPBMessage(cdc *amino.Codec) (msg proto.Message) {
 	pbo := new(typespb.Block)
 	msg = pbo
 	return
 }
+
 func (goo *Block) FromPBMessage(cdc *amino.Codec, msg proto.Message) (err error) {
 	var pbo *typespb.Block = msg.(*typespb.Block)
 	{
@@ -249,9 +256,11 @@ func (goo *Block) FromPBMessage(cdc *amino.Codec, msg proto.Message) (err error)
 	}
 	return
 }
+
 func (_ Block) GetTypeURL() (typeURL string) {
 	return "/tm.Block"
 }
+
 func IsBlockReprEmpty(goor Block) (empty bool) {
 	{
 		empty = true
@@ -275,6 +284,7 @@ func IsBlockReprEmpty(goor Block) (empty bool) {
 	}
 	return
 }
+
 func (goo Header) ToPBMessage(cdc *amino.Codec) (msg proto.Message, err error) {
 	var pbo *typespb.Header
 	{
@@ -320,7 +330,7 @@ func (goo Header) ToPBMessage(cdc *amino.Codec) (msg proto.Message, err error) {
 			if goorl == 0 {
 				pbo.LastCommitHash = nil
 			} else {
-				var pbos = make([]uint8, goorl)
+				pbos := make([]uint8, goorl)
 				for i := 0; i < goorl; i += 1 {
 					{
 						goore := goo.LastCommitHash[i]
@@ -337,7 +347,7 @@ func (goo Header) ToPBMessage(cdc *amino.Codec) (msg proto.Message, err error) {
 			if goorl == 0 {
 				pbo.DataHash = nil
 			} else {
-				var pbos = make([]uint8, goorl)
+				pbos := make([]uint8, goorl)
 				for i := 0; i < goorl; i += 1 {
 					{
 						goore := goo.DataHash[i]
@@ -354,7 +364,7 @@ func (goo Header) ToPBMessage(cdc *amino.Codec) (msg proto.Message, err error) {
 			if goorl == 0 {
 				pbo.ValidatorsHash = nil
 			} else {
-				var pbos = make([]uint8, goorl)
+				pbos := make([]uint8, goorl)
 				for i := 0; i < goorl; i += 1 {
 					{
 						goore := goo.ValidatorsHash[i]
@@ -371,7 +381,7 @@ func (goo Header) ToPBMessage(cdc *amino.Codec) (msg proto.Message, err error) {
 			if goorl == 0 {
 				pbo.NextValidatorsHash = nil
 			} else {
-				var pbos = make([]uint8, goorl)
+				pbos := make([]uint8, goorl)
 				for i := 0; i < goorl; i += 1 {
 					{
 						goore := goo.NextValidatorsHash[i]
@@ -388,7 +398,7 @@ func (goo Header) ToPBMessage(cdc *amino.Codec) (msg proto.Message, err error) {
 			if goorl == 0 {
 				pbo.ConsensusHash = nil
 			} else {
-				var pbos = make([]uint8, goorl)
+				pbos := make([]uint8, goorl)
 				for i := 0; i < goorl; i += 1 {
 					{
 						goore := goo.ConsensusHash[i]
@@ -405,7 +415,7 @@ func (goo Header) ToPBMessage(cdc *amino.Codec) (msg proto.Message, err error) {
 			if goorl == 0 {
 				pbo.AppHash = nil
 			} else {
-				var pbos = make([]uint8, goorl)
+				pbos := make([]uint8, goorl)
 				for i := 0; i < goorl; i += 1 {
 					{
 						goore := goo.AppHash[i]
@@ -422,7 +432,7 @@ func (goo Header) ToPBMessage(cdc *amino.Codec) (msg proto.Message, err error) {
 			if goorl == 0 {
 				pbo.LastResultsHash = nil
 			} else {
-				var pbos = make([]uint8, goorl)
+				pbos := make([]uint8, goorl)
 				for i := 0; i < goorl; i += 1 {
 					{
 						goore := goo.LastResultsHash[i]
@@ -445,11 +455,13 @@ func (goo Header) ToPBMessage(cdc *amino.Codec) (msg proto.Message, err error) {
 	msg = pbo
 	return
 }
+
 func (goo Header) EmptyPBMessage(cdc *amino.Codec) (msg proto.Message) {
 	pbo := new(typespb.Header)
 	msg = pbo
 	return
 }
+
 func (goo *Header) FromPBMessage(cdc *amino.Codec, msg proto.Message) (err error) {
 	var pbo *typespb.Header = msg.(*typespb.Header)
 	{
@@ -491,7 +503,7 @@ func (goo *Header) FromPBMessage(cdc *amino.Codec, msg proto.Message) (err error
 				if pbol == 0 {
 					(*goo).LastCommitHash = nil
 				} else {
-					var goors = make([]uint8, pbol)
+					goors := make([]uint8, pbol)
 					for i := 0; i < pbol; i += 1 {
 						{
 							pboe := pbo.LastCommitHash[i]
@@ -512,7 +524,7 @@ func (goo *Header) FromPBMessage(cdc *amino.Codec, msg proto.Message) (err error
 				if pbol == 0 {
 					(*goo).DataHash = nil
 				} else {
-					var goors = make([]uint8, pbol)
+					goors := make([]uint8, pbol)
 					for i := 0; i < pbol; i += 1 {
 						{
 							pboe := pbo.DataHash[i]
@@ -533,7 +545,7 @@ func (goo *Header) FromPBMessage(cdc *amino.Codec, msg proto.Message) (err error
 				if pbol == 0 {
 					(*goo).ValidatorsHash = nil
 				} else {
-					var goors = make([]uint8, pbol)
+					goors := make([]uint8, pbol)
 					for i := 0; i < pbol; i += 1 {
 						{
 							pboe := pbo.ValidatorsHash[i]
@@ -554,7 +566,7 @@ func (goo *Header) FromPBMessage(cdc *amino.Codec, msg proto.Message) (err error
 				if pbol == 0 {
 					(*goo).NextValidatorsHash = nil
 				} else {
-					var goors = make([]uint8, pbol)
+					goors := make([]uint8, pbol)
 					for i := 0; i < pbol; i += 1 {
 						{
 							pboe := pbo.NextValidatorsHash[i]
@@ -575,7 +587,7 @@ func (goo *Header) FromPBMessage(cdc *amino.Codec, msg proto.Message) (err error
 				if pbol == 0 {
 					(*goo).ConsensusHash = nil
 				} else {
-					var goors = make([]uint8, pbol)
+					goors := make([]uint8, pbol)
 					for i := 0; i < pbol; i += 1 {
 						{
 							pboe := pbo.ConsensusHash[i]
@@ -596,7 +608,7 @@ func (goo *Header) FromPBMessage(cdc *amino.Codec, msg proto.Message) (err error
 				if pbol == 0 {
 					(*goo).AppHash = nil
 				} else {
-					var goors = make([]uint8, pbol)
+					goors := make([]uint8, pbol)
 					for i := 0; i < pbol; i += 1 {
 						{
 							pboe := pbo.AppHash[i]
@@ -617,7 +629,7 @@ func (goo *Header) FromPBMessage(cdc *amino.Codec, msg proto.Message) (err error
 				if pbol == 0 {
 					(*goo).LastResultsHash = nil
 				} else {
-					var goors = make([]uint8, pbol)
+					goors := make([]uint8, pbol)
 					for i := 0; i < pbol; i += 1 {
 						{
 							pboe := pbo.LastResultsHash[i]
@@ -642,9 +654,11 @@ func (goo *Header) FromPBMessage(cdc *amino.Codec, msg proto.Message) (err error
 	}
 	return
 }
+
 func (_ Header) GetTypeURL() (typeURL string) {
 	return "/tm.Header"
 }
+
 func IsHeaderReprEmpty(goor Header) (empty bool) {
 	{
 		empty = true
@@ -736,6 +750,7 @@ func IsHeaderReprEmpty(goor Header) (empty bool) {
 	}
 	return
 }
+
 func (goo Data) ToPBMessage(cdc *amino.Codec) (msg proto.Message, err error) {
 	var pbo *typespb.Data
 	{
@@ -750,7 +765,7 @@ func (goo Data) ToPBMessage(cdc *amino.Codec) (msg proto.Message, err error) {
 			if goorl == 0 {
 				pbo.Txs = nil
 			} else {
-				var pbos = make([][]byte, goorl)
+				pbos := make([][]byte, goorl)
 				for i := 0; i < goorl; i += 1 {
 					{
 						goore := goo.Txs[i]
@@ -759,7 +774,7 @@ func (goo Data) ToPBMessage(cdc *amino.Codec) (msg proto.Message, err error) {
 							if goorl1 == 0 {
 								pbos[i] = nil
 							} else {
-								var pbos1 = make([]uint8, goorl1)
+								pbos1 := make([]uint8, goorl1)
 								for i := 0; i < goorl1; i += 1 {
 									{
 										goore := goore[i]
@@ -780,11 +795,13 @@ func (goo Data) ToPBMessage(cdc *amino.Codec) (msg proto.Message, err error) {
 	msg = pbo
 	return
 }
+
 func (goo Data) EmptyPBMessage(cdc *amino.Codec) (msg proto.Message) {
 	pbo := new(typespb.Data)
 	msg = pbo
 	return
 }
+
 func (goo *Data) FromPBMessage(cdc *amino.Codec, msg proto.Message) (err error) {
 	var pbo *typespb.Data = msg.(*typespb.Data)
 	{
@@ -797,7 +814,7 @@ func (goo *Data) FromPBMessage(cdc *amino.Codec, msg proto.Message) (err error) 
 				if pbol == 0 {
 					(*goo).Txs = nil
 				} else {
-					var goors = make([]Tx, pbol)
+					goors := make([]Tx, pbol)
 					for i := 0; i < pbol; i += 1 {
 						{
 							pboe := pbo.Txs[i]
@@ -810,7 +827,7 @@ func (goo *Data) FromPBMessage(cdc *amino.Codec, msg proto.Message) (err error) 
 								if pbol1 == 0 {
 									goors[i] = nil
 								} else {
-									var goors1 = make([]uint8, pbol1)
+									goors1 := make([]uint8, pbol1)
 									for i := 0; i < pbol1; i += 1 {
 										{
 											pboe := pboev[i]
@@ -832,9 +849,11 @@ func (goo *Data) FromPBMessage(cdc *amino.Codec, msg proto.Message) (err error) 
 	}
 	return
 }
+
 func (_ Data) GetTypeURL() (typeURL string) {
 	return "/tm.Data"
 }
+
 func IsDataReprEmpty(goor Data) (empty bool) {
 	{
 		empty = true
@@ -846,6 +865,7 @@ func IsDataReprEmpty(goor Data) (empty bool) {
 	}
 	return
 }
+
 func (goo Commit) ToPBMessage(cdc *amino.Codec) (msg proto.Message, err error) {
 	var pbo *typespb.Commit
 	{
@@ -868,7 +888,7 @@ func (goo Commit) ToPBMessage(cdc *amino.Codec) (msg proto.Message, err error) {
 			if goorl == 0 {
 				pbo.Precommits = nil
 			} else {
-				var pbos = make([]*typespb.CommitSig, goorl)
+				pbos := make([]*typespb.CommitSig, goorl)
 				for i := 0; i < goorl; i += 1 {
 					{
 						goore := goo.Precommits[i]
@@ -894,11 +914,13 @@ func (goo Commit) ToPBMessage(cdc *amino.Codec) (msg proto.Message, err error) {
 	msg = pbo
 	return
 }
+
 func (goo Commit) EmptyPBMessage(cdc *amino.Codec) (msg proto.Message) {
 	pbo := new(typespb.Commit)
 	msg = pbo
 	return
 }
+
 func (goo *Commit) FromPBMessage(cdc *amino.Codec, msg proto.Message) (err error) {
 	var pbo *typespb.Commit = msg.(*typespb.Commit)
 	{
@@ -919,7 +941,7 @@ func (goo *Commit) FromPBMessage(cdc *amino.Codec, msg proto.Message) (err error
 				if pbol == 0 {
 					(*goo).Precommits = nil
 				} else {
-					var goors = make([]*CommitSig, pbol)
+					goors := make([]*CommitSig, pbol)
 					for i := 0; i < pbol; i += 1 {
 						{
 							pboe := pbo.Precommits[i]
@@ -942,9 +964,11 @@ func (goo *Commit) FromPBMessage(cdc *amino.Codec, msg proto.Message) (err error
 	}
 	return
 }
+
 func (_ Commit) GetTypeURL() (typeURL string) {
 	return "/tm.Commit"
 }
+
 func IsCommitReprEmpty(goor Commit) (empty bool) {
 	{
 		empty = true
@@ -962,6 +986,7 @@ func IsCommitReprEmpty(goor Commit) (empty bool) {
 	}
 	return
 }
+
 func (goo BlockID) ToPBMessage(cdc *amino.Codec) (msg proto.Message, err error) {
 	var pbo *typespb.BlockID
 	{
@@ -976,7 +1001,7 @@ func (goo BlockID) ToPBMessage(cdc *amino.Codec) (msg proto.Message, err error) 
 			if goorl == 0 {
 				pbo.Hash = nil
 			} else {
-				var pbos = make([]uint8, goorl)
+				pbos := make([]uint8, goorl)
 				for i := 0; i < goorl; i += 1 {
 					{
 						goore := goo.Hash[i]
@@ -1000,11 +1025,13 @@ func (goo BlockID) ToPBMessage(cdc *amino.Codec) (msg proto.Message, err error) 
 	msg = pbo
 	return
 }
+
 func (goo BlockID) EmptyPBMessage(cdc *amino.Codec) (msg proto.Message) {
 	pbo := new(typespb.BlockID)
 	msg = pbo
 	return
 }
+
 func (goo *BlockID) FromPBMessage(cdc *amino.Codec, msg proto.Message) (err error) {
 	var pbo *typespb.BlockID = msg.(*typespb.BlockID)
 	{
@@ -1017,7 +1044,7 @@ func (goo *BlockID) FromPBMessage(cdc *amino.Codec, msg proto.Message) (err erro
 				if pbol == 0 {
 					(*goo).Hash = nil
 				} else {
-					var goors = make([]uint8, pbol)
+					goors := make([]uint8, pbol)
 					for i := 0; i < pbol; i += 1 {
 						{
 							pboe := pbo.Hash[i]
@@ -1042,9 +1069,11 @@ func (goo *BlockID) FromPBMessage(cdc *amino.Codec, msg proto.Message) (err erro
 	}
 	return
 }
+
 func (_ BlockID) GetTypeURL() (typeURL string) {
 	return "/tm.BlockID"
 }
+
 func IsBlockIDReprEmpty(goor BlockID) (empty bool) {
 	{
 		empty = true
@@ -1062,6 +1091,7 @@ func IsBlockIDReprEmpty(goor BlockID) (empty bool) {
 	}
 	return
 }
+
 func (goo CommitSig) ToPBMessage(cdc *amino.Codec) (msg proto.Message, err error) {
 	var pbo *typespb.CommitSig
 	{
@@ -1108,7 +1138,7 @@ func (goo CommitSig) ToPBMessage(cdc *amino.Codec) (msg proto.Message, err error
 			if goorl == 0 {
 				pbo.Signature = nil
 			} else {
-				var pbos = make([]uint8, goorl)
+				pbos := make([]uint8, goorl)
 				for i := 0; i < goorl; i += 1 {
 					{
 						goore := goo.Signature[i]
@@ -1124,11 +1154,13 @@ func (goo CommitSig) ToPBMessage(cdc *amino.Codec) (msg proto.Message, err error
 	msg = pbo
 	return
 }
+
 func (goo CommitSig) EmptyPBMessage(cdc *amino.Codec) (msg proto.Message) {
 	pbo := new(typespb.CommitSig)
 	msg = pbo
 	return
 }
+
 func (goo *CommitSig) FromPBMessage(cdc *amino.Codec, msg proto.Message) (err error) {
 	var pbo *typespb.CommitSig = msg.(*typespb.CommitSig)
 	{
@@ -1172,7 +1204,7 @@ func (goo *CommitSig) FromPBMessage(cdc *amino.Codec, msg proto.Message) (err er
 				if pbol == 0 {
 					(*goo).Signature = nil
 				} else {
-					var goors = make([]uint8, pbol)
+					goors := make([]uint8, pbol)
 					for i := 0; i < pbol; i += 1 {
 						{
 							pboe := pbo.Signature[i]
@@ -1189,9 +1221,11 @@ func (goo *CommitSig) FromPBMessage(cdc *amino.Codec, msg proto.Message) (err er
 	}
 	return
 }
+
 func (_ CommitSig) GetTypeURL() (typeURL string) {
 	return "/tm.CommitSig"
 }
+
 func IsCommitSigReprEmpty(goor CommitSig) (empty bool) {
 	{
 		empty = true
@@ -1243,6 +1277,7 @@ func IsCommitSigReprEmpty(goor CommitSig) (empty bool) {
 	}
 	return
 }
+
 func (goo Vote) ToPBMessage(cdc *amino.Codec) (msg proto.Message, err error) {
 	var pbo *typespb.Vote
 	{
@@ -1289,7 +1324,7 @@ func (goo Vote) ToPBMessage(cdc *amino.Codec) (msg proto.Message, err error) {
 			if goorl == 0 {
 				pbo.Signature = nil
 			} else {
-				var pbos = make([]uint8, goorl)
+				pbos := make([]uint8, goorl)
 				for i := 0; i < goorl; i += 1 {
 					{
 						goore := goo.Signature[i]
@@ -1305,11 +1340,13 @@ func (goo Vote) ToPBMessage(cdc *amino.Codec) (msg proto.Message, err error) {
 	msg = pbo
 	return
 }
+
 func (goo Vote) EmptyPBMessage(cdc *amino.Codec) (msg proto.Message) {
 	pbo := new(typespb.Vote)
 	msg = pbo
 	return
 }
+
 func (goo *Vote) FromPBMessage(cdc *amino.Codec, msg proto.Message) (err error) {
 	var pbo *typespb.Vote = msg.(*typespb.Vote)
 	{
@@ -1353,7 +1390,7 @@ func (goo *Vote) FromPBMessage(cdc *amino.Codec, msg proto.Message) (err error) 
 				if pbol == 0 {
 					(*goo).Signature = nil
 				} else {
-					var goors = make([]uint8, pbol)
+					goors := make([]uint8, pbol)
 					for i := 0; i < pbol; i += 1 {
 						{
 							pboe := pbo.Signature[i]
@@ -1370,9 +1407,11 @@ func (goo *Vote) FromPBMessage(cdc *amino.Codec, msg proto.Message) (err error) 
 	}
 	return
 }
+
 func (_ Vote) GetTypeURL() (typeURL string) {
 	return "/tm.Vote"
 }
+
 func IsVoteReprEmpty(goor Vote) (empty bool) {
 	{
 		empty = true
@@ -1424,6 +1463,7 @@ func IsVoteReprEmpty(goor Vote) (empty bool) {
 	}
 	return
 }
+
 func (goo Part) ToPBMessage(cdc *amino.Codec) (msg proto.Message, err error) {
 	var pbo *typespb.Part
 	{
@@ -1441,7 +1481,7 @@ func (goo Part) ToPBMessage(cdc *amino.Codec) (msg proto.Message, err error) {
 			if goorl == 0 {
 				pbo.Bytes = nil
 			} else {
-				var pbos = make([]uint8, goorl)
+				pbos := make([]uint8, goorl)
 				for i := 0; i < goorl; i += 1 {
 					{
 						goore := goo.Bytes[i]
@@ -1465,11 +1505,13 @@ func (goo Part) ToPBMessage(cdc *amino.Codec) (msg proto.Message, err error) {
 	msg = pbo
 	return
 }
+
 func (goo Part) EmptyPBMessage(cdc *amino.Codec) (msg proto.Message) {
 	pbo := new(typespb.Part)
 	msg = pbo
 	return
 }
+
 func (goo *Part) FromPBMessage(cdc *amino.Codec, msg proto.Message) (err error) {
 	var pbo *typespb.Part = msg.(*typespb.Part)
 	{
@@ -1485,7 +1527,7 @@ func (goo *Part) FromPBMessage(cdc *amino.Codec, msg proto.Message) (err error) 
 				if pbol == 0 {
 					(*goo).Bytes = nil
 				} else {
-					var goors = make([]uint8, pbol)
+					goors := make([]uint8, pbol)
 					for i := 0; i < pbol; i += 1 {
 						{
 							pboe := pbo.Bytes[i]
@@ -1510,9 +1552,11 @@ func (goo *Part) FromPBMessage(cdc *amino.Codec, msg proto.Message) (err error) 
 	}
 	return
 }
+
 func (_ Part) GetTypeURL() (typeURL string) {
 	return "/tm.Part"
 }
+
 func IsPartReprEmpty(goor Part) (empty bool) {
 	{
 		empty = true
@@ -1535,6 +1579,7 @@ func IsPartReprEmpty(goor Part) (empty bool) {
 	}
 	return
 }
+
 func (goo PartSet) ToPBMessage(cdc *amino.Codec) (msg proto.Message, err error) {
 	var pbo *typespb.PartSet
 	{
@@ -1548,11 +1593,13 @@ func (goo PartSet) ToPBMessage(cdc *amino.Codec) (msg proto.Message, err error) 
 	msg = pbo
 	return
 }
+
 func (goo PartSet) EmptyPBMessage(cdc *amino.Codec) (msg proto.Message) {
 	pbo := new(typespb.PartSet)
 	msg = pbo
 	return
 }
+
 func (goo *PartSet) FromPBMessage(cdc *amino.Codec, msg proto.Message) (err error) {
 	var pbo *typespb.PartSet = msg.(*typespb.PartSet)
 	{
@@ -1561,15 +1608,18 @@ func (goo *PartSet) FromPBMessage(cdc *amino.Codec, msg proto.Message) (err erro
 	}
 	return
 }
+
 func (_ PartSet) GetTypeURL() (typeURL string) {
 	return "/tm.PartSet"
 }
+
 func IsPartSetReprEmpty(goor PartSet) (empty bool) {
 	{
 		empty = true
 	}
 	return
 }
+
 func (goo PartSetHeader) ToPBMessage(cdc *amino.Codec) (msg proto.Message, err error) {
 	var pbo *typespb.PartSetHeader
 	{
@@ -1587,7 +1637,7 @@ func (goo PartSetHeader) ToPBMessage(cdc *amino.Codec) (msg proto.Message, err e
 			if goorl == 0 {
 				pbo.Hash = nil
 			} else {
-				var pbos = make([]uint8, goorl)
+				pbos := make([]uint8, goorl)
 				for i := 0; i < goorl; i += 1 {
 					{
 						goore := goo.Hash[i]
@@ -1603,11 +1653,13 @@ func (goo PartSetHeader) ToPBMessage(cdc *amino.Codec) (msg proto.Message, err e
 	msg = pbo
 	return
 }
+
 func (goo PartSetHeader) EmptyPBMessage(cdc *amino.Codec) (msg proto.Message) {
 	pbo := new(typespb.PartSetHeader)
 	msg = pbo
 	return
 }
+
 func (goo *PartSetHeader) FromPBMessage(cdc *amino.Codec, msg proto.Message) (err error) {
 	var pbo *typespb.PartSetHeader = msg.(*typespb.PartSetHeader)
 	{
@@ -1623,7 +1675,7 @@ func (goo *PartSetHeader) FromPBMessage(cdc *amino.Codec, msg proto.Message) (er
 				if pbol == 0 {
 					(*goo).Hash = nil
 				} else {
-					var goors = make([]uint8, pbol)
+					goors := make([]uint8, pbol)
 					for i := 0; i < pbol; i += 1 {
 						{
 							pboe := pbo.Hash[i]
@@ -1640,9 +1692,11 @@ func (goo *PartSetHeader) FromPBMessage(cdc *amino.Codec, msg proto.Message) (er
 	}
 	return
 }
+
 func (_ PartSetHeader) GetTypeURL() (typeURL string) {
 	return "/tm.PartSetHeader"
 }
+
 func IsPartSetHeaderReprEmpty(goor PartSetHeader) (empty bool) {
 	{
 		empty = true
@@ -1659,6 +1713,7 @@ func IsPartSetHeaderReprEmpty(goor PartSetHeader) (empty bool) {
 	}
 	return
 }
+
 func (goo Validator) ToPBMessage(cdc *amino.Codec) (msg proto.Message, err error) {
 	var pbo *typespb.Validator
 	{
@@ -1696,11 +1751,13 @@ func (goo Validator) ToPBMessage(cdc *amino.Codec) (msg proto.Message, err error
 	msg = pbo
 	return
 }
+
 func (goo Validator) EmptyPBMessage(cdc *amino.Codec) (msg proto.Message) {
 	pbo := new(typespb.Validator)
 	msg = pbo
 	return
 }
+
 func (goo *Validator) FromPBMessage(cdc *amino.Codec, msg proto.Message) (err error) {
 	var pbo *typespb.Validator = msg.(*typespb.Validator)
 	{
@@ -1734,9 +1791,11 @@ func (goo *Validator) FromPBMessage(cdc *amino.Codec, msg proto.Message) (err er
 	}
 	return
 }
+
 func (_ Validator) GetTypeURL() (typeURL string) {
 	return "/tm.Validator"
 }
+
 func IsValidatorReprEmpty(goor Validator) (empty bool) {
 	{
 		empty = true
@@ -1767,6 +1826,7 @@ func IsValidatorReprEmpty(goor Validator) (empty bool) {
 	}
 	return
 }
+
 func (goo ValidatorSet) ToPBMessage(cdc *amino.Codec) (msg proto.Message, err error) {
 	var pbo *typespb.ValidatorSet
 	{
@@ -1781,7 +1841,7 @@ func (goo ValidatorSet) ToPBMessage(cdc *amino.Codec) (msg proto.Message, err er
 			if goorl == 0 {
 				pbo.Validators = nil
 			} else {
-				var pbos = make([]*typespb.Validator, goorl)
+				pbos := make([]*typespb.Validator, goorl)
 				for i := 0; i < goorl; i += 1 {
 					{
 						goore := goo.Validators[i]
@@ -1820,11 +1880,13 @@ func (goo ValidatorSet) ToPBMessage(cdc *amino.Codec) (msg proto.Message, err er
 	msg = pbo
 	return
 }
+
 func (goo ValidatorSet) EmptyPBMessage(cdc *amino.Codec) (msg proto.Message) {
 	pbo := new(typespb.ValidatorSet)
 	msg = pbo
 	return
 }
+
 func (goo *ValidatorSet) FromPBMessage(cdc *amino.Codec, msg proto.Message) (err error) {
 	var pbo *typespb.ValidatorSet = msg.(*typespb.ValidatorSet)
 	{
@@ -1837,7 +1899,7 @@ func (goo *ValidatorSet) FromPBMessage(cdc *amino.Codec, msg proto.Message) (err
 				if pbol == 0 {
 					(*goo).Validators = nil
 				} else {
-					var goors = make([]*Validator, pbol)
+					goors := make([]*Validator, pbol)
 					for i := 0; i < pbol; i += 1 {
 						{
 							pboe := pbo.Validators[i]
@@ -1869,9 +1931,11 @@ func (goo *ValidatorSet) FromPBMessage(cdc *amino.Codec, msg proto.Message) (err
 	}
 	return
 }
+
 func (_ ValidatorSet) GetTypeURL() (typeURL string) {
 	return "/tm.ValidatorSet"
 }
+
 func IsValidatorSetReprEmpty(goor ValidatorSet) (empty bool) {
 	{
 		empty = true
@@ -1888,6 +1952,7 @@ func IsValidatorSetReprEmpty(goor ValidatorSet) (empty bool) {
 	}
 	return
 }
+
 func (goo EventNewBlock) ToPBMessage(cdc *amino.Codec) (msg proto.Message, err error) {
 	var pbo *typespb.EventNewBlock
 	{
@@ -1930,11 +1995,13 @@ func (goo EventNewBlock) ToPBMessage(cdc *amino.Codec) (msg proto.Message, err e
 	msg = pbo
 	return
 }
+
 func (goo EventNewBlock) EmptyPBMessage(cdc *amino.Codec) (msg proto.Message) {
 	pbo := new(typespb.EventNewBlock)
 	msg = pbo
 	return
 }
+
 func (goo *EventNewBlock) FromPBMessage(cdc *amino.Codec, msg proto.Message) (err error) {
 	var pbo *typespb.EventNewBlock = msg.(*typespb.EventNewBlock)
 	{
@@ -1968,9 +2035,11 @@ func (goo *EventNewBlock) FromPBMessage(cdc *amino.Codec, msg proto.Message) (er
 	}
 	return
 }
+
 func (_ EventNewBlock) GetTypeURL() (typeURL string) {
 	return "/tm.EventNewBlock"
 }
+
 func IsEventNewBlockReprEmpty(goor EventNewBlock) (empty bool) {
 	{
 		empty = true
@@ -1994,6 +2063,7 @@ func IsEventNewBlockReprEmpty(goor EventNewBlock) (empty bool) {
 	}
 	return
 }
+
 func (goo EventNewBlockHeader) ToPBMessage(cdc *amino.Codec) (msg proto.Message, err error) {
 	var pbo *typespb.EventNewBlockHeader
 	{
@@ -2031,11 +2101,13 @@ func (goo EventNewBlockHeader) ToPBMessage(cdc *amino.Codec) (msg proto.Message,
 	msg = pbo
 	return
 }
+
 func (goo EventNewBlockHeader) EmptyPBMessage(cdc *amino.Codec) (msg proto.Message) {
 	pbo := new(typespb.EventNewBlockHeader)
 	msg = pbo
 	return
 }
+
 func (goo *EventNewBlockHeader) FromPBMessage(cdc *amino.Codec, msg proto.Message) (err error) {
 	var pbo *typespb.EventNewBlockHeader = msg.(*typespb.EventNewBlockHeader)
 	{
@@ -2068,9 +2140,11 @@ func (goo *EventNewBlockHeader) FromPBMessage(cdc *amino.Codec, msg proto.Messag
 	}
 	return
 }
+
 func (_ EventNewBlockHeader) GetTypeURL() (typeURL string) {
 	return "/tm.EventNewBlockHeader"
 }
+
 func IsEventNewBlockHeaderReprEmpty(goor EventNewBlockHeader) (empty bool) {
 	{
 		empty = true
@@ -2095,6 +2169,7 @@ func IsEventNewBlockHeaderReprEmpty(goor EventNewBlockHeader) (empty bool) {
 	}
 	return
 }
+
 func (goo EventTx) ToPBMessage(cdc *amino.Codec) (msg proto.Message, err error) {
 	var pbo *typespb.EventTx
 	{
@@ -2116,11 +2191,13 @@ func (goo EventTx) ToPBMessage(cdc *amino.Codec) (msg proto.Message, err error) 
 	msg = pbo
 	return
 }
+
 func (goo EventTx) EmptyPBMessage(cdc *amino.Codec) (msg proto.Message) {
 	pbo := new(typespb.EventTx)
 	msg = pbo
 	return
 }
+
 func (goo *EventTx) FromPBMessage(cdc *amino.Codec, msg proto.Message) (err error) {
 	var pbo *typespb.EventTx = msg.(*typespb.EventTx)
 	{
@@ -2137,9 +2214,11 @@ func (goo *EventTx) FromPBMessage(cdc *amino.Codec, msg proto.Message) (err erro
 	}
 	return
 }
+
 func (_ EventTx) GetTypeURL() (typeURL string) {
 	return "/tm.EventTx"
 }
+
 func IsEventTxReprEmpty(goor EventTx) (empty bool) {
 	{
 		empty = true
@@ -2152,6 +2231,7 @@ func IsEventTxReprEmpty(goor EventTx) (empty bool) {
 	}
 	return
 }
+
 func (goo EventVote) ToPBMessage(cdc *amino.Codec) (msg proto.Message, err error) {
 	var pbo *typespb.EventVote
 	{
@@ -2178,11 +2258,13 @@ func (goo EventVote) ToPBMessage(cdc *amino.Codec) (msg proto.Message, err error
 	msg = pbo
 	return
 }
+
 func (goo EventVote) EmptyPBMessage(cdc *amino.Codec) (msg proto.Message) {
 	pbo := new(typespb.EventVote)
 	msg = pbo
 	return
 }
+
 func (goo *EventVote) FromPBMessage(cdc *amino.Codec, msg proto.Message) (err error) {
 	var pbo *typespb.EventVote = msg.(*typespb.EventVote)
 	{
@@ -2200,9 +2282,11 @@ func (goo *EventVote) FromPBMessage(cdc *amino.Codec, msg proto.Message) (err er
 	}
 	return
 }
+
 func (_ EventVote) GetTypeURL() (typeURL string) {
 	return "/tm.EventVote"
 }
+
 func IsEventVoteReprEmpty(goor EventVote) (empty bool) {
 	{
 		empty = true
@@ -2214,6 +2298,7 @@ func IsEventVoteReprEmpty(goor EventVote) (empty bool) {
 	}
 	return
 }
+
 func (goo EventString) ToPBMessage(cdc *amino.Codec) (msg proto.Message, err error) {
 	var pbo *typespb.EventString
 	{
@@ -2227,11 +2312,13 @@ func (goo EventString) ToPBMessage(cdc *amino.Codec) (msg proto.Message, err err
 	msg = pbo
 	return
 }
+
 func (goo EventString) EmptyPBMessage(cdc *amino.Codec) (msg proto.Message) {
 	pbo := new(typespb.EventString)
 	msg = pbo
 	return
 }
+
 func (goo *EventString) FromPBMessage(cdc *amino.Codec, msg proto.Message) (err error) {
 	var pbo *typespb.EventString = msg.(*typespb.EventString)
 	{
@@ -2239,9 +2326,11 @@ func (goo *EventString) FromPBMessage(cdc *amino.Codec, msg proto.Message) (err 
 	}
 	return
 }
+
 func (_ EventString) GetTypeURL() (typeURL string) {
 	return "/tm.EventString"
 }
+
 func IsEventStringReprEmpty(goor EventString) (empty bool) {
 	{
 		empty = true
@@ -2251,6 +2340,7 @@ func IsEventStringReprEmpty(goor EventString) (empty bool) {
 	}
 	return
 }
+
 func (goo EventValidatorSetUpdates) ToPBMessage(cdc *amino.Codec) (msg proto.Message, err error) {
 	var pbo *typespb.EventValidatorSetUpdates
 	{
@@ -2265,7 +2355,7 @@ func (goo EventValidatorSetUpdates) ToPBMessage(cdc *amino.Codec) (msg proto.Mes
 			if goorl == 0 {
 				pbo.ValidatorUpdates = nil
 			} else {
-				var pbos = make([]*abcipb.ValidatorUpdate, goorl)
+				pbos := make([]*abcipb.ValidatorUpdate, goorl)
 				for i := 0; i < goorl; i += 1 {
 					{
 						goore := goo.ValidatorUpdates[i]
@@ -2286,11 +2376,13 @@ func (goo EventValidatorSetUpdates) ToPBMessage(cdc *amino.Codec) (msg proto.Mes
 	msg = pbo
 	return
 }
+
 func (goo EventValidatorSetUpdates) EmptyPBMessage(cdc *amino.Codec) (msg proto.Message) {
 	pbo := new(typespb.EventValidatorSetUpdates)
 	msg = pbo
 	return
 }
+
 func (goo *EventValidatorSetUpdates) FromPBMessage(cdc *amino.Codec, msg proto.Message) (err error) {
 	var pbo *typespb.EventValidatorSetUpdates = msg.(*typespb.EventValidatorSetUpdates)
 	{
@@ -2303,7 +2395,7 @@ func (goo *EventValidatorSetUpdates) FromPBMessage(cdc *amino.Codec, msg proto.M
 				if pbol == 0 {
 					(*goo).ValidatorUpdates = nil
 				} else {
-					var goors = make([]abci.ValidatorUpdate, pbol)
+					goors := make([]abci.ValidatorUpdate, pbol)
 					for i := 0; i < pbol; i += 1 {
 						{
 							pboe := pbo.ValidatorUpdates[i]
@@ -2325,9 +2417,11 @@ func (goo *EventValidatorSetUpdates) FromPBMessage(cdc *amino.Codec, msg proto.M
 	}
 	return
 }
+
 func (_ EventValidatorSetUpdates) GetTypeURL() (typeURL string) {
 	return "/tm.EventValidatorSetUpdates"
 }
+
 func IsEventValidatorSetUpdatesReprEmpty(goor EventValidatorSetUpdates) (empty bool) {
 	{
 		empty = true
@@ -2339,6 +2433,7 @@ func IsEventValidatorSetUpdatesReprEmpty(goor EventValidatorSetUpdates) (empty b
 	}
 	return
 }
+
 func (goo DuplicateVoteEvidence) ToPBMessage(cdc *amino.Codec) (msg proto.Message, err error) {
 	var pbo *typespb.DuplicateVoteEvidence
 	{
@@ -2389,11 +2484,13 @@ func (goo DuplicateVoteEvidence) ToPBMessage(cdc *amino.Codec) (msg proto.Messag
 	msg = pbo
 	return
 }
+
 func (goo DuplicateVoteEvidence) EmptyPBMessage(cdc *amino.Codec) (msg proto.Message) {
 	pbo := new(typespb.DuplicateVoteEvidence)
 	msg = pbo
 	return
 }
+
 func (goo *DuplicateVoteEvidence) FromPBMessage(cdc *amino.Codec, msg proto.Message) (err error) {
 	var pbo *typespb.DuplicateVoteEvidence = msg.(*typespb.DuplicateVoteEvidence)
 	{
@@ -2431,9 +2528,11 @@ func (goo *DuplicateVoteEvidence) FromPBMessage(cdc *amino.Codec, msg proto.Mess
 	}
 	return
 }
+
 func (_ DuplicateVoteEvidence) GetTypeURL() (typeURL string) {
 	return "/tm.DuplicateVoteEvidence"
 }
+
 func IsDuplicateVoteEvidenceReprEmpty(goor DuplicateVoteEvidence) (empty bool) {
 	{
 		empty = true
@@ -2455,6 +2554,7 @@ func IsDuplicateVoteEvidenceReprEmpty(goor DuplicateVoteEvidence) (empty bool) {
 	}
 	return
 }
+
 func (goo MockGoodEvidence) ToPBMessage(cdc *amino.Codec) (msg proto.Message, err error) {
 	var pbo *typespb.MockGoodEvidence
 	{
@@ -2478,11 +2578,13 @@ func (goo MockGoodEvidence) ToPBMessage(cdc *amino.Codec) (msg proto.Message, er
 	msg = pbo
 	return
 }
+
 func (goo MockGoodEvidence) EmptyPBMessage(cdc *amino.Codec) (msg proto.Message) {
 	pbo := new(typespb.MockGoodEvidence)
 	msg = pbo
 	return
 }
+
 func (goo *MockGoodEvidence) FromPBMessage(cdc *amino.Codec, msg proto.Message) (err error) {
 	var pbo *typespb.MockGoodEvidence = msg.(*typespb.MockGoodEvidence)
 	{
@@ -2502,9 +2604,11 @@ func (goo *MockGoodEvidence) FromPBMessage(cdc *amino.Codec, msg proto.Message) 
 	}
 	return
 }
+
 func (_ MockGoodEvidence) GetTypeURL() (typeURL string) {
 	return "/tm.MockGoodEvidence"
 }
+
 func IsMockGoodEvidenceReprEmpty(goor MockGoodEvidence) (empty bool) {
 	{
 		empty = true
@@ -2525,6 +2629,7 @@ func IsMockGoodEvidenceReprEmpty(goor MockGoodEvidence) (empty bool) {
 	}
 	return
 }
+
 func (goo MockRandomGoodEvidence) ToPBMessage(cdc *amino.Codec) (msg proto.Message, err error) {
 	var pbo *typespb.MockRandomGoodEvidence
 	{
@@ -2546,11 +2651,13 @@ func (goo MockRandomGoodEvidence) ToPBMessage(cdc *amino.Codec) (msg proto.Messa
 	msg = pbo
 	return
 }
+
 func (goo MockRandomGoodEvidence) EmptyPBMessage(cdc *amino.Codec) (msg proto.Message) {
 	pbo := new(typespb.MockRandomGoodEvidence)
 	msg = pbo
 	return
 }
+
 func (goo *MockRandomGoodEvidence) FromPBMessage(cdc *amino.Codec, msg proto.Message) (err error) {
 	var pbo *typespb.MockRandomGoodEvidence = msg.(*typespb.MockRandomGoodEvidence)
 	{
@@ -2567,9 +2674,11 @@ func (goo *MockRandomGoodEvidence) FromPBMessage(cdc *amino.Codec, msg proto.Mes
 	}
 	return
 }
+
 func (_ MockRandomGoodEvidence) GetTypeURL() (typeURL string) {
 	return "/tm.MockRandomGoodEvidence"
 }
+
 func IsMockRandomGoodEvidenceReprEmpty(goor MockRandomGoodEvidence) (empty bool) {
 	{
 		empty = true
@@ -2582,6 +2691,7 @@ func IsMockRandomGoodEvidenceReprEmpty(goor MockRandomGoodEvidence) (empty bool)
 	}
 	return
 }
+
 func (goo MockBadEvidence) ToPBMessage(cdc *amino.Codec) (msg proto.Message, err error) {
 	var pbo *typespb.MockBadEvidence
 	{
@@ -2603,11 +2713,13 @@ func (goo MockBadEvidence) ToPBMessage(cdc *amino.Codec) (msg proto.Message, err
 	msg = pbo
 	return
 }
+
 func (goo MockBadEvidence) EmptyPBMessage(cdc *amino.Codec) (msg proto.Message) {
 	pbo := new(typespb.MockBadEvidence)
 	msg = pbo
 	return
 }
+
 func (goo *MockBadEvidence) FromPBMessage(cdc *amino.Codec, msg proto.Message) (err error) {
 	var pbo *typespb.MockBadEvidence = msg.(*typespb.MockBadEvidence)
 	{
@@ -2624,9 +2736,11 @@ func (goo *MockBadEvidence) FromPBMessage(cdc *amino.Codec, msg proto.Message) (
 	}
 	return
 }
+
 func (_ MockBadEvidence) GetTypeURL() (typeURL string) {
 	return "/tm.MockBadEvidence"
 }
+
 func IsMockBadEvidenceReprEmpty(goor MockBadEvidence) (empty bool) {
 	{
 		empty = true
@@ -2639,6 +2753,7 @@ func IsMockBadEvidenceReprEmpty(goor MockBadEvidence) (empty bool) {
 	}
 	return
 }
+
 func (goo TxResult) ToPBMessage(cdc *amino.Codec) (msg proto.Message, err error) {
 	var pbo *typespb.TxResult
 	{
@@ -2659,7 +2774,7 @@ func (goo TxResult) ToPBMessage(cdc *amino.Codec) (msg proto.Message, err error)
 			if goorl == 0 {
 				pbo.Tx = nil
 			} else {
-				var pbos = make([]uint8, goorl)
+				pbos := make([]uint8, goorl)
 				for i := 0; i < goorl; i += 1 {
 					{
 						goore := goo.Tx[i]
@@ -2683,11 +2798,13 @@ func (goo TxResult) ToPBMessage(cdc *amino.Codec) (msg proto.Message, err error)
 	msg = pbo
 	return
 }
+
 func (goo TxResult) EmptyPBMessage(cdc *amino.Codec) (msg proto.Message) {
 	pbo := new(typespb.TxResult)
 	msg = pbo
 	return
 }
+
 func (goo *TxResult) FromPBMessage(cdc *amino.Codec, msg proto.Message) (err error) {
 	var pbo *typespb.TxResult = msg.(*typespb.TxResult)
 	{
@@ -2706,7 +2823,7 @@ func (goo *TxResult) FromPBMessage(cdc *amino.Codec, msg proto.Message) (err err
 				if pbol == 0 {
 					(*goo).Tx = nil
 				} else {
-					var goors = make([]uint8, pbol)
+					goors := make([]uint8, pbol)
 					for i := 0; i < pbol; i += 1 {
 						{
 							pboe := pbo.Tx[i]
@@ -2731,9 +2848,11 @@ func (goo *TxResult) FromPBMessage(cdc *amino.Codec, msg proto.Message) (err err
 	}
 	return
 }
+
 func (_ TxResult) GetTypeURL() (typeURL string) {
 	return "/tm.TxResult"
 }
+
 func IsTxResultReprEmpty(goor TxResult) (empty bool) {
 	{
 		empty = true
@@ -2761,6 +2880,7 @@ func IsTxResultReprEmpty(goor TxResult) (empty bool) {
 	}
 	return
 }
+
 func (goo MockAppState) ToPBMessage(cdc *amino.Codec) (msg proto.Message, err error) {
 	var pbo *typespb.MockAppState
 	{
@@ -2777,11 +2897,13 @@ func (goo MockAppState) ToPBMessage(cdc *amino.Codec) (msg proto.Message, err er
 	msg = pbo
 	return
 }
+
 func (goo MockAppState) EmptyPBMessage(cdc *amino.Codec) (msg proto.Message) {
 	pbo := new(typespb.MockAppState)
 	msg = pbo
 	return
 }
+
 func (goo *MockAppState) FromPBMessage(cdc *amino.Codec, msg proto.Message) (err error) {
 	var pbo *typespb.MockAppState = msg.(*typespb.MockAppState)
 	{
@@ -2793,9 +2915,11 @@ func (goo *MockAppState) FromPBMessage(cdc *amino.Codec, msg proto.Message) (err
 	}
 	return
 }
+
 func (_ MockAppState) GetTypeURL() (typeURL string) {
 	return "/tm.MockAppState"
 }
+
 func IsMockAppStateReprEmpty(goor MockAppState) (empty bool) {
 	{
 		empty = true
@@ -2807,6 +2931,7 @@ func IsMockAppStateReprEmpty(goor MockAppState) (empty bool) {
 	}
 	return
 }
+
 func (goo VoteSet) ToPBMessage(cdc *amino.Codec) (msg proto.Message, err error) {
 	var pbo *typespb.VoteSet
 	{
@@ -2820,11 +2945,13 @@ func (goo VoteSet) ToPBMessage(cdc *amino.Codec) (msg proto.Message, err error) 
 	msg = pbo
 	return
 }
+
 func (goo VoteSet) EmptyPBMessage(cdc *amino.Codec) (msg proto.Message) {
 	pbo := new(typespb.VoteSet)
 	msg = pbo
 	return
 }
+
 func (goo *VoteSet) FromPBMessage(cdc *amino.Codec, msg proto.Message) (err error) {
 	var pbo *typespb.VoteSet = msg.(*typespb.VoteSet)
 	{
@@ -2833,9 +2960,11 @@ func (goo *VoteSet) FromPBMessage(cdc *amino.Codec, msg proto.Message) (err erro
 	}
 	return
 }
+
 func (_ VoteSet) GetTypeURL() (typeURL string) {
 	return "/tm.VoteSet"
 }
+
 func IsVoteSetReprEmpty(goor VoteSet) (empty bool) {
 	{
 		empty = true
