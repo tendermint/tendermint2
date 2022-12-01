@@ -1,9 +1,9 @@
 package bitarray
 
 import (
-	proto "google.golang.org/protobuf/proto"
 	amino "github.com/tendermint/tendermint2/pkgs/amino"
 	bitarraypb "github.com/tendermint/tendermint2/pkgs/bitarray/pb"
+	proto "google.golang.org/protobuf/proto"
 )
 
 func (goo BitArray) ToPBMessage(cdc *amino.Codec) (msg proto.Message, err error) {
@@ -23,7 +23,7 @@ func (goo BitArray) ToPBMessage(cdc *amino.Codec) (msg proto.Message, err error)
 			if goorl == 0 {
 				pbo.Elems = nil
 			} else {
-				var pbos = make([]uint64, goorl)
+				pbos := make([]uint64, goorl)
 				for i := 0; i < goorl; i += 1 {
 					{
 						goore := goo.Elems[i]
@@ -39,11 +39,13 @@ func (goo BitArray) ToPBMessage(cdc *amino.Codec) (msg proto.Message, err error)
 	msg = pbo
 	return
 }
+
 func (goo BitArray) EmptyPBMessage(cdc *amino.Codec) (msg proto.Message) {
 	pbo := new(bitarraypb.BitArray)
 	msg = pbo
 	return
 }
+
 func (goo *BitArray) FromPBMessage(cdc *amino.Codec, msg proto.Message) (err error) {
 	var pbo *bitarraypb.BitArray = msg.(*bitarraypb.BitArray)
 	{
@@ -59,7 +61,7 @@ func (goo *BitArray) FromPBMessage(cdc *amino.Codec, msg proto.Message) (err err
 				if pbol == 0 {
 					(*goo).Elems = nil
 				} else {
-					var goors = make([]uint64, pbol)
+					goors := make([]uint64, pbol)
 					for i := 0; i < pbol; i += 1 {
 						{
 							pboe := pbo.Elems[i]
@@ -76,9 +78,11 @@ func (goo *BitArray) FromPBMessage(cdc *amino.Codec, msg proto.Message) (err err
 	}
 	return
 }
+
 func (_ BitArray) GetTypeURL() (typeURL string) {
 	return "/tm.BitArray"
 }
+
 func IsBitArrayReprEmpty(goor BitArray) (empty bool) {
 	{
 		empty = true

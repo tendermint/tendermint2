@@ -5,9 +5,9 @@ import (
 	"fmt"
 	"testing"
 
-	"github.com/tendermint/tendermint2/pkgs/crypto/bip39"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
+	"github.com/tendermint/tendermint2/pkgs/crypto/bip39"
 )
 
 var defaultBIP39Passphrase = ""

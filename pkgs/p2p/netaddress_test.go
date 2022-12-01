@@ -5,9 +5,9 @@ import (
 	"net"
 	"testing"
 
-	"github.com/tendermint/tendermint2/pkgs/crypto"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
+	"github.com/tendermint/tendermint2/pkgs/crypto"
 )
 
 func TestAddress2ID(t *testing.T) {

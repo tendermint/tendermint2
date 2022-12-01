@@ -6,8 +6,8 @@ import (
 	"go/token"
 	"testing"
 
-	"github.com/tendermint/tendermint2/pkgs/amino/tests"
 	"github.com/jaekwon/testify/assert"
+	"github.com/tendermint/tendermint2/pkgs/amino/tests"
 )
 
 func TestGenerateProtoBindings(t *testing.T) {

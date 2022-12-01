@@ -1,9 +1,9 @@
 package bank
 
 import (
-	proto "google.golang.org/protobuf/proto"
 	amino "github.com/tendermint/tendermint2/pkgs/amino"
 	bankpb "github.com/tendermint/tendermint2/pkgs/sdk/bank/pb"
+	proto "google.golang.org/protobuf/proto"
 )
 
 func (goo NoInputsError) ToPBMessage(cdc *amino.Codec) (msg proto.Message, err error) {
@@ -19,11 +19,13 @@ func (goo NoInputsError) ToPBMessage(cdc *amino.Codec) (msg proto.Message, err e
 	msg = pbo
 	return
 }
+
 func (goo NoInputsError) EmptyPBMessage(cdc *amino.Codec) (msg proto.Message) {
 	pbo := new(bankpb.NoInputsError)
 	msg = pbo
 	return
 }
+
 func (goo *NoInputsError) FromPBMessage(cdc *amino.Codec, msg proto.Message) (err error) {
 	var pbo *bankpb.NoInputsError = msg.(*bankpb.NoInputsError)
 	{
@@ -32,15 +34,18 @@ func (goo *NoInputsError) FromPBMessage(cdc *amino.Codec, msg proto.Message) (er
 	}
 	return
 }
+
 func (_ NoInputsError) GetTypeURL() (typeURL string) {
 	return "/bank.NoInputsError"
 }
+
 func IsNoInputsErrorReprEmpty(goor NoInputsError) (empty bool) {
 	{
 		empty = true
 	}
 	return
 }
+
 func (goo NoOutputsError) ToPBMessage(cdc *amino.Codec) (msg proto.Message, err error) {
 	var pbo *bankpb.NoOutputsError
 	{
@@ -54,11 +59,13 @@ func (goo NoOutputsError) ToPBMessage(cdc *amino.Codec) (msg proto.Message, err 
 	msg = pbo
 	return
 }
+
 func (goo NoOutputsError) EmptyPBMessage(cdc *amino.Codec) (msg proto.Message) {
 	pbo := new(bankpb.NoOutputsError)
 	msg = pbo
 	return
 }
+
 func (goo *NoOutputsError) FromPBMessage(cdc *amino.Codec, msg proto.Message) (err error) {
 	var pbo *bankpb.NoOutputsError = msg.(*bankpb.NoOutputsError)
 	{
@@ -67,15 +74,18 @@ func (goo *NoOutputsError) FromPBMessage(cdc *amino.Codec, msg proto.Message) (e
 	}
 	return
 }
+
 func (_ NoOutputsError) GetTypeURL() (typeURL string) {
 	return "/bank.NoOutputsError"
 }
+
 func IsNoOutputsErrorReprEmpty(goor NoOutputsError) (empty bool) {
 	{
 		empty = true
 	}
 	return
 }
+
 func (goo InputOutputMismatchError) ToPBMessage(cdc *amino.Codec) (msg proto.Message, err error) {
 	var pbo *bankpb.InputOutputMismatchError
 	{
@@ -89,11 +99,13 @@ func (goo InputOutputMismatchError) ToPBMessage(cdc *amino.Codec) (msg proto.Mes
 	msg = pbo
 	return
 }
+
 func (goo InputOutputMismatchError) EmptyPBMessage(cdc *amino.Codec) (msg proto.Message) {
 	pbo := new(bankpb.InputOutputMismatchError)
 	msg = pbo
 	return
 }
+
 func (goo *InputOutputMismatchError) FromPBMessage(cdc *amino.Codec, msg proto.Message) (err error) {
 	var pbo *bankpb.InputOutputMismatchError = msg.(*bankpb.InputOutputMismatchError)
 	{
@@ -102,15 +114,18 @@ func (goo *InputOutputMismatchError) FromPBMessage(cdc *amino.Codec, msg proto.M
 	}
 	return
 }
+
 func (_ InputOutputMismatchError) GetTypeURL() (typeURL string) {
 	return "/bank.InputOutputMismatchError"
 }
+
 func IsInputOutputMismatchErrorReprEmpty(goor InputOutputMismatchError) (empty bool) {
 	{
 		empty = true
 	}
 	return
 }
+
 func (goo MsgSend) ToPBMessage(cdc *amino.Codec) (msg proto.Message, err error) {
 	var pbo *bankpb.MsgSend
 	{
@@ -145,11 +160,13 @@ func (goo MsgSend) ToPBMessage(cdc *amino.Codec) (msg proto.Message, err error) 
 	msg = pbo
 	return
 }
+
 func (goo MsgSend) EmptyPBMessage(cdc *amino.Codec) (msg proto.Message) {
 	pbo := new(bankpb.MsgSend)
 	msg = pbo
 	return
 }
+
 func (goo *MsgSend) FromPBMessage(cdc *amino.Codec, msg proto.Message) (err error) {
 	var pbo *bankpb.MsgSend = msg.(*bankpb.MsgSend)
 	{
@@ -182,9 +199,11 @@ func (goo *MsgSend) FromPBMessage(cdc *amino.Codec, msg proto.Message) (err erro
 	}
 	return
 }
+
 func (_ MsgSend) GetTypeURL() (typeURL string) {
 	return "/bank.MsgSend"
 }
+
 func IsMsgSendReprEmpty(goor MsgSend) (empty bool) {
 	{
 		empty = true

@@ -6,10 +6,10 @@ import (
 	"runtime/debug"
 	"testing"
 
-	"github.com/tendermint/tendermint2/pkgs/amino"
-	"github.com/tendermint/tendermint2/pkgs/amino/tests"
 	fuzz "github.com/google/gofuzz"
 	"github.com/stretchr/testify/require"
+	"github.com/tendermint/tendermint2/pkgs/amino"
+	"github.com/tendermint/tendermint2/pkgs/amino/tests"
 	"google.golang.org/protobuf/proto"
 )
 

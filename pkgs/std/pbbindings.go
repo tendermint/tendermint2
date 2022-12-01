@@ -1,9 +1,9 @@
 package std
 
 import (
-	proto "google.golang.org/protobuf/proto"
 	amino "github.com/tendermint/tendermint2/pkgs/amino"
 	stdpb "github.com/tendermint/tendermint2/pkgs/std/pb"
+	proto "google.golang.org/protobuf/proto"
 	anypb "google.golang.org/protobuf/types/known/anypb"
 )
 
@@ -51,11 +51,13 @@ func (goo BaseAccount) ToPBMessage(cdc *amino.Codec) (msg proto.Message, err err
 	msg = pbo
 	return
 }
+
 func (goo BaseAccount) EmptyPBMessage(cdc *amino.Codec) (msg proto.Message) {
 	pbo := new(stdpb.BaseAccount)
 	msg = pbo
 	return
 }
+
 func (goo *BaseAccount) FromPBMessage(cdc *amino.Codec, msg proto.Message) (err error) {
 	var pbo *stdpb.BaseAccount = msg.(*stdpb.BaseAccount)
 	{
@@ -97,9 +99,11 @@ func (goo *BaseAccount) FromPBMessage(cdc *amino.Codec, msg proto.Message) (err 
 	}
 	return
 }
+
 func (_ BaseAccount) GetTypeURL() (typeURL string) {
 	return "/std.BaseAccount"
 }
+
 func IsBaseAccountReprEmpty(goor BaseAccount) (empty bool) {
 	{
 		empty = true
@@ -139,6 +143,7 @@ func IsBaseAccountReprEmpty(goor BaseAccount) (empty bool) {
 	}
 	return
 }
+
 func (goo MemFile) ToPBMessage(cdc *amino.Codec) (msg proto.Message, err error) {
 	var pbo *stdpb.MemFile
 	{
@@ -158,11 +163,13 @@ func (goo MemFile) ToPBMessage(cdc *amino.Codec) (msg proto.Message, err error) 
 	msg = pbo
 	return
 }
+
 func (goo MemFile) EmptyPBMessage(cdc *amino.Codec) (msg proto.Message) {
 	pbo := new(stdpb.MemFile)
 	msg = pbo
 	return
 }
+
 func (goo *MemFile) FromPBMessage(cdc *amino.Codec, msg proto.Message) (err error) {
 	var pbo *stdpb.MemFile = msg.(*stdpb.MemFile)
 	{
@@ -177,9 +184,11 @@ func (goo *MemFile) FromPBMessage(cdc *amino.Codec, msg proto.Message) (err erro
 	}
 	return
 }
+
 func (_ MemFile) GetTypeURL() (typeURL string) {
 	return "/std.MemFile"
 }
+
 func IsMemFileReprEmpty(goor MemFile) (empty bool) {
 	{
 		empty = true
@@ -196,6 +205,7 @@ func IsMemFileReprEmpty(goor MemFile) (empty bool) {
 	}
 	return
 }
+
 func (goo MemPackage) ToPBMessage(cdc *amino.Codec) (msg proto.Message, err error) {
 	var pbo *stdpb.MemPackage
 	{
@@ -216,7 +226,7 @@ func (goo MemPackage) ToPBMessage(cdc *amino.Codec) (msg proto.Message, err erro
 			if goorl == 0 {
 				pbo.Files = nil
 			} else {
-				var pbos = make([]*stdpb.MemFile, goorl)
+				pbos := make([]*stdpb.MemFile, goorl)
 				for i := 0; i < goorl; i += 1 {
 					{
 						goore := goo.Files[i]
@@ -242,11 +252,13 @@ func (goo MemPackage) ToPBMessage(cdc *amino.Codec) (msg proto.Message, err erro
 	msg = pbo
 	return
 }
+
 func (goo MemPackage) EmptyPBMessage(cdc *amino.Codec) (msg proto.Message) {
 	pbo := new(stdpb.MemPackage)
 	msg = pbo
 	return
 }
+
 func (goo *MemPackage) FromPBMessage(cdc *amino.Codec, msg proto.Message) (err error) {
 	var pbo *stdpb.MemPackage = msg.(*stdpb.MemPackage)
 	{
@@ -265,7 +277,7 @@ func (goo *MemPackage) FromPBMessage(cdc *amino.Codec, msg proto.Message) (err e
 				if pbol == 0 {
 					(*goo).Files = nil
 				} else {
-					var goors = make([]*MemFile, pbol)
+					goors := make([]*MemFile, pbol)
 					for i := 0; i < pbol; i += 1 {
 						{
 							pboe := pbo.Files[i]
@@ -288,9 +300,11 @@ func (goo *MemPackage) FromPBMessage(cdc *amino.Codec, msg proto.Message) (err e
 	}
 	return
 }
+
 func (_ MemPackage) GetTypeURL() (typeURL string) {
 	return "/std.MemPackage"
 }
+
 func IsMemPackageReprEmpty(goor MemPackage) (empty bool) {
 	{
 		empty = true
@@ -312,6 +326,7 @@ func IsMemPackageReprEmpty(goor MemPackage) (empty bool) {
 	}
 	return
 }
+
 func (goo InternalError) ToPBMessage(cdc *amino.Codec) (msg proto.Message, err error) {
 	var pbo *stdpb.InternalError
 	{
@@ -325,11 +340,13 @@ func (goo InternalError) ToPBMessage(cdc *amino.Codec) (msg proto.Message, err e
 	msg = pbo
 	return
 }
+
 func (goo InternalError) EmptyPBMessage(cdc *amino.Codec) (msg proto.Message) {
 	pbo := new(stdpb.InternalError)
 	msg = pbo
 	return
 }
+
 func (goo *InternalError) FromPBMessage(cdc *amino.Codec, msg proto.Message) (err error) {
 	var pbo *stdpb.InternalError = msg.(*stdpb.InternalError)
 	{
@@ -338,15 +355,18 @@ func (goo *InternalError) FromPBMessage(cdc *amino.Codec, msg proto.Message) (er
 	}
 	return
 }
+
 func (_ InternalError) GetTypeURL() (typeURL string) {
 	return "/std.InternalError"
 }
+
 func IsInternalErrorReprEmpty(goor InternalError) (empty bool) {
 	{
 		empty = true
 	}
 	return
 }
+
 func (goo TxDecodeError) ToPBMessage(cdc *amino.Codec) (msg proto.Message, err error) {
 	var pbo *stdpb.TxDecodeError
 	{
@@ -360,11 +380,13 @@ func (goo TxDecodeError) ToPBMessage(cdc *amino.Codec) (msg proto.Message, err e
 	msg = pbo
 	return
 }
+
 func (goo TxDecodeError) EmptyPBMessage(cdc *amino.Codec) (msg proto.Message) {
 	pbo := new(stdpb.TxDecodeError)
 	msg = pbo
 	return
 }
+
 func (goo *TxDecodeError) FromPBMessage(cdc *amino.Codec, msg proto.Message) (err error) {
 	var pbo *stdpb.TxDecodeError = msg.(*stdpb.TxDecodeError)
 	{
@@ -373,15 +395,18 @@ func (goo *TxDecodeError) FromPBMessage(cdc *amino.Codec, msg proto.Message) (er
 	}
 	return
 }
+
 func (_ TxDecodeError) GetTypeURL() (typeURL string) {
 	return "/std.TxDecodeError"
 }
+
 func IsTxDecodeErrorReprEmpty(goor TxDecodeError) (empty bool) {
 	{
 		empty = true
 	}
 	return
 }
+
 func (goo InvalidSequenceError) ToPBMessage(cdc *amino.Codec) (msg proto.Message, err error) {
 	var pbo *stdpb.InvalidSequenceError
 	{
@@ -395,11 +420,13 @@ func (goo InvalidSequenceError) ToPBMessage(cdc *amino.Codec) (msg proto.Message
 	msg = pbo
 	return
 }
+
 func (goo InvalidSequenceError) EmptyPBMessage(cdc *amino.Codec) (msg proto.Message) {
 	pbo := new(stdpb.InvalidSequenceError)
 	msg = pbo
 	return
 }
+
 func (goo *InvalidSequenceError) FromPBMessage(cdc *amino.Codec, msg proto.Message) (err error) {
 	var pbo *stdpb.InvalidSequenceError = msg.(*stdpb.InvalidSequenceError)
 	{
@@ -408,15 +435,18 @@ func (goo *InvalidSequenceError) FromPBMessage(cdc *amino.Codec, msg proto.Messa
 	}
 	return
 }
+
 func (_ InvalidSequenceError) GetTypeURL() (typeURL string) {
 	return "/std.InvalidSequenceError"
 }
+
 func IsInvalidSequenceErrorReprEmpty(goor InvalidSequenceError) (empty bool) {
 	{
 		empty = true
 	}
 	return
 }
+
 func (goo UnauthorizedError) ToPBMessage(cdc *amino.Codec) (msg proto.Message, err error) {
 	var pbo *stdpb.UnauthorizedError
 	{
@@ -430,11 +460,13 @@ func (goo UnauthorizedError) ToPBMessage(cdc *amino.Codec) (msg proto.Message, e
 	msg = pbo
 	return
 }
+
 func (goo UnauthorizedError) EmptyPBMessage(cdc *amino.Codec) (msg proto.Message) {
 	pbo := new(stdpb.UnauthorizedError)
 	msg = pbo
 	return
 }
+
 func (goo *UnauthorizedError) FromPBMessage(cdc *amino.Codec, msg proto.Message) (err error) {
 	var pbo *stdpb.UnauthorizedError = msg.(*stdpb.UnauthorizedError)
 	{
@@ -443,15 +475,18 @@ func (goo *UnauthorizedError) FromPBMessage(cdc *amino.Codec, msg proto.Message)
 	}
 	return
 }
+
 func (_ UnauthorizedError) GetTypeURL() (typeURL string) {
 	return "/std.UnauthorizedError"
 }
+
 func IsUnauthorizedErrorReprEmpty(goor UnauthorizedError) (empty bool) {
 	{
 		empty = true
 	}
 	return
 }
+
 func (goo InsufficientFundsError) ToPBMessage(cdc *amino.Codec) (msg proto.Message, err error) {
 	var pbo *stdpb.InsufficientFundsError
 	{
@@ -465,11 +500,13 @@ func (goo InsufficientFundsError) ToPBMessage(cdc *amino.Codec) (msg proto.Messa
 	msg = pbo
 	return
 }
+
 func (goo InsufficientFundsError) EmptyPBMessage(cdc *amino.Codec) (msg proto.Message) {
 	pbo := new(stdpb.InsufficientFundsError)
 	msg = pbo
 	return
 }
+
 func (goo *InsufficientFundsError) FromPBMessage(cdc *amino.Codec, msg proto.Message) (err error) {
 	var pbo *stdpb.InsufficientFundsError = msg.(*stdpb.InsufficientFundsError)
 	{
@@ -478,15 +515,18 @@ func (goo *InsufficientFundsError) FromPBMessage(cdc *amino.Codec, msg proto.Mes
 	}
 	return
 }
+
 func (_ InsufficientFundsError) GetTypeURL() (typeURL string) {
 	return "/std.InsufficientFundsError"
 }
+
 func IsInsufficientFundsErrorReprEmpty(goor InsufficientFundsError) (empty bool) {
 	{
 		empty = true
 	}
 	return
 }
+
 func (goo UnknownRequestError) ToPBMessage(cdc *amino.Codec) (msg proto.Message, err error) {
 	var pbo *stdpb.UnknownRequestError
 	{
@@ -500,11 +540,13 @@ func (goo UnknownRequestError) ToPBMessage(cdc *amino.Codec) (msg proto.Message,
 	msg = pbo
 	return
 }
+
 func (goo UnknownRequestError) EmptyPBMessage(cdc *amino.Codec) (msg proto.Message) {
 	pbo := new(stdpb.UnknownRequestError)
 	msg = pbo
 	return
 }
+
 func (goo *UnknownRequestError) FromPBMessage(cdc *amino.Codec, msg proto.Message) (err error) {
 	var pbo *stdpb.UnknownRequestError = msg.(*stdpb.UnknownRequestError)
 	{
@@ -513,15 +555,18 @@ func (goo *UnknownRequestError) FromPBMessage(cdc *amino.Codec, msg proto.Messag
 	}
 	return
 }
+
 func (_ UnknownRequestError) GetTypeURL() (typeURL string) {
 	return "/std.UnknownRequestError"
 }
+
 func IsUnknownRequestErrorReprEmpty(goor UnknownRequestError) (empty bool) {
 	{
 		empty = true
 	}
 	return
 }
+
 func (goo InvalidAddressError) ToPBMessage(cdc *amino.Codec) (msg proto.Message, err error) {
 	var pbo *stdpb.InvalidAddressError
 	{
@@ -535,11 +580,13 @@ func (goo InvalidAddressError) ToPBMessage(cdc *amino.Codec) (msg proto.Message,
 	msg = pbo
 	return
 }
+
 func (goo InvalidAddressError) EmptyPBMessage(cdc *amino.Codec) (msg proto.Message) {
 	pbo := new(stdpb.InvalidAddressError)
 	msg = pbo
 	return
 }
+
 func (goo *InvalidAddressError) FromPBMessage(cdc *amino.Codec, msg proto.Message) (err error) {
 	var pbo *stdpb.InvalidAddressError = msg.(*stdpb.InvalidAddressError)
 	{
@@ -548,15 +595,18 @@ func (goo *InvalidAddressError) FromPBMessage(cdc *amino.Codec, msg proto.Messag
 	}
 	return
 }
+
 func (_ InvalidAddressError) GetTypeURL() (typeURL string) {
 	return "/std.InvalidAddressError"
 }
+
 func IsInvalidAddressErrorReprEmpty(goor InvalidAddressError) (empty bool) {
 	{
 		empty = true
 	}
 	return
 }
+
 func (goo UnknownAddressError) ToPBMessage(cdc *amino.Codec) (msg proto.Message, err error) {
 	var pbo *stdpb.UnknownAddressError
 	{
@@ -570,11 +620,13 @@ func (goo UnknownAddressError) ToPBMessage(cdc *amino.Codec) (msg proto.Message,
 	msg = pbo
 	return
 }
+
 func (goo UnknownAddressError) EmptyPBMessage(cdc *amino.Codec) (msg proto.Message) {
 	pbo := new(stdpb.UnknownAddressError)
 	msg = pbo
 	return
 }
+
 func (goo *UnknownAddressError) FromPBMessage(cdc *amino.Codec, msg proto.Message) (err error) {
 	var pbo *stdpb.UnknownAddressError = msg.(*stdpb.UnknownAddressError)
 	{
@@ -583,15 +635,18 @@ func (goo *UnknownAddressError) FromPBMessage(cdc *amino.Codec, msg proto.Messag
 	}
 	return
 }
+
 func (_ UnknownAddressError) GetTypeURL() (typeURL string) {
 	return "/std.UnknownAddressError"
 }
+
 func IsUnknownAddressErrorReprEmpty(goor UnknownAddressError) (empty bool) {
 	{
 		empty = true
 	}
 	return
 }
+
 func (goo InvalidPubKeyError) ToPBMessage(cdc *amino.Codec) (msg proto.Message, err error) {
 	var pbo *stdpb.InvalidPubKeyError
 	{
@@ -605,11 +660,13 @@ func (goo InvalidPubKeyError) ToPBMessage(cdc *amino.Codec) (msg proto.Message, 
 	msg = pbo
 	return
 }
+
 func (goo InvalidPubKeyError) EmptyPBMessage(cdc *amino.Codec) (msg proto.Message) {
 	pbo := new(stdpb.InvalidPubKeyError)
 	msg = pbo
 	return
 }
+
 func (goo *InvalidPubKeyError) FromPBMessage(cdc *amino.Codec, msg proto.Message) (err error) {
 	var pbo *stdpb.InvalidPubKeyError = msg.(*stdpb.InvalidPubKeyError)
 	{
@@ -618,15 +675,18 @@ func (goo *InvalidPubKeyError) FromPBMessage(cdc *amino.Codec, msg proto.Message
 	}
 	return
 }
+
 func (_ InvalidPubKeyError) GetTypeURL() (typeURL string) {
 	return "/std.InvalidPubKeyError"
 }
+
 func IsInvalidPubKeyErrorReprEmpty(goor InvalidPubKeyError) (empty bool) {
 	{
 		empty = true
 	}
 	return
 }
+
 func (goo InsufficientCoinsError) ToPBMessage(cdc *amino.Codec) (msg proto.Message, err error) {
 	var pbo *stdpb.InsufficientCoinsError
 	{
@@ -640,11 +700,13 @@ func (goo InsufficientCoinsError) ToPBMessage(cdc *amino.Codec) (msg proto.Messa
 	msg = pbo
 	return
 }
+
 func (goo InsufficientCoinsError) EmptyPBMessage(cdc *amino.Codec) (msg proto.Message) {
 	pbo := new(stdpb.InsufficientCoinsError)
 	msg = pbo
 	return
 }
+
 func (goo *InsufficientCoinsError) FromPBMessage(cdc *amino.Codec, msg proto.Message) (err error) {
 	var pbo *stdpb.InsufficientCoinsError = msg.(*stdpb.InsufficientCoinsError)
 	{
@@ -653,15 +715,18 @@ func (goo *InsufficientCoinsError) FromPBMessage(cdc *amino.Codec, msg proto.Mes
 	}
 	return
 }
+
 func (_ InsufficientCoinsError) GetTypeURL() (typeURL string) {
 	return "/std.InsufficientCoinsError"
 }
+
 func IsInsufficientCoinsErrorReprEmpty(goor InsufficientCoinsError) (empty bool) {
 	{
 		empty = true
 	}
 	return
 }
+
 func (goo InvalidCoinsError) ToPBMessage(cdc *amino.Codec) (msg proto.Message, err error) {
 	var pbo *stdpb.InvalidCoinsError
 	{
@@ -675,11 +740,13 @@ func (goo InvalidCoinsError) ToPBMessage(cdc *amino.Codec) (msg proto.Message, e
 	msg = pbo
 	return
 }
+
 func (goo InvalidCoinsError) EmptyPBMessage(cdc *amino.Codec) (msg proto.Message) {
 	pbo := new(stdpb.InvalidCoinsError)
 	msg = pbo
 	return
 }
+
 func (goo *InvalidCoinsError) FromPBMessage(cdc *amino.Codec, msg proto.Message) (err error) {
 	var pbo *stdpb.InvalidCoinsError = msg.(*stdpb.InvalidCoinsError)
 	{
@@ -688,15 +755,18 @@ func (goo *InvalidCoinsError) FromPBMessage(cdc *amino.Codec, msg proto.Message)
 	}
 	return
 }
+
 func (_ InvalidCoinsError) GetTypeURL() (typeURL string) {
 	return "/std.InvalidCoinsError"
 }
+
 func IsInvalidCoinsErrorReprEmpty(goor InvalidCoinsError) (empty bool) {
 	{
 		empty = true
 	}
 	return
 }
+
 func (goo InvalidGasWantedError) ToPBMessage(cdc *amino.Codec) (msg proto.Message, err error) {
 	var pbo *stdpb.InvalidGasWantedError
 	{
@@ -710,11 +780,13 @@ func (goo InvalidGasWantedError) ToPBMessage(cdc *amino.Codec) (msg proto.Messag
 	msg = pbo
 	return
 }
+
 func (goo InvalidGasWantedError) EmptyPBMessage(cdc *amino.Codec) (msg proto.Message) {
 	pbo := new(stdpb.InvalidGasWantedError)
 	msg = pbo
 	return
 }
+
 func (goo *InvalidGasWantedError) FromPBMessage(cdc *amino.Codec, msg proto.Message) (err error) {
 	var pbo *stdpb.InvalidGasWantedError = msg.(*stdpb.InvalidGasWantedError)
 	{
@@ -723,15 +795,18 @@ func (goo *InvalidGasWantedError) FromPBMessage(cdc *amino.Codec, msg proto.Mess
 	}
 	return
 }
+
 func (_ InvalidGasWantedError) GetTypeURL() (typeURL string) {
 	return "/std.InvalidGasWantedError"
 }
+
 func IsInvalidGasWantedErrorReprEmpty(goor InvalidGasWantedError) (empty bool) {
 	{
 		empty = true
 	}
 	return
 }
+
 func (goo OutOfGasError) ToPBMessage(cdc *amino.Codec) (msg proto.Message, err error) {
 	var pbo *stdpb.OutOfGasError
 	{
@@ -745,11 +820,13 @@ func (goo OutOfGasError) ToPBMessage(cdc *amino.Codec) (msg proto.Message, err e
 	msg = pbo
 	return
 }
+
 func (goo OutOfGasError) EmptyPBMessage(cdc *amino.Codec) (msg proto.Message) {
 	pbo := new(stdpb.OutOfGasError)
 	msg = pbo
 	return
 }
+
 func (goo *OutOfGasError) FromPBMessage(cdc *amino.Codec, msg proto.Message) (err error) {
 	var pbo *stdpb.OutOfGasError = msg.(*stdpb.OutOfGasError)
 	{
@@ -758,15 +835,18 @@ func (goo *OutOfGasError) FromPBMessage(cdc *amino.Codec, msg proto.Message) (er
 	}
 	return
 }
+
 func (_ OutOfGasError) GetTypeURL() (typeURL string) {
 	return "/std.OutOfGasError"
 }
+
 func IsOutOfGasErrorReprEmpty(goor OutOfGasError) (empty bool) {
 	{
 		empty = true
 	}
 	return
 }
+
 func (goo MemoTooLargeError) ToPBMessage(cdc *amino.Codec) (msg proto.Message, err error) {
 	var pbo *stdpb.MemoTooLargeError
 	{
@@ -780,11 +860,13 @@ func (goo MemoTooLargeError) ToPBMessage(cdc *amino.Codec) (msg proto.Message, e
 	msg = pbo
 	return
 }
+
 func (goo MemoTooLargeError) EmptyPBMessage(cdc *amino.Codec) (msg proto.Message) {
 	pbo := new(stdpb.MemoTooLargeError)
 	msg = pbo
 	return
 }
+
 func (goo *MemoTooLargeError) FromPBMessage(cdc *amino.Codec, msg proto.Message) (err error) {
 	var pbo *stdpb.MemoTooLargeError = msg.(*stdpb.MemoTooLargeError)
 	{
@@ -793,15 +875,18 @@ func (goo *MemoTooLargeError) FromPBMessage(cdc *amino.Codec, msg proto.Message)
 	}
 	return
 }
+
 func (_ MemoTooLargeError) GetTypeURL() (typeURL string) {
 	return "/std.MemoTooLargeError"
 }
+
 func IsMemoTooLargeErrorReprEmpty(goor MemoTooLargeError) (empty bool) {
 	{
 		empty = true
 	}
 	return
 }
+
 func (goo InsufficientFeeError) ToPBMessage(cdc *amino.Codec) (msg proto.Message, err error) {
 	var pbo *stdpb.InsufficientFeeError
 	{
@@ -815,11 +900,13 @@ func (goo InsufficientFeeError) ToPBMessage(cdc *amino.Codec) (msg proto.Message
 	msg = pbo
 	return
 }
+
 func (goo InsufficientFeeError) EmptyPBMessage(cdc *amino.Codec) (msg proto.Message) {
 	pbo := new(stdpb.InsufficientFeeError)
 	msg = pbo
 	return
 }
+
 func (goo *InsufficientFeeError) FromPBMessage(cdc *amino.Codec, msg proto.Message) (err error) {
 	var pbo *stdpb.InsufficientFeeError = msg.(*stdpb.InsufficientFeeError)
 	{
@@ -828,15 +915,18 @@ func (goo *InsufficientFeeError) FromPBMessage(cdc *amino.Codec, msg proto.Messa
 	}
 	return
 }
+
 func (_ InsufficientFeeError) GetTypeURL() (typeURL string) {
 	return "/std.InsufficientFeeError"
 }
+
 func IsInsufficientFeeErrorReprEmpty(goor InsufficientFeeError) (empty bool) {
 	{
 		empty = true
 	}
 	return
 }
+
 func (goo TooManySignaturesError) ToPBMessage(cdc *amino.Codec) (msg proto.Message, err error) {
 	var pbo *stdpb.TooManySignaturesError
 	{
@@ -850,11 +940,13 @@ func (goo TooManySignaturesError) ToPBMessage(cdc *amino.Codec) (msg proto.Messa
 	msg = pbo
 	return
 }
+
 func (goo TooManySignaturesError) EmptyPBMessage(cdc *amino.Codec) (msg proto.Message) {
 	pbo := new(stdpb.TooManySignaturesError)
 	msg = pbo
 	return
 }
+
 func (goo *TooManySignaturesError) FromPBMessage(cdc *amino.Codec, msg proto.Message) (err error) {
 	var pbo *stdpb.TooManySignaturesError = msg.(*stdpb.TooManySignaturesError)
 	{
@@ -863,15 +955,18 @@ func (goo *TooManySignaturesError) FromPBMessage(cdc *amino.Codec, msg proto.Mes
 	}
 	return
 }
+
 func (_ TooManySignaturesError) GetTypeURL() (typeURL string) {
 	return "/std.TooManySignaturesError"
 }
+
 func IsTooManySignaturesErrorReprEmpty(goor TooManySignaturesError) (empty bool) {
 	{
 		empty = true
 	}
 	return
 }
+
 func (goo NoSignaturesError) ToPBMessage(cdc *amino.Codec) (msg proto.Message, err error) {
 	var pbo *stdpb.NoSignaturesError
 	{
@@ -885,11 +980,13 @@ func (goo NoSignaturesError) ToPBMessage(cdc *amino.Codec) (msg proto.Message, e
 	msg = pbo
 	return
 }
+
 func (goo NoSignaturesError) EmptyPBMessage(cdc *amino.Codec) (msg proto.Message) {
 	pbo := new(stdpb.NoSignaturesError)
 	msg = pbo
 	return
 }
+
 func (goo *NoSignaturesError) FromPBMessage(cdc *amino.Codec, msg proto.Message) (err error) {
 	var pbo *stdpb.NoSignaturesError = msg.(*stdpb.NoSignaturesError)
 	{
@@ -898,15 +995,18 @@ func (goo *NoSignaturesError) FromPBMessage(cdc *amino.Codec, msg proto.Message)
 	}
 	return
 }
+
 func (_ NoSignaturesError) GetTypeURL() (typeURL string) {
 	return "/std.NoSignaturesError"
 }
+
 func IsNoSignaturesErrorReprEmpty(goor NoSignaturesError) (empty bool) {
 	{
 		empty = true
 	}
 	return
 }
+
 func (goo GasOverflowError) ToPBMessage(cdc *amino.Codec) (msg proto.Message, err error) {
 	var pbo *stdpb.GasOverflowError
 	{
@@ -920,11 +1020,13 @@ func (goo GasOverflowError) ToPBMessage(cdc *amino.Codec) (msg proto.Message, er
 	msg = pbo
 	return
 }
+
 func (goo GasOverflowError) EmptyPBMessage(cdc *amino.Codec) (msg proto.Message) {
 	pbo := new(stdpb.GasOverflowError)
 	msg = pbo
 	return
 }
+
 func (goo *GasOverflowError) FromPBMessage(cdc *amino.Codec, msg proto.Message) (err error) {
 	var pbo *stdpb.GasOverflowError = msg.(*stdpb.GasOverflowError)
 	{
@@ -933,9 +1035,11 @@ func (goo *GasOverflowError) FromPBMessage(cdc *amino.Codec, msg proto.Message) 
 	}
 	return
 }
+
 func (_ GasOverflowError) GetTypeURL() (typeURL string) {
 	return "/std.GasOverflowError"
 }
+
 func IsGasOverflowErrorReprEmpty(goor GasOverflowError) (empty bool) {
 	{
 		empty = true

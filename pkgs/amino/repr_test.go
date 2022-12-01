@@ -5,8 +5,8 @@ import (
 	"reflect"
 	"testing"
 
-	"github.com/tendermint/tendermint2/pkgs/amino/pkg"
 	"github.com/stretchr/testify/assert"
+	"github.com/tendermint/tendermint2/pkgs/amino/pkg"
 )
 
 type FooList []*Foo

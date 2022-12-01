@@ -6,8 +6,8 @@ import (
 	"path/filepath"
 	"testing"
 
-	"github.com/tendermint/tendermint2/pkgs/random"
 	"github.com/stretchr/testify/assert"
+	"github.com/tendermint/tendermint2/pkgs/random"
 )
 
 func TestLoadOrGenNodeKey(t *testing.T) {

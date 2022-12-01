@@ -7,8 +7,8 @@ import (
 	"path/filepath"
 	"text/template"
 
-	osm "github.com/tendermint/tendermint2/pkgs/os"
 	"github.com/pelletier/go-toml"
+	osm "github.com/tendermint/tendermint2/pkgs/os"
 )
 
 // DefaultDirPerm is the default permissions used when creating directories.

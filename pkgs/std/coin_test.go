@@ -4,9 +4,9 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/tendermint/tendermint2/pkgs/amino"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
+	"github.com/tendermint/tendermint2/pkgs/amino"
 )
 
 var (

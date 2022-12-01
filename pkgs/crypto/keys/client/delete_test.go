@@ -4,11 +4,11 @@ import (
 	"strings"
 	"testing"
 
+	"github.com/jaekwon/testify/assert"
+	"github.com/jaekwon/testify/require"
 	"github.com/tendermint/tendermint2/pkgs/command"
 	"github.com/tendermint/tendermint2/pkgs/crypto/keys"
 	"github.com/tendermint/tendermint2/pkgs/testutils"
-	"github.com/jaekwon/testify/assert"
-	"github.com/jaekwon/testify/require"
 )
 
 func Test_deleteApp(t *testing.T) {

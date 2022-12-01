@@ -5,11 +5,11 @@ import (
 	"strings"
 	"testing"
 
+	"github.com/jaekwon/testify/assert"
 	"github.com/tendermint/tendermint2/pkgs/command"
 	"github.com/tendermint/tendermint2/pkgs/crypto/keys"
 	"github.com/tendermint/tendermint2/pkgs/crypto/secp256k1"
 	"github.com/tendermint/tendermint2/pkgs/testutils"
-	"github.com/jaekwon/testify/assert"
 )
 
 func Test_addAppBasic(t *testing.T) {

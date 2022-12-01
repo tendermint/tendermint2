@@ -5,8 +5,8 @@ import (
 	"testing"
 	"time"
 
-	amino "github.com/tendermint/tendermint2/pkgs/amino"
 	"github.com/stretchr/testify/assert"
+	amino "github.com/tendermint/tendermint2/pkgs/amino"
 )
 
 func TestMarshal(t *testing.T) {
