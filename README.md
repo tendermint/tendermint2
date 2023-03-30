@@ -1,5 +1,7 @@
 # Tendermint2
 
+**Disclaimer: Tendermint2 is currently part of the Gno monorepo (https://github.com/gnolang/gno/tree/master/tm2) for streamlined development. Once Gno.land is mainnet, Tendermint2 will operate independently, including for governance.**
+
 ## Mission
 
  * make awesome software with modular components.
